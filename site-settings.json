@@ -1,7 +1,7 @@
 {
   "note": "公開前に work/build_clearth_site.py 上部の CONFIG を更新して再ビルドしてください。",
-  "site_url": "https://example.com",
-  "assets_version": "20260705-04",
+  "site_url": "https://clearth191-yyy.github.io/clearth-site",
+  "assets_version": "20260705-05",
   "company": {
     "name": "株式会社Clearth",
     "brand": "Clearth",

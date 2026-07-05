@@ -5,7 +5,7 @@
 ## 差し替え場所
 | 内容 | 編集箇所 | 現在の値 | 反映先 |
 |---|---|---|---|
-| 本番URL | `CONFIG["site_url"]` | `https://example.com` | canonical、OGP、構造化データ、sitemap、robots、フォーム完了URL |
+| 本番URL | `CONFIG["site_url"]` | `https://clearth191-yyy.github.io/clearth-site` | canonical、OGP、構造化データ、sitemap、robots、フォーム完了URL |
 | 会社名 | `CONFIG["company"]["name"]` | `株式会社Clearth` | 全ページの社名、構造化データ |
 | 所在地 | `CONFIG["company"]["address"]` | `〒738-0222 広島県廿日市市津田5267-3` | 会社概要、問い合わせ、フッター、構造化データ |
 | 対応エリア | `CONFIG["company"]["area_served"]` | `広島県全域を中心に対応` | 会社概要、問い合わせ、構造化データ |

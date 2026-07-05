@@ -1,7 +1,8 @@
 {
   "name": "株式会社Clearth",
   "short_name": "Clearth",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b2d4d",

@@ -1,0 +1,210 @@
+{
+  "note": "公開前に work/build_clearth_site.py 上部の CONFIG を更新して再ビルドしてください。",
+  "site_url": "https://example.com",
+  "assets_version": "20260705-04",
+  "company": {
+    "name": "株式会社Clearth",
+    "brand": "Clearth",
+    "catchcopy": "住み良い街づくりのために社会に貢献します。",
+    "area_served": "広島県全域を中心に対応",
+    "address": "〒738-0222 広島県廿日市市津田5267-3",
+    "locations": [
+      {
+        "name": "本社",
+        "postal_code": "738-0222",
+        "address": "広島県廿日市市津田5267-3",
+        "access": "廿日市市津田エリア。山林整備・木材リサイクルに関するご相談の窓口です。"
+      },
+      {
+        "name": "浅原プラント",
+        "postal_code": "738-0223",
+        "address": "広島県廿日市市浅原962-2",
+        "map_url": "https://maps.app.goo.gl/4wMg3vUEQ7vRsqch8",
+        "access": "木材の搬入や木質チップ製造に関する拠点です。搬入前に必ずお問い合わせください。"
+      },
+      {
+        "name": "友田プラント",
+        "postal_code": "738-0203",
+        "address": "広島県廿日市市友田62",
+        "map_url": "https://maps.app.goo.gl/AYWPKjwz34oLmK3v7",
+        "access": "木材リサイクル・資源循環に関する事業拠点です。来場前に事前連絡をお願いいたします。"
+      }
+    ]
+  },
+  "contact": {
+    "phone_display": "0829-78-0022",
+    "phone_href": "0829780022",
+    "fax_display": "0829-78-2277",
+    "email_display": "clearth.191@gmail.com",
+    "email_href": "clearth.191@gmail.com",
+    "hours": "平日 9:00〜17:00"
+  },
+  "image_sources": {
+    "hero-aerial": {
+      "type": "User-provided brand hero image",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "town-mountain": {
+      "type": "AI / brand image",
+      "site": "Project generated image",
+      "license": "Project-owned generated image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "forest": {
+      "type": "AI / brand image",
+      "site": "Project generated image",
+      "license": "Project-owned generated image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "forestry-machinery": {
+      "type": "Commercial-use-free stock photo",
+      "site": "Pixabay",
+      "license": "Pixabay Content License",
+      "source_url": "https://pixabay.com/photos/machine-forest-mulcher-6812266/",
+      "download_url": "https://cdn.pixabay.com/photo/2021/11/20/16/04/machine-6812266_1280.jpg"
+    },
+    "forest-maintenance-main": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "standing-tree-assessment-main": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "heavy-machinery-hauling-main": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "wood-recycling": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "wood-waste-green": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "chip-production": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "wood-chip-manufacturing-main": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "asahara-plant-main": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "biomass-supply-main": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "biomass-shipping-detail": {
+      "type": "Cropped user-provided actual photo",
+      "site": "株式会社Clearth provided image",
+      "license": "Company-provided image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "wood-chip": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "chip-plant": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "forestry-work": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "hauling": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "crusher": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "yard": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "shipping": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    },
+    "staff": {
+      "type": "User-provided actual photo",
+      "site": "株式会社Clearth provided photo",
+      "license": "Company-provided actual image",
+      "source_url": "",
+      "download_url": ""
+    }
+  },
+  "image_manifest": "assets/images/image-manifest.json",
+  "works": {
+    "show_placeholder_badges": true,
+    "placeholder_badge_label": "イメージ画像",
+    "placeholder_alt_suffix": "（実写真差し替え予定）"
+  },
+  "form": {
+    "action": "https://formspree.io/f/REPLACE_ME",
+    "name": "clearth-contact",
+    "success_page": "thanks.html",
+    "honeypot_name": "website"
+  }
+}

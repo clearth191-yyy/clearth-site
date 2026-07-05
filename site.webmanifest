@@ -1,0 +1,15 @@
+{
+  "name": "株式会社Clearth",
+  "short_name": "Clearth",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b2d4d",
+  "icons": [
+    {
+      "src": "assets/images/company/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

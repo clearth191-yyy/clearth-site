@@ -158,6 +158,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-card picture img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.96) contrast(1.04) brightness(.99); }
 .service-card picture img[src*="forest-maintenance-main"] { object-position: 42% center; }
 .service-card picture img[src*="standing-tree-assessment-main"] { object-position: 45% center; }
+.service-card picture img[src*="danger-tree-main"] { object-position: center center; }
 .service-card picture img[src*="wood-waste-green"] { object-position: center center; }
 .service-card picture img[src*="crusher"] { object-position: center center; }
 .service-card picture img[src*="wood-chip-manufacturing-main"] { object-position: center center; }
@@ -192,17 +193,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .lower-hero-copy p { font-size: 17px; }
 .service-photo-hero { position: relative; display: flex; align-items: flex-end; width: min(1160px, calc(100% - 36px)); min-height: clamp(520px, 62vw, 700px); margin: 26px auto 0; overflow: hidden; color: #fff; background: var(--navy); border-radius: var(--radius); box-shadow: var(--photo-shadow); }
 .service-photo-hero-media, .service-photo-hero-media picture, .service-photo-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.service-photo-hero-link { position: absolute; inset: 0; display: block; cursor: zoom-in; }
 .service-photo-hero-media img { object-fit: cover; object-position: 54% center; filter: saturate(.96) contrast(1.04) brightness(.96); }
 .service-photo-hero-media img[src*="forest-maintenance-main"] { object-position: 48% center; }
 .service-photo-hero-media img[src*="standing-tree-assessment-main"] { object-position: 54% center; }
+.service-photo-hero-media img[src*="danger-tree-main"] { object-position: center center; }
 .service-photo-hero-media img[src*="forestry-machinery"] { object-position: center center; }
+.service-photo-hero-special { aspect-ratio: auto; height: clamp(420px, 45vw, 540px); min-height: 0; background: #071b2f; }
+.service-photo-hero-special .service-photo-hero-media,
+.service-photo-hero-special .service-photo-hero-link,
+.service-photo-hero-special .service-photo-hero-media picture { background: #071b2f; }
+.service-photo-hero-special .service-photo-hero-media img[src*="special-cutting-main"] { object-fit: cover; object-position: center 48%; background: #071b2f; filter: saturate(.98) contrast(1.03) brightness(.96); }
 .service-photo-hero-media img[src*="wood-recycling"] { object-position: center center; }
 .service-photo-hero-media img[src*="wood-waste-green"] { object-position: center center; }
 .service-photo-hero-media img[src*="crusher"] { object-position: center 43%; }
 .service-photo-hero-media img[src*="wood-chip-manufacturing-main"] { object-position: center center; }
 .service-photo-hero-media img[src*="biomass-supply-main"] { object-position: center 58%; }
 .service-photo-hero-media img[src*="heavy-machinery-hauling-main"] { object-position: center center; }
-.service-photo-hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,27,47,.86), rgba(7,27,47,.68) 35%, rgba(7,27,47,.22) 66%, rgba(7,27,47,.06)), linear-gradient(180deg, rgba(7,27,47,.1), rgba(7,27,47,.4)); }
+.service-photo-hero-overlay { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(7,27,47,.86), rgba(7,27,47,.68) 35%, rgba(7,27,47,.22) 66%, rgba(7,27,47,.06)), linear-gradient(180deg, rgba(7,27,47,.1), rgba(7,27,47,.4)); }
+.service-photo-hero-special .service-photo-hero-overlay { background: linear-gradient(90deg, rgba(7,27,47,.62), rgba(7,27,47,.38) 36%, rgba(7,27,47,.12) 68%, rgba(7,27,47,.04)), linear-gradient(180deg, rgba(7,27,47,.06), rgba(7,27,47,.24)); }
 .service-photo-hero-copy { position: relative; z-index: 2; width: min(560px, 92%); padding: clamp(38px, 6vw, 72px); }
 .service-photo-hero h1 { margin-bottom: 16px; color: #fff; font-size: clamp(40px, 6vw, 72px); line-height: 1.12; letter-spacing: 0; }
 .service-photo-hero p:not(.eyebrow) { color: rgba(255,255,255,.9); font-size: clamp(16px, 2.1vw, 21px); font-weight: 700; line-height: 1.9; }
@@ -229,6 +238,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .map-frame iframe { width: 100%; height: 100%; min-height: 280px; border: 0; filter: saturate(.9) contrast(.98); }
 .contact-strip { display: flex; gap: 26px; align-items: center; justify-content: space-between; padding: 34px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 16px 42px rgba(7,27,47,.08); }
 .contact-strip h2 { margin-bottom: 8px; color: var(--navy); font-size: clamp(26px, 3.4vw, 40px); line-height: 1.25; }
+.service-assurance-section .contact-strip p { line-height: 1.95; }
+.service-assurance-section .assurance-callout { margin-top: 16px; padding: 16px 18px; color: var(--navy); background: linear-gradient(135deg, rgba(31,120,180,.08), rgba(31,138,87,.08)); border: 1px solid rgba(31,120,180,.18); border-left: 4px solid var(--green); border-radius: 14px; font-weight: 800; }
 .contact-strip-actions { display: flex; flex-wrap: wrap; gap: 10px; flex: 0 0 auto; }
 .contact-strip-with-media > div:first-child { flex: 1 1 0; }
 .contact-strip-media { flex: 0 0 min(42%, 460px); }
@@ -324,14 +335,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-photo-hero-media img { object-position: 47% center; }
   .service-photo-hero-media img[src*="forest-maintenance-main"] { object-position: 42% center; }
   .service-photo-hero-media img[src*="standing-tree-assessment-main"] { object-position: 47% center; }
+  .service-photo-hero-media img[src*="danger-tree-main"] { object-position: center center; }
   .service-photo-hero-media img[src*="wood-chip-manufacturing-main"] { object-position: 48% center; }
   .service-photo-hero-media img[src*="biomass-supply-main"] { object-position: 52% center; }
   .service-photo-hero-media img[src*="heavy-machinery-hauling-main"] { object-position: 52% center; }
+  .service-photo-hero-special { aspect-ratio: auto; height: clamp(250px, 62vw, 320px); min-height: 0; }
+  .service-photo-hero-special .service-photo-hero-media img[src*="special-cutting-main"] { object-fit: cover; object-position: center 48%; background: #071b2f; }
   .service-photo-hero-media img[src*="crusher"] { object-position: 52% center; }
   .service-photo-hero-overlay { background: linear-gradient(180deg, rgba(7,27,47,.22), rgba(7,27,47,.38) 42%, rgba(7,27,47,.88)); }
+  .service-photo-hero-special .service-photo-hero-overlay { background: linear-gradient(180deg, rgba(7,27,47,.12), rgba(7,27,47,.28) 42%, rgba(7,27,47,.68)); }
   .service-photo-hero-copy { width: 100%; padding: 30px 20px; }
   .service-photo-hero h1 { font-size: 36px; line-height: 1.18; }
   .service-photo-hero p:not(.eyebrow) { font-size: 15px; line-height: 1.78; }
+  .service-photo-hero-special .service-photo-hero-copy { width: min(82%, 340px); padding: 20px 18px; }
+  .service-photo-hero-special h1 { font-size: 31px; line-height: 1.15; }
+  .service-photo-hero-special p:not(.eyebrow) { font-size: 13px; line-height: 1.58; }
   .service-intro-pair-section { padding-top: 34px; }
   .hero-actions, .cta-actions { flex-direction: column; }
   .hero-service-grid, .proof-grid, .strength-grid, .service-grid, .works-grid, .works-grid-large, .gallery-grid, .photo-trust-gallery, .contact-form, .company-table div, .news-list article, .location-grid { grid-template-columns: 1fr; }

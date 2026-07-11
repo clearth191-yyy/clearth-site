@@ -211,6 +211,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-photo-hero-media img[src*="biomass-supply-main"] { object-position: center 58%; }
 .service-photo-hero-media img[src*="heavy-machinery-hauling-main"] { object-position: center center; }
 .service-photo-hero-overlay { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(7,27,47,.86), rgba(7,27,47,.68) 35%, rgba(7,27,47,.22) 66%, rgba(7,27,47,.06)), linear-gradient(180deg, rgba(7,27,47,.1), rgba(7,27,47,.4)); }
+.service-photo-hero-overlay-readable { background: linear-gradient(90deg, rgba(0,0,0,.62), rgba(0,0,0,.42) 30%, rgba(0,0,0,.16) 56%, rgba(0,0,0,.02) 78%), linear-gradient(180deg, rgba(7,27,47,.04), rgba(7,27,47,.22)); }
 .service-photo-hero-special .service-photo-hero-overlay { background: linear-gradient(90deg, rgba(7,27,47,.62), rgba(7,27,47,.38) 36%, rgba(7,27,47,.12) 68%, rgba(7,27,47,.04)), linear-gradient(180deg, rgba(7,27,47,.06), rgba(7,27,47,.24)); }
 .service-photo-hero-copy { position: relative; z-index: 2; width: min(560px, 92%); padding: clamp(38px, 6vw, 72px); }
 .service-photo-hero h1 { margin-bottom: 16px; color: #fff; font-size: clamp(40px, 6vw, 72px); line-height: 1.12; letter-spacing: 0; }
@@ -343,6 +344,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-photo-hero-special .service-photo-hero-media img[src*="special-cutting-main"] { object-fit: cover; object-position: center 48%; background: #071b2f; }
   .service-photo-hero-media img[src*="crusher"] { object-position: 52% center; }
   .service-photo-hero-overlay { background: linear-gradient(180deg, rgba(7,27,47,.22), rgba(7,27,47,.38) 42%, rgba(7,27,47,.88)); }
+  .service-photo-hero-overlay-readable { background: linear-gradient(90deg, rgba(0,0,0,.48), rgba(0,0,0,.28) 48%, rgba(0,0,0,.04) 78%), linear-gradient(180deg, rgba(7,27,47,.08), rgba(7,27,47,.18) 45%, rgba(7,27,47,.7)); }
   .service-photo-hero-special .service-photo-hero-overlay { background: linear-gradient(180deg, rgba(7,27,47,.12), rgba(7,27,47,.28) 42%, rgba(7,27,47,.68)); }
   .service-photo-hero-copy { width: 100%; padding: 30px 20px; }
   .service-photo-hero h1 { font-size: 36px; line-height: 1.18; }

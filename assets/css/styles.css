@@ -158,7 +158,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-card picture img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.96) contrast(1.04) brightness(.99); }
 .service-card picture img[src*="forest-maintenance-main"] { object-position: 42% center; }
 .service-card picture img[src*="standing-tree-assessment-main"] { object-position: 45% center; }
-.service-card picture img[src*="danger-tree-main"] { object-position: center center; }
+.service-card picture img[src*="danger-tree-main"] { object-position: 58% center; }
 .service-card picture img[src*="special-cutting-main"] { object-position: 54% center; }
 .service-card picture img[src*="wood-waste-green"] { object-position: center center; }
 .service-card picture img[src*="crusher"] { object-position: center center; }

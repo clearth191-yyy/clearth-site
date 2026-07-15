@@ -21,6 +21,7 @@ html { scroll-behavior: smooth; }
 html, body { max-width: 100%; overflow-x: hidden; }
 body {
   margin: 0;
+  padding-top: 80px;
   color: var(--ink);
   background: var(--snow);
   font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -40,9 +41,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .container { width: min(1160px, calc(100% - 36px)); margin: 0 auto; }
 .narrow { width: min(860px, calc(100% - 36px)); }
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -297,7 +298,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 @media (max-width: 980px) {
   .menu-toggle { display: inline-flex; }
-  .global-nav { position: fixed; inset: 78px 0 auto; display: none; flex-direction: column; align-items: stretch; padding: 20px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .global-nav { position: fixed; inset: 80px 0 auto; display: none; flex-direction: column; align-items: stretch; padding: 20px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
   body.is-menu-open .global-nav { display: flex; }
   .hero-content { margin-left: 18px; padding-bottom: 190px; }
   .hero-panel { left: 18px; right: 18px; bottom: 24px; width: auto; }
@@ -313,7 +314,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .footer-main { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
-  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  body { padding-top: 68px; padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
   .container, .narrow, .breadcrumbs { width: calc(100% - 28px); }
   .site-header { min-height: 68px; gap: 10px; padding: 10px 14px; }
   .brand { min-width: 0; max-width: calc(100% - 86px); gap: 8px; }

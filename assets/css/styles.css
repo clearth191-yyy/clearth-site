@@ -192,6 +192,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .cta-band h2, .cta-band p { color: #fff; }
 .lower-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); gap: clamp(28px, 7vw, 80px); align-items: center; width: min(1160px, calc(100% - 36px)); margin: 0 auto; padding: clamp(70px, 8vw, 110px) 0 50px; }
 .lower-hero.simple { display: block; }
+.lower-hero.lower-hero-works { display: block; width: 100%; max-width: none; }
+.lower-hero-works .lower-hero-copy { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.lower-hero-works .lower-hero-image, .lower-hero-works .lower-hero-image picture { width: 100%; }
+.lower-hero-works .lower-hero-image picture { aspect-ratio: auto; overflow: visible; background: var(--navy-2); border-radius: 0; box-shadow: none; }
+.lower-hero-works .lower-hero-image img { width: 100%; height: auto; object-fit: contain; object-position: center; filter: none; }
 .lower-hero-copy p { font-size: 17px; }
 .service-photo-hero { position: relative; display: flex; align-items: flex-end; width: min(1160px, calc(100% - 36px)); min-height: clamp(520px, 62vw, 700px); margin: 26px auto 0; overflow: hidden; color: #fff; background: var(--navy); border-radius: var(--radius); box-shadow: var(--photo-shadow); }
 .service-photo-hero-media, .service-photo-hero-media picture, .service-photo-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; }

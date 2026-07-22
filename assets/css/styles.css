@@ -320,6 +320,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .cycle-orbit { position: absolute; inset: 20px; width: calc(100% - 40px); height: calc(100% - 40px); overflow: visible; }
 .cycle-orbit ellipse, .cycle-orbit path { fill: none; stroke: rgba(31,120,180,.26); stroke-width: 2; stroke-dasharray: 7 8; vector-effect: non-scaling-stroke; }
 .cycle-orbit .cycle-orbit-accent { stroke: rgba(31,138,87,.55); stroke-width: 3; stroke-dasharray: none; }
+.cycle-direction { position: absolute; z-index: 4; display: grid; width: 36px; height: 36px; place-items: center; color: #fff; background: linear-gradient(135deg, var(--blue), var(--green)); border: 4px solid #fff; border-radius: 50%; box-shadow: 0 10px 24px rgba(7,27,47,.18); font-size: 15px; font-weight: 900; }
+.cycle-direction-1 { top: 164px; left: 32%; }
+.cycle-direction-2 { top: 164px; right: 32%; }
+.cycle-direction-3 { top: 50%; right: 19%; transform: translateY(-50%); }
+.cycle-direction-4 { right: 32%; bottom: 164px; }
+.cycle-direction-5 { bottom: 164px; left: 32%; }
+.cycle-direction-6 { top: 50%; left: 19%; transform: translateY(-50%); }
 .cycle-core { position: absolute; top: 50%; left: 50%; z-index: 2; display: flex; width: 252px; height: 252px; align-items: center; justify-content: center; flex-direction: column; padding: 28px; text-align: center; background: radial-gradient(circle at 35% 24%, #1f9561, var(--green) 48%, #12613c 100%); border: 10px solid rgba(255,255,255,.9); border-radius: 50%; box-shadow: 0 24px 54px rgba(20,104,66,.26), 0 0 0 1px rgba(31,138,87,.2); transform: translate(-50%, -50%); }
 .cycle-core-mark { display: grid; width: 48px; height: 48px; place-items: center; margin-bottom: 8px; color: #fff; }
 .cycle-core-mark svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -339,15 +346,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .cycle-number { color: rgba(31,120,180,.48); font-size: 13px; font-weight: 900; letter-spacing: .1em; }
 .cycle-node h3 { margin-bottom: 6px; color: var(--navy); font-size: 17px; line-height: 1.4; }
 .cycle-node p { margin: 0; font-size: 12px; line-height: 1.7; }
-.cycle-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
-.cycle-photo-grid figure { position: relative; min-height: 240px; margin: 0; overflow: hidden; background: var(--navy); border-radius: 20px; box-shadow: var(--photo-shadow); }
-.cycle-photo-grid picture, .cycle-photo-grid img { width: 100%; height: 100%; }
-.cycle-photo-grid img { object-fit: cover; object-position: center; filter: saturate(.94) contrast(1.04) brightness(.92); transition: transform .55s ease; }
-.cycle-photo-grid figure:nth-child(1) img { object-position: 42% center; }
-.cycle-photo-grid figure:nth-child(3) img { object-position: center 62%; }
-.cycle-photo-grid figure::after { position: absolute; inset: 42% 0 0; background: linear-gradient(transparent, rgba(7,27,47,.88)); content: ""; }
-.cycle-photo-grid figcaption { position: absolute; right: 20px; bottom: 18px; left: 20px; z-index: 2; color: #fff; font-weight: 900; }
-.cycle-photo-grid figcaption span { display: block; margin-bottom: 3px; color: var(--cyan); font-size: 11px; letter-spacing: .12em; }
+.cycle-outcomes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+.cycle-outcomes article { display: grid; min-height: 168px; grid-template-columns: 64px 1fr; gap: 18px; align-items: start; padding: 28px; background: linear-gradient(145deg, #fff, #f2f8fa); border: 1px solid rgba(31,120,180,.15); border-radius: 20px; box-shadow: 0 16px 42px rgba(7,27,47,.07); transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+.cycle-outcome-icon { display: grid; width: 64px; height: 64px; place-items: center; color: #fff; background: linear-gradient(145deg, var(--green), var(--blue)); border-radius: 18px; box-shadow: 0 12px 28px rgba(31,138,87,.2); }
+.cycle-outcome-icon svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.cycle-outcomes small, .cycle-outcomes strong { display: block; }
+.cycle-outcomes small { margin-bottom: 6px; color: var(--blue); font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+.cycle-outcomes strong { color: var(--navy); font-size: 18px; line-height: 1.4; }
+.cycle-outcomes p { margin: 7px 0 0; font-size: 12px; line-height: 1.75; }
 .bioeconomy-section { background: #fff; }
 .bioeconomy-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr); gap: clamp(44px, 7vw, 90px); align-items: center; }
 .bioeconomy-copy h2 { margin-bottom: 24px; color: var(--navy); font-size: clamp(34px, 4.2vw, 54px); line-height: 1.28; }
@@ -358,18 +364,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .bioeconomy-note span { margin-bottom: 8px; color: var(--green); font-size: 12px; font-weight: 900; }
 .bioeconomy-note strong { color: var(--navy); font-size: 19px; line-height: 1.65; }
 .bioeconomy-note p { position: relative; z-index: 1; margin: 9px 0 0; font-size: 13px; line-height: 1.75; }
-.bioeconomy-visual { position: relative; min-height: 590px; }
-.bioeconomy-visual figure { margin: 0; overflow: hidden; background: #e9f1f6; border-radius: 22px; box-shadow: var(--photo-shadow); }
-.bioeconomy-visual picture, .bioeconomy-visual img { width: 100%; height: 100%; }
-.bioeconomy-visual img { object-fit: cover; filter: saturate(.94) contrast(1.04) brightness(.97); }
-.bioeconomy-photo-main { position: absolute; inset: 0 70px 70px 0; }
-.bioeconomy-photo-main img { object-position: center; }
-.bioeconomy-photo-sub { position: absolute; right: 0; bottom: 0; width: 46%; height: 43%; border: 8px solid #fff; }
-.bioeconomy-photo-sub img { object-position: center; }
-.bioeconomy-visual-label { position: absolute; top: 28px; right: 0; width: min(260px, 48%); padding: 22px; color: #fff; background: rgba(7,27,47,.92); border: 1px solid rgba(255,255,255,.18); border-radius: 18px; box-shadow: 0 18px 46px rgba(7,27,47,.2); backdrop-filter: blur(12px); }
-.bioeconomy-visual-label small, .bioeconomy-visual-label strong { display: block; }
-.bioeconomy-visual-label small { margin-bottom: 8px; color: var(--cyan); font-size: 10px; font-weight: 900; letter-spacing: .12em; }
-.bioeconomy-visual-label strong { font-size: 18px; line-height: 1.6; }
+.bioeconomy-model { position: relative; min-height: 590px; overflow: hidden; background: radial-gradient(circle at 50% 49%, rgba(78,180,223,.16), transparent 24%), linear-gradient(145deg, #f6fbfb, #eaf4f6); border: 1px solid rgba(31,120,180,.16); border-radius: 30px; box-shadow: 0 24px 64px rgba(7,27,47,.1); isolation: isolate; }
+.bioeconomy-model::before, .bioeconomy-model::after { position: absolute; z-index: -1; width: 260px; height: 260px; background: rgba(31,138,87,.06); border-radius: 50%; content: ""; }
+.bioeconomy-model::before { top: -130px; right: -90px; }
+.bioeconomy-model::after { bottom: -150px; left: -80px; background: rgba(31,120,180,.07); }
+.bioeconomy-model-lines { position: absolute; inset: 30px; width: calc(100% - 60px); height: calc(100% - 60px); }
+.bioeconomy-model-lines path, .bioeconomy-model-lines circle { fill: none; stroke: rgba(31,120,180,.25); stroke-width: 2; stroke-dasharray: 7 8; vector-effect: non-scaling-stroke; }
+.bioeconomy-model-lines circle { stroke: rgba(31,138,87,.33); stroke-dasharray: none; }
+.bioeconomy-model-core { position: absolute; top: 49%; left: 50%; display: flex; width: 196px; height: 196px; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-align: center; background: radial-gradient(circle at 34% 22%, #209764, var(--green) 52%, #125c3a); border: 8px solid rgba(255,255,255,.92); border-radius: 50%; box-shadow: 0 20px 46px rgba(20,104,66,.25); transform: translate(-50%, -50%); }
+.bioeconomy-model-core span { display: grid; width: 45px; height: 45px; place-items: center; margin-bottom: 5px; }
+.bioeconomy-model-core svg, .bioeconomy-impact svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bioeconomy-model-core small { color: rgba(255,255,255,.72); font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+.bioeconomy-model-core strong { margin-top: 4px; font-size: 20px; line-height: 1.35; }
+.bioeconomy-impact { position: absolute; display: grid; width: 220px; min-height: 112px; grid-template-columns: 48px 1fr; gap: 14px; align-items: center; padding: 18px; background: rgba(255,255,255,.96); border: 1px solid rgba(31,120,180,.16); border-radius: 18px; box-shadow: 0 14px 36px rgba(7,27,47,.1); }
+.bioeconomy-impact > span { display: grid; width: 48px; height: 48px; place-items: center; color: var(--green); background: rgba(31,138,87,.1); border-radius: 14px; }
+.bioeconomy-impact > span svg { width: 29px; height: 29px; }
+.bioeconomy-impact small, .bioeconomy-impact strong { display: block; }
+.bioeconomy-impact small { color: var(--blue); font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+.bioeconomy-impact strong { margin-top: 2px; color: var(--navy); font-size: 18px; }
+.bioeconomy-impact p { margin: 3px 0 0; font-size: 11px; line-height: 1.5; }
+.bioeconomy-impact-environment { top: 28px; left: 50%; transform: translateX(-50%); }
+.bioeconomy-impact-community { bottom: 30px; left: 24px; }
+.bioeconomy-impact-economy { right: 24px; bottom: 30px; }
 .environmental-section { background: linear-gradient(180deg, #f2f8fa, #edf5f7); }
 .environment-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .environment-card { position: relative; min-height: 320px; padding: 34px 30px; overflow: hidden; background: #fff; border: 1px solid rgba(31,120,180,.14); border-radius: 22px; box-shadow: 0 18px 46px rgba(7,27,47,.08); transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
@@ -379,10 +395,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .environment-number { position: absolute; top: 34px; right: 30px; color: rgba(31,120,180,.28); font-size: 13px; font-weight: 900; letter-spacing: .12em; }
 .environment-card h3 { margin-bottom: 12px; color: var(--navy); font-size: 23px; line-height: 1.4; }
 .environment-card p { position: relative; z-index: 1; margin: 0; }
+.sdgs-section { overflow: hidden; background: #fff; }
+.sdgs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.sdg-card { position: relative; min-height: 330px; padding: 26px 28px 30px; overflow: hidden; background: #fff; border: 1px solid rgba(7,27,47,.1); border-radius: 22px; box-shadow: 0 16px 42px rgba(7,27,47,.08); transition: transform .24s ease, box-shadow .24s ease; }
+.sdg-card::before { position: absolute; top: 0; right: 0; left: 0; height: 7px; background: var(--sdg-color); content: ""; }
+.sdg-card::after { position: absolute; top: -58px; right: -58px; width: 160px; height: 160px; background: color-mix(in srgb, var(--sdg-color) 12%, transparent); border-radius: 50%; content: ""; }
+.sdg-card-head { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.sdg-number { display: grid; width: 66px; height: 66px; place-items: center; color: var(--sdg-ink); background: var(--sdg-color); border-radius: 18px; font-size: 30px; font-weight: 900; box-shadow: 0 10px 24px color-mix(in srgb, var(--sdg-color) 26%, transparent); }
+.sdg-icon { display: grid; width: 54px; height: 54px; place-items: center; color: var(--sdg-color); background: color-mix(in srgb, var(--sdg-color) 10%, #fff); border: 1px solid color-mix(in srgb, var(--sdg-color) 20%, transparent); border-radius: 16px; }
+.sdg-icon svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sdg-card > small { color: var(--sdg-color); font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.sdg-card h3 { margin: 7px 0 12px; color: var(--navy); font-size: 22px; line-height: 1.35; }
+.sdg-card p { margin: 0; font-size: 13px; line-height: 1.8; }
+.sdgs-note { max-width: 760px; padding: 18px 24px; margin: 28px auto 0; color: var(--navy); text-align: center; background: linear-gradient(90deg, rgba(31,138,87,.08), rgba(78,180,223,.1)); border-radius: 999px; font-size: 13px; font-weight: 800; }
 .community-section { position: relative; padding: clamp(90px, 10vw, 136px) 0; overflow: hidden; color: #fff; background: var(--navy-2); }
-.community-media, .community-media picture, .community-media img { position: absolute; inset: 0; width: 100%; height: 100%; }
-.community-media img { object-fit: cover; object-position: center; filter: saturate(.86) contrast(1.05) brightness(.75); }
-.community-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,27,47,.94), rgba(7,27,47,.72) 55%, rgba(7,27,47,.52)), linear-gradient(180deg, rgba(7,27,47,.12), rgba(7,27,47,.72)); }
+.community-section::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: 42px 42px; content: ""; }
+.community-graphic { position: absolute; top: 0; right: -4%; bottom: 0; width: 68%; opacity: .66; }
+.community-graphic svg { width: 100%; height: 100%; overflow: visible; }
+.community-mountain, .community-tree, .community-house { fill: none; stroke: rgba(255,255,255,.3); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.community-mountain-back { stroke: rgba(78,180,223,.2); }
+.community-land { fill: rgba(31,138,87,.14); stroke: rgba(78,180,223,.18); stroke-width: 2; }
+.community-flow { fill: none; stroke: var(--cyan); stroke-width: 3; stroke-dasharray: 8 10; opacity: .72; }
+.community-flow-dots { fill: var(--cyan); }
+.community-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 78% 40%, rgba(31,138,87,.14), transparent 30%), linear-gradient(90deg, rgba(7,27,47,.98), rgba(7,27,47,.9) 54%, rgba(7,27,47,.55)); }
 .community-content { position: relative; z-index: 2; }
 .community-copy { max-width: 760px; }
 .community-copy h2 { margin-bottom: 18px; color: #fff; font-size: clamp(38px, 5vw, 60px); line-height: 1.2; }
@@ -404,8 +439,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-card:hover img, .work-card:hover img, .photo-trust-gallery picture:hover img, .gallery-grid picture:hover img, .resource-step:hover img { transform: scale(1.025); }
   .cycle-node:hover { border-color: rgba(31,138,87,.34); box-shadow: 0 22px 54px rgba(7,27,47,.14); }
   .cycle-node-2:hover, .cycle-node-5:hover { transform: translateX(-50%) translateY(-3px); }
-  .cycle-node-1:hover, .cycle-node-3:hover, .cycle-node-4:hover, .cycle-node-6:hover, .environment-card:hover { transform: translateY(-3px); }
-  .cycle-photo-grid figure:hover img { transform: scale(1.025); }
+  .cycle-node-1:hover, .cycle-node-3:hover, .cycle-node-4:hover, .cycle-node-6:hover, .environment-card:hover, .cycle-outcomes article:hover, .sdg-card:hover { transform: translateY(-3px); }
+  .cycle-outcomes article:hover, .sdg-card:hover { box-shadow: 0 22px 54px rgba(7,27,47,.12); }
 }
 @media (max-width: 980px) {
   body { padding-top: calc(80px + env(safe-area-inset-top)); }
@@ -492,17 +527,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .sustainability-hero { min-height: 720px; }
   .sustainability-hero-content { padding-top: 96px; padding-bottom: 84px; }
   .cycle-system { display: grid; height: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding: 26px; }
-  .cycle-system::before, .cycle-orbit { display: none; }
+  .cycle-system::before, .cycle-orbit, .cycle-direction { display: none; }
   .cycle-core { position: relative; inset: auto; grid-column: 1 / -1; width: 100%; height: auto; min-height: 210px; border-width: 0; border-radius: 24px; transform: none; }
   .cycle-core p { max-width: 420px; }
   .cycle-node, .cycle-node-1, .cycle-node-2, .cycle-node-3, .cycle-node-4, .cycle-node-5, .cycle-node-6 { position: relative; inset: auto; width: auto; min-height: 190px; transform: none; }
-  .cycle-photo-grid { gap: 12px; }
-  .cycle-photo-grid figure { min-height: 210px; }
+  .cycle-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .cycle-outcomes article:last-child { grid-column: 1 / -1; }
   .bioeconomy-grid { grid-template-columns: 1fr; }
   .bioeconomy-copy { max-width: 760px; }
-  .bioeconomy-visual { min-height: 600px; }
+  .bioeconomy-model { width: min(100%, 700px); min-height: 600px; margin: 0 auto; }
   .environment-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .environment-card:last-child { grid-column: 1 / -1; }
+  .sdgs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .community-values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 980px) and (hover: hover) {
@@ -525,24 +561,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .cycle-core strong { font-size: 23px; }
   .cycle-node, .cycle-node-1, .cycle-node-2, .cycle-node-3, .cycle-node-4, .cycle-node-5, .cycle-node-6 { min-height: 0; padding: 20px; }
   .cycle-node:not(.cycle-node-6)::after { position: absolute; bottom: -29px; left: 50%; display: grid; width: 26px; height: 26px; place-items: center; color: #fff; background: var(--blue); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 8px 20px rgba(7,27,47,.14); content: "↓"; font-size: 12px; font-weight: 900; transform: translateX(-50%); }
-  .cycle-photo-grid { grid-template-columns: 1fr; margin-top: 16px; }
-  .cycle-photo-grid figure { min-height: 220px; }
+  .cycle-outcomes { grid-template-columns: 1fr; margin-top: 16px; }
+  .cycle-outcomes article, .cycle-outcomes article:last-child { min-height: 0; grid-column: auto; grid-template-columns: 54px 1fr; gap: 15px; padding: 22px 20px; }
+  .cycle-outcome-icon { width: 54px; height: 54px; border-radius: 15px; }
+  .cycle-outcome-icon svg { width: 29px; height: 29px; }
   .bioeconomy-grid { gap: 38px; }
   .bioeconomy-copy h2 { font-size: 29px; line-height: 1.35; }
   .bioeconomy-copy > p { font-size: 15px; }
   .bioeconomy-note { padding: 22px; }
   .bioeconomy-note strong { font-size: 17px; }
-  .bioeconomy-visual { min-height: 500px; }
-  .bioeconomy-photo-main { inset: 0 0 92px; }
-  .bioeconomy-photo-sub { width: 56%; height: 38%; border-width: 6px; }
-  .bioeconomy-visual-label { top: 16px; right: auto; left: 14px; width: min(270px, calc(100% - 28px)); padding: 17px; }
-  .bioeconomy-visual-label strong { font-size: 16px; }
+  .bioeconomy-model { display: grid; min-height: 0; gap: 14px; padding: 18px; border-radius: 24px; }
+  .bioeconomy-model-lines { display: none; }
+  .bioeconomy-model-core { position: relative; inset: auto; width: 100%; height: auto; min-height: 210px; border-width: 0; border-radius: 20px; transform: none; }
+  .bioeconomy-impact, .bioeconomy-impact-environment, .bioeconomy-impact-community, .bioeconomy-impact-economy { position: relative; inset: auto; width: 100%; min-height: 104px; transform: none; }
   .environment-card-grid { grid-template-columns: 1fr; }
   .environment-card, .environment-card:last-child { grid-column: auto; min-height: 0; padding: 28px 24px; }
   .environment-icon { margin-bottom: 24px; }
   .environment-number { top: 28px; right: 24px; }
+  .sdgs-grid { grid-template-columns: 1fr; }
+  .sdg-card { min-height: 0; padding: 24px; }
+  .sdgs-note { padding: 17px 20px; border-radius: 20px; text-align: left; }
   .community-section { padding: 72px 0; }
-  .community-media img { object-position: 62% center; }
+  .community-graphic { top: auto; right: -48%; bottom: 0; width: 150%; height: 54%; opacity: .42; }
+  .community-overlay { background: linear-gradient(180deg, rgba(7,27,47,.98), rgba(7,27,47,.9) 62%, rgba(7,27,47,.72)); }
   .community-copy h2 { font-size: 34px; }
   .community-copy p:last-child { font-size: 16px; }
   .community-values { grid-template-columns: 1fr; gap: 10px; margin-top: 34px; }

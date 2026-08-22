@@ -494,7 +494,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-photo-hero-overlay-readable { background: linear-gradient(90deg, rgba(0,0,0,.48), rgba(0,0,0,.28) 48%, rgba(0,0,0,.04) 78%), linear-gradient(180deg, rgba(7,27,47,.08), rgba(7,27,47,.18) 45%, rgba(7,27,47,.7)); }
   .service-photo-hero-special .service-photo-hero-overlay { background: linear-gradient(180deg, rgba(7,27,47,.12), rgba(7,27,47,.28) 42%, rgba(7,27,47,.68)); }
   .service-photo-hero-copy { width: 100%; padding: 30px 20px; }
-  .service-photo-hero h1 { font-size: 36px; line-height: 1.18; }
+  .service-photo-hero h1 { font-size: clamp(26px, 8.2vw, 36px); line-height: 1.18; }
   .service-photo-hero p:not(.eyebrow) { font-size: 15px; line-height: 1.78; }
   .service-photo-hero-special .service-photo-hero-copy { width: min(82%, 340px); padding: 20px 18px; }
   .service-photo-hero-special h1 { font-size: 31px; line-height: 1.15; }
@@ -504,6 +504,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero-service-grid, .proof-grid, .strength-grid, .service-grid, .works-grid, .works-grid-large, .gallery-grid, .photo-trust-gallery, .contact-form, .company-table div, .news-list article, .location-grid { grid-template-columns: 1fr; }
   .service-card picture, .intro-photo picture, .recycle-photo picture, .lower-hero-image picture { aspect-ratio: 16 / 10; }
   .service-card div, .work-card > div:last-child, .strength-grid article, .service-aside, .accept-card, .contact-info, .contact-form { padding: 22px; }
+  .service-card h3 { font-size: 18px; }
   .section-heading { margin-bottom: 28px; }
   .section-heading h2, .lower-hero h1, .recycle-grid h2, .cta-band h2 { font-size: 30px; line-height: 1.28; }
   .lower-hero { width: calc(100% - 28px); padding: 48px 0 36px; }
@@ -515,9 +516,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .photo-trust-gallery picture:first-child { grid-row: auto; aspect-ratio: 16 / 11; }
   .photo-trust-gallery picture { aspect-ratio: 16 / 11; }
   .contact-strip { padding: 24px; }
+  .contact-strip h2 { font-size: 24px; line-height: 1.35; }
   .contact-strip-actions { width: 100%; flex-direction: column; }
   .floating-cta { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); gap: 7px; }
-  .floating-cta a { flex: 1 1 0; min-height: 40px; padding: 8px 8px; font-size: 13px; box-shadow: 0 12px 28px rgba(7,27,47,.16); }
+  .floating-cta a { flex: 1 1 0; min-height: 44px; padding: 8px 8px; font-size: 13px; box-shadow: 0 12px 28px rgba(7,27,47,.16); }
   .footer-bottom { flex-direction: column; gap: 8px; }
 }
 @media (max-width: 980px) {

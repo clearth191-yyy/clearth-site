@@ -17,12 +17,12 @@
     <link rel="icon" href="assets/images/company/icon-512.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/images/company/icon-512.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="preload" href="assets/css/styles.css?v=20260722-02" as="style">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260722-02">
+    <link rel="preload" href="assets/css/styles.css?v=20260901-01" as="style">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260901-01">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"森づくりストーリー | 株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site/sustainability.html","description":"森林整備から木質チップ製造、バイオマス発電用燃料の供給までを一貫して行う株式会社Clearthの森づくりと森林資源循環への取り組み。","isPartOf":{"@type":"WebSite","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site/"},"about":{"@type":"Organization","name":"株式会社Clearth"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"森づくりストーリー","item":"https://clearth191-yyy.github.io/clearth-site/sustainability.html"}]}</script>
   </head>
-  <body>
+  <body class="sustainability-page">
     <a class="skip-link" href="#main">本文へスキップ</a>
 
     <header class="site-header" data-header>
@@ -47,14 +47,24 @@
         <div class="sustainability-hero-overlay" aria-hidden="true"></div>
         <div class="sustainability-hero-content">
           <p class="eyebrow">CLEARTH FOREST STORY</p>
-          <h1 id="sustainability-title">森づくり<wbr><span style="white-space: nowrap;">ストーリー</span></h1>
+          <h1 id="sustainability-title"><span class="sustainability-title-line">森づくり</span><wbr><span style="white-space: nowrap;">ストーリー</span></h1>
           <p class="sustainability-hero-lead">森林を整え、そこから生まれる木材を資源として活かし、<br class="desktop-break">次の価値へつなぐ。</p>
+        </div>
+        <span class="sustainability-scroll-cue" aria-hidden="true">SCROLL</span>
+      </section>
+
+      <section class="sustainability-intro-section" aria-label="Clearthの森づくりに対する考え方">
+        <div class="container sustainability-intro-grid">
+          <div class="sustainability-intro-label">
+            <p class="eyebrow">OUR APPROACH</p>
+            <span aria-hidden="true"></span>
+          </div>
           <div class="sustainability-hero-copy">
             <p>株式会社Clearthは、森林整備から木材の搬出・受け入れ、一次破砕、木質チップ製造、バイオマス燃料供給までを一つの流れとしてつないでいます。</p>
             <p>森林から生まれた木材を大切に活かし、地域の資源循環と次の森林づくりへつなげることが、私たちの森づくりです。</p>
-          </div>
-          <div class="sustainability-route" aria-label="Clearthの森づくりストーリー">
-            <span>森林を整える</span><i aria-hidden="true">→</i><span>木材を資源へつなぐ</span><i aria-hidden="true">→</i><span>木質チップへ加工</span><i aria-hidden="true">→</i><span>未来へつなぐ</span>
+            <div class="sustainability-route" aria-label="Clearthの森づくりストーリー">
+              <span>森林を整える</span><i aria-hidden="true">→</i><span>木材を資源へつなぐ</span><i aria-hidden="true">→</i><span>木質チップへ加工</span><i aria-hidden="true">→</i><span>未来へつなぐ</span>
+            </div>
           </div>
         </div>
       </section>
@@ -147,6 +157,12 @@
           </nav>
         </div>
       </section>
+
+      <div class="sustainability-visual-bridge" aria-hidden="true">
+        <picture class="sustainability-visual-bridge-main"><source srcset="assets/images/services/wood-chip-manufacturing-main.webp" type="image/webp"><img src="assets/images/services/wood-chip-manufacturing-main.jpg" alt="" loading="lazy" decoding="async" width="1448" height="1086"></picture>
+        <picture class="sustainability-visual-bridge-sub"><source srcset="assets/images/services/biomass-supply-main.webp" type="image/webp"><img src="assets/images/services/biomass-supply-main.jpg" alt="" loading="lazy" decoding="async" width="1448" height="1086"></picture>
+        <span class="sustainability-visual-bridge-line"></span>
+      </div>
 
       <section class="section bioeconomy-section" aria-labelledby="bioeconomy-title">
         <div class="container bioeconomy-grid">
@@ -255,6 +271,7 @@
       </section>
 
       <section class="community-section" aria-labelledby="community-title">
+        <picture class="community-photo" aria-hidden="true"><source srcset="assets/images/generated/town-mountain.webp" type="image/webp"><img src="assets/images/generated/town-mountain.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></picture>
         <div class="community-graphic" aria-hidden="true">
           <svg viewBox="0 0 920 620" preserveAspectRatio="xMidYMid slice">
             <path class="community-mountain community-mountain-back" d="M20 410 180 230l100 105 128-165 184 225 118-135 190 190"/>

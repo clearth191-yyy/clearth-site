@@ -298,13 +298,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .intro-photo img, .recycle-photo img, .lower-hero-image img, .photo-trust-gallery img, .service-card img, .work-card img, .gallery-grid img { transition: transform .55s ease, filter .35s ease; }
 
 /* Sustainability */
-.sustainability-page { --story-navy: #071d33; --story-blue: #1f78b4; --story-cyan: #6bc4e6; --story-pale: #eff6f9; }
+.sustainability-page { --story-navy: #071d33; --story-blue: #1d70a9; --story-cyan: #6bc4e6; --story-pale: #edf5f9; --story-muted: #40576a; --story-line: rgba(31,112,169,.22); }
 .sustainability-page .breadcrumbs { margin-bottom: 0; }
 .sustainability-hero { position: relative; display: flex; min-height: clamp(720px, calc(100svh - 128px), 900px); align-items: flex-end; overflow: hidden; color: #fff; background: var(--story-navy); isolation: isolate; }
 .sustainability-hero-media, .sustainability-hero-media picture, .sustainability-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .sustainability-hero-media { z-index: -2; }
-.sustainability-hero-media img { object-fit: cover; object-position: center 48%; filter: saturate(.92) contrast(1.06) brightness(.92); transform: scale(1.015); }
-.sustainability-hero-overlay { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 78% 22%, rgba(107,196,230,.16), transparent 32%), linear-gradient(90deg, rgba(4,19,35,.94) 0%, rgba(6,29,51,.82) 42%, rgba(7,29,48,.36) 74%, rgba(7,29,48,.16) 100%), linear-gradient(180deg, rgba(7,29,51,.03) 45%, rgba(7,29,51,.64) 100%); }
+.sustainability-hero-media img { object-fit: cover; object-position: center 48%; filter: saturate(.95) contrast(1.1) brightness(.98); transform: scale(1.015); }
+.sustainability-hero-overlay { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 80% 22%, rgba(107,196,230,.1), transparent 34%), linear-gradient(90deg, rgba(4,19,35,.93) 0%, rgba(6,29,51,.75) 40%, rgba(7,29,48,.24) 72%, rgba(7,29,48,.06) 100%), linear-gradient(180deg, rgba(7,29,51,0) 43%, rgba(7,29,51,.56) 100%); }
 .sustainability-hero-content { position: relative; z-index: 2; width: min(1160px, calc(100% - 56px)); margin: 0 auto; padding: clamp(116px, 13vw, 176px) 0 clamp(102px, 10vw, 136px); }
 .sustainability-hero .eyebrow { margin-bottom: 20px; color: var(--story-cyan); letter-spacing: .18em; }
 .sustainability-hero h1 { max-width: 980px; margin-bottom: 26px; color: #fff; font-size: clamp(58px, 6.7vw, 92px); line-height: 1.04; letter-spacing: -.025em; text-wrap: balance; }
@@ -315,24 +315,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .sustainability-intro-grid { display: grid; grid-template-columns: minmax(150px, .34fr) minmax(0, 1fr); gap: clamp(44px, 8vw, 116px); align-items: start; }
 .sustainability-intro-label { padding-top: 8px; }
 .sustainability-intro-label .eyebrow { margin: 0 0 22px; color: var(--story-blue); }
-.sustainability-intro-label > span { display: block; width: 1px; height: 116px; margin-left: 7px; background: linear-gradient(var(--story-blue), rgba(31,120,180,.05)); }
+.sustainability-intro-label > span { display: block; width: 1px; height: 116px; margin-left: 7px; background: linear-gradient(var(--story-blue), rgba(31,112,169,.16)); }
 .sustainability-hero-copy { display: grid; max-width: 850px; gap: 18px; }
 .sustainability-hero-copy p { max-width: 800px; margin: 0; color: var(--navy); line-height: 1.95; }
 .sustainability-hero-copy p:first-child { font-size: clamp(20px, 2vw, 27px); font-weight: 800; letter-spacing: .015em; }
-.sustainability-hero-copy p:nth-child(2) { color: #3e5265; font-size: 16px; }
-.sustainability-route { display: inline-flex; width: fit-content; flex-wrap: wrap; align-items: center; gap: 11px; margin-top: 18px; padding: 17px 21px; background: var(--story-pale); border: 1px solid rgba(31,120,180,.14); border-radius: 999px; }
+.sustainability-hero-copy p:nth-child(2) { color: var(--story-muted); font-size: 16px; }
+.sustainability-route { display: inline-flex; width: fit-content; flex-wrap: wrap; align-items: center; gap: 11px; margin-top: 18px; padding: 17px 21px; background: var(--story-pale); border: 1px solid var(--story-line); border-radius: 999px; }
 .sustainability-route span { color: var(--navy); font-size: 12px; font-weight: 900; letter-spacing: .02em; }
 .sustainability-route i { color: var(--story-blue); font-style: normal; font-weight: 900; }
 .sustainability-cycle-section { padding-top: clamp(112px, 11vw, 156px); padding-bottom: clamp(108px, 10vw, 148px); overflow: hidden; background: radial-gradient(circle at 50% 32%, rgba(107,196,230,.1), transparent 30%), linear-gradient(180deg, #f3f8fb 0%, #fff 100%); }
 .sustainability-heading { max-width: 900px; margin-right: auto; margin-left: auto; text-align: center; }
 .sustainability-heading .eyebrow { color: var(--story-blue); }
-.sustainability-heading p:last-child { max-width: 780px; margin-right: auto; margin-left: auto; }
-.cycle-system { position: relative; height: 820px; margin-top: 62px; overflow: hidden; background: rgba(255,255,255,.72); border: 1px solid rgba(31,120,180,.14); border-radius: 38px; box-shadow: 0 30px 90px rgba(7,29,51,.09); isolation: isolate; }
+.sustainability-heading p:last-child { max-width: 780px; margin-right: auto; margin-left: auto; color: var(--story-muted); }
+.cycle-system { position: relative; height: 820px; margin-top: 62px; overflow: hidden; background: rgba(255,255,255,.78); border: 1px solid var(--story-line); border-radius: 38px; box-shadow: 0 30px 90px rgba(7,29,51,.09); isolation: isolate; }
 .cycle-system::before, .cycle-system::after { position: absolute; z-index: -1; border-radius: 50%; content: ""; pointer-events: none; }
-.cycle-system::before { top: 50%; left: 50%; width: 570px; height: 570px; background: radial-gradient(circle, rgba(255,255,255,.98) 0 38%, rgba(107,196,230,.08) 38.5% 63%, transparent 63.5%); border: 1px solid rgba(31,120,180,.09); transform: translate(-50%, -50%); }
+.cycle-system::before { top: 50%; left: 50%; width: 570px; height: 570px; background: radial-gradient(circle, rgba(255,255,255,.98) 0 38%, rgba(107,196,230,.11) 38.5% 63%, transparent 63.5%); border: 1px solid rgba(31,112,169,.15); transform: translate(-50%, -50%); }
 .cycle-system::after { top: -170px; right: -120px; width: 430px; height: 430px; background: rgba(31,120,180,.045); }
 .cycle-orbit { position: absolute; inset: 34px; width: calc(100% - 68px); height: calc(100% - 68px); overflow: visible; }
-.cycle-orbit ellipse, .cycle-orbit path { fill: none; stroke: rgba(31,120,180,.28); stroke-width: 1.6; stroke-dasharray: 6 9; vector-effect: non-scaling-stroke; }
+.cycle-orbit ellipse, .cycle-orbit path { fill: none; stroke: rgba(31,112,169,.38); stroke-width: 1.6; stroke-dasharray: 6 9; vector-effect: non-scaling-stroke; }
 .cycle-orbit .cycle-orbit-accent { stroke: rgba(107,196,230,.82); stroke-width: 2.5; stroke-dasharray: none; }
 .cycle-direction { position: absolute; z-index: 4; display: grid; width: 32px; height: 32px; place-items: center; color: #fff; background: linear-gradient(135deg, var(--story-blue), #4eb4df); border: 4px solid #fff; border-radius: 50%; box-shadow: 0 9px 22px rgba(7,29,51,.16); font-size: 13px; font-weight: 900; }
 .cycle-direction-1 { top: 176px; left: 32%; }
@@ -347,7 +347,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .cycle-core small { color: rgba(255,255,255,.66); font-size: 9px; font-weight: 900; letter-spacing: .15em; }
 .cycle-core strong { margin-top: 6px; color: #fff; font-size: 25px; line-height: 1.38; }
 .cycle-core p { max-width: 180px; margin: 9px 0 0; color: rgba(255,255,255,.76); font-size: 10px; line-height: 1.65; }
-.cycle-node { position: absolute; z-index: 3; width: 248px; min-height: 166px; padding: 20px 21px; background: rgba(255,255,255,.94); border: 1px solid rgba(31,120,180,.18); border-radius: 18px; box-shadow: 0 14px 38px rgba(7,29,51,.08); backdrop-filter: blur(10px); transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+.cycle-node { position: absolute; z-index: 3; width: 248px; min-height: 166px; padding: 20px 21px; background: rgba(255,255,255,.96); border: 1px solid rgba(31,112,169,.24); border-radius: 18px; box-shadow: 0 14px 38px rgba(7,29,51,.08); backdrop-filter: blur(10px); transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
 .cycle-node-1 { top: 56px; left: 38px; }
 .cycle-node-2 { top: 26px; left: 50%; transform: translateX(-50%); }
 .cycle-node-3 { top: 56px; right: 38px; }
@@ -355,19 +355,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .cycle-node-5 { bottom: 26px; left: 50%; transform: translateX(-50%); }
 .cycle-node-6 { bottom: 56px; left: 38px; }
 .cycle-node-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; }
-.cycle-node-icon { display: grid; width: 42px; height: 42px; place-items: center; color: var(--story-blue); background: rgba(31,120,180,.08); border: 1px solid rgba(31,120,180,.1); border-radius: 50%; }
+.cycle-node-icon { display: grid; width: 42px; height: 42px; place-items: center; color: var(--story-blue); background: rgba(31,112,169,.1); border: 1px solid rgba(31,112,169,.18); border-radius: 50%; }
 .cycle-node-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-.cycle-number { color: rgba(31,120,180,.42); font-size: 12px; font-weight: 900; letter-spacing: .14em; }
+.cycle-number { color: rgba(29,112,169,.58); font-size: 12px; font-weight: 900; letter-spacing: .14em; }
 .cycle-node h3 { margin-bottom: 7px; color: var(--navy); font-size: 16px; line-height: 1.45; }
-.cycle-node p { margin: 0; color: #526577; font-size: 11px; line-height: 1.72; }
+.cycle-node p { margin: 0; color: var(--story-muted); font-size: 11px; line-height: 1.72; }
 .cycle-outcomes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
-.cycle-outcomes article { display: grid; min-height: 190px; grid-template-columns: 68px 1fr; gap: 20px; align-items: start; padding: 34px 30px; background: #fff; border: 1px solid rgba(31,120,180,.14); border-radius: 18px; box-shadow: 0 14px 40px rgba(7,29,51,.055); transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
-.cycle-outcome-icon { display: grid; width: 68px; height: 68px; place-items: center; color: var(--story-blue); background: var(--story-pale); border: 1px solid rgba(31,120,180,.12); border-radius: 50%; }
+.cycle-outcomes article { display: grid; min-height: 190px; grid-template-columns: 68px 1fr; gap: 20px; align-items: start; padding: 34px 30px; background: #fff; border: 1px solid var(--story-line); border-radius: 18px; box-shadow: 0 14px 40px rgba(7,29,51,.055); transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+.cycle-outcome-icon { display: grid; width: 68px; height: 68px; place-items: center; color: var(--story-blue); background: var(--story-pale); border: 1px solid rgba(31,112,169,.2); border-radius: 50%; }
 .cycle-outcome-icon svg { width: 33px; height: 33px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 .cycle-outcomes small, .cycle-outcomes strong { display: block; }
 .cycle-outcomes small { margin-bottom: 8px; color: var(--story-blue); font-size: 9px; font-weight: 900; letter-spacing: .15em; }
 .cycle-outcomes strong { color: var(--navy); font-size: 19px; line-height: 1.4; }
-.cycle-outcomes p { margin: 8px 0 0; color: #526577; font-size: 12px; line-height: 1.75; }
+.cycle-outcomes p { margin: 8px 0 0; color: var(--story-muted); font-size: 12px; line-height: 1.75; }
+.sustainability-page .related-links a { color: var(--story-navy); border-color: var(--story-line); box-shadow: 0 8px 24px rgba(7,29,51,.035); }
 .sustainability-visual-bridge { position: relative; min-height: 690px; padding: clamp(72px, 8vw, 112px) max(28px, calc((100vw - 1240px) / 2)); overflow: hidden; background: linear-gradient(135deg, #061b30, #0b3553); isolation: isolate; }
 .sustainability-visual-bridge::before { position: absolute; inset: 0; background: radial-gradient(circle at 86% 20%, rgba(107,196,230,.13), transparent 27%), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: auto, 72px 72px; content: ""; pointer-events: none; }
 .sustainability-visual-bridge picture { position: absolute; display: block; overflow: hidden; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 28px 70px rgba(0,0,0,.28); }
@@ -378,35 +379,38 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .sustainability-visual-bridge-sub img { object-position: center; }
 .sustainability-visual-bridge-line { position: absolute; right: max(32px, calc((100vw - 1240px) / 2)); top: 8%; width: 1px; height: 110px; background: linear-gradient(var(--story-cyan), transparent); }
 .bioeconomy-section { padding-top: clamp(112px, 11vw, 158px); padding-bottom: clamp(112px, 11vw, 158px); background: linear-gradient(180deg, #fff, #f5f9fb); }
-.bioeconomy-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(430px, 1.08fr); gap: clamp(48px, 7vw, 96px); align-items: center; }
+.bioeconomy-grid { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(410px, .82fr); gap: clamp(48px, 6vw, 82px); align-items: center; }
 .bioeconomy-copy .eyebrow { color: var(--story-blue); }
-.bioeconomy-copy h2 { margin-bottom: 28px; color: var(--navy); font-size: clamp(35px, 4.2vw, 55px); line-height: 1.3; text-wrap: balance; }
-.bioeconomy-copy > p { color: #42576a; font-size: 15px; line-height: 2; }
-.bioeconomy-note { position: relative; margin-top: 34px; padding: 28px 30px 28px 34px; overflow: hidden; background: #fff; border: 1px solid rgba(31,120,180,.17); border-left: 4px solid var(--story-blue); border-radius: 0 18px 18px 0; box-shadow: 0 16px 42px rgba(7,29,51,.06); }
+.bioeconomy-copy h2 { margin-bottom: 28px; color: var(--story-navy); font-size: clamp(37px, 3vw, 44px); line-height: 1.3; text-wrap: balance; }
+.bioeconomy-title-term, .bioeconomy-title-action { display: block; }
+.bioeconomy-title-term { white-space: nowrap; }
+.bioeconomy-title-term > span { white-space: nowrap; }
+.bioeconomy-copy > p { color: var(--story-muted); font-size: 15px; line-height: 2; }
+.bioeconomy-note { position: relative; margin-top: 34px; padding: 28px 30px 28px 34px; overflow: hidden; background: #fff; border: 1px solid var(--story-line); border-left: 4px solid var(--story-blue); border-radius: 0 18px 18px 0; box-shadow: 0 16px 42px rgba(7,29,51,.06); }
 .bioeconomy-note::after { position: absolute; top: -70px; right: -55px; width: 180px; height: 180px; background: rgba(107,196,230,.08); border-radius: 50%; content: ""; }
 .bioeconomy-note span, .bioeconomy-note strong { position: relative; z-index: 1; display: block; }
 .bioeconomy-note span { margin-bottom: 9px; color: var(--story-blue); font-size: 11px; font-weight: 900; letter-spacing: .06em; }
 .bioeconomy-note strong { color: var(--navy); font-size: 18px; line-height: 1.7; }
-.bioeconomy-note p { position: relative; z-index: 1; margin: 10px 0 0; color: #526577; font-size: 12px; line-height: 1.8; }
-.bioeconomy-model { position: relative; min-height: 620px; overflow: hidden; background: radial-gradient(circle at 50% 49%, rgba(107,196,230,.14), transparent 25%), linear-gradient(145deg, #f8fbfc, #eaf3f7); border: 1px solid rgba(31,120,180,.15); border-radius: 32px; box-shadow: 0 28px 76px rgba(7,29,51,.1); isolation: isolate; }
+.bioeconomy-note p { position: relative; z-index: 1; margin: 10px 0 0; color: var(--story-muted); font-size: 12px; line-height: 1.8; }
+.bioeconomy-model { position: relative; min-height: 620px; overflow: hidden; background: radial-gradient(circle at 50% 49%, rgba(107,196,230,.16), transparent 25%), linear-gradient(145deg, #f8fbfc, #eaf3f7); border: 1px solid var(--story-line); border-radius: 32px; box-shadow: 0 28px 76px rgba(7,29,51,.1); isolation: isolate; }
 .bioeconomy-model::before, .bioeconomy-model::after { position: absolute; z-index: -1; width: 280px; height: 280px; background: rgba(31,120,180,.05); border-radius: 50%; content: ""; }
 .bioeconomy-model::before { top: -150px; right: -100px; }
 .bioeconomy-model::after { bottom: -160px; left: -90px; background: rgba(107,196,230,.07); }
 .bioeconomy-model-lines { position: absolute; inset: 32px; width: calc(100% - 64px); height: calc(100% - 64px); }
-.bioeconomy-model-lines path, .bioeconomy-model-lines circle { fill: none; stroke: rgba(31,120,180,.26); stroke-width: 1.8; stroke-dasharray: 6 9; vector-effect: non-scaling-stroke; }
+.bioeconomy-model-lines path, .bioeconomy-model-lines circle { fill: none; stroke: rgba(31,112,169,.36); stroke-width: 1.8; stroke-dasharray: 6 9; vector-effect: non-scaling-stroke; }
 .bioeconomy-model-lines circle { stroke: rgba(107,196,230,.48); stroke-dasharray: none; }
 .bioeconomy-model-core { position: absolute; top: 49%; left: 50%; display: flex; width: 204px; height: 204px; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-align: center; background: radial-gradient(circle at 32% 20%, #2d87be, #125d91 48%, #082b4d); border: 9px solid rgba(255,255,255,.94); border-radius: 50%; box-shadow: 0 22px 50px rgba(7,45,77,.24); transform: translate(-50%, -50%); }
 .bioeconomy-model-core span { display: grid; width: 44px; height: 44px; place-items: center; margin-bottom: 6px; }
 .bioeconomy-model-core svg, .bioeconomy-impact svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .bioeconomy-model-core small { color: rgba(255,255,255,.68); font-size: 9px; font-weight: 900; letter-spacing: .14em; }
 .bioeconomy-model-core strong { margin-top: 4px; font-size: 20px; line-height: 1.38; }
-.bioeconomy-impact { position: absolute; display: grid; width: 220px; min-height: 112px; grid-template-columns: 48px 1fr; gap: 14px; align-items: center; padding: 18px; background: rgba(255,255,255,.96); border: 1px solid rgba(31,120,180,.16); border-radius: 16px; box-shadow: 0 14px 36px rgba(7,29,51,.09); }
+.bioeconomy-impact { position: absolute; display: grid; width: 220px; min-height: 112px; grid-template-columns: 48px 1fr; gap: 14px; align-items: center; padding: 18px; background: rgba(255,255,255,.97); border: 1px solid var(--story-line); border-radius: 16px; box-shadow: 0 14px 36px rgba(7,29,51,.09); }
 .bioeconomy-impact > span { display: grid; width: 48px; height: 48px; place-items: center; color: var(--story-blue); background: rgba(31,120,180,.08); border-radius: 50%; }
 .bioeconomy-impact > span svg { width: 28px; height: 28px; }
 .bioeconomy-impact small, .bioeconomy-impact strong { display: block; }
 .bioeconomy-impact small { color: var(--story-blue); font-size: 9px; font-weight: 900; letter-spacing: .14em; }
 .bioeconomy-impact strong { margin-top: 2px; color: var(--navy); font-size: 17px; }
-.bioeconomy-impact p { margin: 3px 0 0; color: #526577; font-size: 10px; line-height: 1.55; }
+.bioeconomy-impact p { margin: 3px 0 0; color: var(--story-muted); font-size: 10px; line-height: 1.55; }
 .bioeconomy-impact-environment { top: 32px; left: 50%; transform: translateX(-50%); }
 .bioeconomy-impact-community { bottom: 34px; left: 26px; }
 .bioeconomy-impact-economy { right: 26px; bottom: 34px; }
@@ -415,7 +419,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .environmental-section .container { position: relative; }
 .environmental-section .sustainability-heading .eyebrow { color: var(--story-cyan); }
 .environmental-section .sustainability-heading h2 { color: #fff; }
-.environmental-section .sustainability-heading p:last-child { color: rgba(255,255,255,.7); }
+.environmental-section .sustainability-heading p:last-child { color: rgba(255,255,255,.78); }
 .environment-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(255,255,255,.18); border-bottom: 1px solid rgba(255,255,255,.18); }
 .environment-card { position: relative; min-height: 326px; padding: 42px 34px; overflow: hidden; background: rgba(255,255,255,.025); border-right: 1px solid rgba(255,255,255,.14); transition: background .24s ease, transform .24s ease; }
 .environment-card:last-child { border-right: 0; }
@@ -424,16 +428,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .environment-icon svg { width: 31px; height: 31px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .environment-number { position: absolute; top: 33px; right: 30px; color: rgba(255,255,255,.1); font-size: 52px; font-weight: 900; line-height: 1; letter-spacing: -.03em; }
 .environment-card h3 { position: relative; z-index: 1; margin-bottom: 14px; color: #fff; font-size: 21px; line-height: 1.5; }
-.environment-card p { position: relative; z-index: 1; margin: 0; color: rgba(255,255,255,.7); font-size: 13px; line-height: 1.85; }
+.environment-card p { position: relative; z-index: 1; margin: 0; color: rgba(255,255,255,.78); font-size: 13px; line-height: 1.85; }
 .sdgs-section { padding-top: clamp(108px, 10vw, 148px); padding-bottom: clamp(108px, 10vw, 148px); overflow: hidden; background: #f4f7f9; }
 .sdgs-official-logo { display: block; width: min(300px, 42%); height: auto; margin: 0 auto 22px; }
 .sdgs-grid { display: grid; max-width: 1160px; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 0 auto; }
-.sdg-card { display: flex; min-width: 0; min-height: 330px; align-items: center; flex-direction: column; padding: 26px 22px 24px; background: #fff; border: 1px solid rgba(7,29,51,.1); border-radius: 16px; box-shadow: 0 12px 34px rgba(7,29,51,.045); }
+.sdg-card { display: flex; min-width: 0; min-height: 330px; align-items: center; flex-direction: column; padding: 26px 22px 24px; background: #fff; border: 1px solid rgba(7,29,51,.15); border-radius: 16px; box-shadow: 0 12px 34px rgba(7,29,51,.045); }
 .sdg-card img { display: block; width: min(148px, 72%); height: auto; aspect-ratio: 1; object-fit: contain; }
 .sdg-card p { width: 100%; min-height: 82px; padding: 17px 2px 0; margin: 18px 0 0; color: var(--navy); border-top: 1px solid rgba(7,29,51,.09); font-size: 12px; font-weight: 700; line-height: 1.75; }
 .sdgs-note { max-width: 1040px; padding: 24px 28px 0; margin: 40px auto 0; color: var(--navy); text-align: center; border-top: 1px solid rgba(7,29,51,.12); }
 .sdgs-note > p:first-child { margin: 0; font-size: 13px; font-weight: 800; }
-.sdgs-attribution { margin: 15px 0 0; color: var(--muted); font-size: 10px; font-weight: 500; line-height: 1.85; }
+.sdgs-attribution { margin: 15px 0 0; color: #506579; font-size: 10px; font-weight: 500; line-height: 1.85; }
 .sdgs-attribution a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 .community-section { position: relative; min-height: 880px; padding: clamp(118px, 12vw, 170px) 0 clamp(108px, 11vw, 154px); overflow: hidden; color: #fff; background: var(--story-navy); isolation: isolate; }
 .community-photo, .community-photo img { position: absolute; z-index: -3; inset: 0; width: 100%; height: 100%; }
@@ -464,16 +468,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .community-message p { margin-bottom: 10px; color: rgba(255,255,255,.78); font-size: 15px; font-weight: 800; letter-spacing: .03em; }
 .community-message strong { color: #fff; font-size: clamp(21px, 2.3vw, 29px); line-height: 1.7; }
 .sustainability-cta { background: radial-gradient(circle at 82% 18%, rgba(107,196,230,.2), transparent 28%), linear-gradient(135deg, #081f37, #0c4667); }
+.sustainability-page .floating-cta { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); gap: 8px; }
+.sustainability-page .floating-cta a { min-height: 42px; padding: 8px 15px; color: #fff; border: 1px solid rgba(255,255,255,.2); font-size: 12px; box-shadow: 0 10px 28px rgba(7,29,51,.14); backdrop-filter: blur(10px); }
+.sustainability-page .floating-tel { background: linear-gradient(135deg, rgba(22,79,121,.96), rgba(7,35,61,.97)); }
+.sustainability-page .floating-mail { background: linear-gradient(135deg, rgba(52,137,187,.96), rgba(24,90,134,.97)); }
 @media (hover: hover) {
   .button:hover, .nav-contact:hover, .floating-cta a:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(7,27,47,.18); }
   .hero-service-card:hover { transform: translateY(-2px); background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.34); }
   .strength-grid article:hover, .service-card:hover, .work-card:hover, .location-card:hover, .resource-step a:hover { transform: translateY(-3px); border-color: rgba(31,120,180,.26); box-shadow: 0 22px 54px rgba(7,27,47,.12); }
   .service-card:hover img, .work-card:hover img, .photo-trust-gallery picture:hover img, .gallery-grid picture:hover img, .resource-step:hover img { transform: scale(1.025); }
-  .cycle-node:hover { border-color: rgba(31,138,87,.34); box-shadow: 0 22px 54px rgba(7,27,47,.14); }
+  .cycle-node:hover { border-color: rgba(29,112,169,.36); box-shadow: 0 22px 54px rgba(7,27,47,.14); }
   .cycle-node-2:hover, .cycle-node-5:hover { transform: translateX(-50%) translateY(-3px); }
   .cycle-node-1:hover, .cycle-node-3:hover, .cycle-node-4:hover, .cycle-node-6:hover, .cycle-outcomes article:hover { transform: translateY(-3px); }
   .cycle-outcomes article:hover { box-shadow: 0 22px 54px rgba(7,27,47,.12); }
   .environment-card:hover { background: rgba(255,255,255,.06); }
+  .sustainability-page .floating-cta a:hover { transform: translateY(-1px); box-shadow: 0 13px 30px rgba(7,29,51,.17); filter: brightness(1.06); }
+}
+@media (max-width: 1100px) {
+  .bioeconomy-grid { grid-template-columns: 1fr; }
+  .bioeconomy-copy { max-width: 840px; }
+  .bioeconomy-model { width: min(100%, 700px); min-height: 600px; margin: 0 auto; }
 }
 @media (max-width: 980px) {
   body { padding-top: calc(80px + env(safe-area-inset-top)); }
@@ -629,6 +643,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .sustainability-visual-bridge-sub, .sustainability-visual-bridge-line { display: none; }
   .bioeconomy-grid { gap: 38px; }
   .bioeconomy-copy h2 { font-size: 29px; line-height: 1.35; }
+  .bioeconomy-title-term { white-space: normal; }
   .bioeconomy-copy > p { font-size: 15px; }
   .bioeconomy-note { padding: 22px; }
   .bioeconomy-note strong { font-size: 17px; }
@@ -647,6 +662,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .sdgs-note { padding: 18px 0 0; text-align: left; }
   .sdgs-note > p:first-child { font-size: 12px; line-height: 1.7; }
   .sdgs-attribution { font-size: 9px; }
+  .sustainability-page .floating-cta { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); gap: 7px; }
+  .sustainability-page .floating-cta a { min-height: 44px; padding: 8px; font-size: 13px; }
   .community-section { min-height: 0; padding: 88px 0 92px; }
   .community-photo img { object-position: 56% center; }
   .community-graphic { right: -48%; bottom: 0; width: 150%; height: 48%; opacity: .22; }

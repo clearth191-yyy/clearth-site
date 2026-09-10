@@ -1,0 +1,533 @@
+.forest-story-v4 {
+  --fs-forest: #153c2d;
+  --fs-forest-deep: #09261d;
+  --fs-moss: #66755a;
+  --fs-sage: #9aa58d;
+  --fs-bark: #6f5138;
+  --fs-ivory: #f5f2e9;
+  --fs-paper: #fbfaf5;
+  --fs-greige: #e5e0d4;
+  --fs-ink: #24312a;
+  --fs-muted: #5f675f;
+  --fs-rule: rgba(45, 65, 53, .24);
+  color: var(--fs-ink);
+  background: var(--fs-paper);
+}
+
+.forest-story-v4 main { background: var(--fs-paper); }
+.forest-story-v4 main h1,
+.forest-story-v4 main h2,
+.forest-story-v4 main h3 {
+  color: var(--fs-forest-deep);
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", serif;
+  font-weight: 600;
+  letter-spacing: .055em;
+}
+.forest-story-v4 main p { color: var(--fs-muted); }
+.forest-story-v4 .breadcrumbs {
+  width: min(1180px, calc(100% - 64px));
+  margin-top: 0;
+  padding: 18px 0;
+  color: #70776f;
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+.forest-story-v4 .breadcrumbs li + li::before { color: #adb3aa; }
+.fs-shell { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
+.fs-kicker {
+  margin: 0 0 18px;
+  color: var(--fs-moss) !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .24em;
+  line-height: 1.4;
+}
+.fs-kicker--light { color: rgba(255, 255, 255, .78) !important; }
+.fs-heading { max-width: 710px; margin-bottom: clamp(46px, 6vw, 78px); }
+.fs-heading h2 {
+  margin-bottom: 22px;
+  font-size: clamp(34px, 4.15vw, 58px);
+  line-height: 1.35;
+}
+.fs-heading > p:last-child,
+.fs-heading--wide > p:not(.fs-kicker) { margin-bottom: 10px; font-size: 16px; line-height: 2; }
+
+/* Hero */
+.fs-hero {
+  position: relative;
+  min-height: clamp(640px, calc(100svh - 120px), 850px);
+  overflow: hidden;
+  color: #fff;
+  background: var(--fs-forest-deep);
+}
+.fs-hero__media,
+.fs-hero__media img,
+.fs-hero__shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.fs-hero__media img {
+  object-fit: cover;
+  object-position: center 54%;
+  filter: saturate(.9) contrast(1.04) brightness(.93);
+}
+.fs-hero__shade {
+  background: linear-gradient(90deg, rgba(7, 30, 22, .8) 0%, rgba(7, 30, 22, .55) 40%, rgba(7, 30, 22, .12) 74%, rgba(7, 30, 22, .18) 100%), linear-gradient(180deg, rgba(6, 25, 19, .08), rgba(6, 25, 19, .26));
+}
+.fs-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: inherit;
+  justify-content: center;
+  flex-direction: column;
+  padding: 112px 0 118px;
+}
+.forest-story-v4 .fs-hero h1 {
+  max-width: 900px;
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(48px, 6.7vw, 94px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: .09em;
+  text-wrap: balance;
+}
+.fs-hero__copy {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, .95) !important;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(20px, 2.4vw, 31px);
+  letter-spacing: .11em;
+  line-height: 1.75;
+}
+.fs-hero__subcopy {
+  max-width: 590px;
+  margin: 0;
+  color: rgba(255, 255, 255, .75) !important;
+  font-size: 15px;
+  letter-spacing: .08em;
+}
+.fs-hero__aside {
+  position: absolute;
+  z-index: 2;
+  top: 17%;
+  right: clamp(24px, 4vw, 70px);
+  margin: 0;
+  color: rgba(255, 255, 255, .82) !important;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 14px;
+  letter-spacing: .32em;
+  line-height: 2;
+  writing-mode: vertical-rl;
+}
+.fs-hero__index {
+  position: absolute;
+  z-index: 2;
+  right: clamp(24px, 4vw, 70px);
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0;
+  color: rgba(255, 255, 255, .8) !important;
+  font-size: 11px;
+  letter-spacing: .18em;
+}
+.fs-hero__index span { width: 44px; height: 1px; background: rgba(255, 255, 255, .6); }
+
+/* Introduction */
+.fs-intro {
+  position: relative;
+  padding: clamp(90px, 10vw, 148px) 0;
+  overflow: hidden;
+  background: var(--fs-paper);
+}
+.fs-intro::after {
+  position: absolute;
+  right: -60px;
+  bottom: -104px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(91, 112, 84, .13);
+  border-radius: 50%;
+  content: "";
+}
+.fs-intro__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(58px, 9vw, 140px);
+}
+.fs-intro h2 { margin: 0; font-size: clamp(36px, 4.5vw, 61px); line-height: 1.45; }
+.fs-intro__copy { max-width: 680px; padding-top: 32px; border-top: 1px solid var(--fs-rule); }
+.fs-intro__copy p { margin-bottom: 24px; color: #505a53; font-size: 16px; line-height: 2.05; }
+.fs-intro__copy p:last-child { margin-bottom: 0; }
+
+/* Four chapters */
+.fs-story { padding-bottom: clamp(98px, 11vw, 166px); background: var(--fs-paper); }
+.fs-chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: clamp(48px, 8vw, 116px);
+  align-items: center;
+  padding: clamp(44px, 6.5vw, 86px) 0;
+  border-top: 1px solid var(--fs-rule);
+}
+.fs-chapter:last-child { border-bottom: 1px solid var(--fs-rule); }
+.fs-chapter:nth-child(even) .fs-chapter__image { order: 2; }
+.fs-chapter:nth-child(even) .fs-chapter__body { order: 1; }
+.fs-chapter__image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #d8ddcf;
+}
+.fs-chapter__image::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(7, 30, 22, .12));
+  content: "";
+}
+.fs-chapter__image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.86) contrast(1.03); }
+.fs-chapter:nth-child(1) .fs-chapter__image img { object-position: center 48%; }
+.fs-chapter:nth-child(2) .fs-chapter__image img { object-position: 43% center; }
+.fs-chapter:nth-child(3) .fs-chapter__image img { object-position: 64% center; }
+.fs-chapter:nth-child(4) .fs-chapter__image img { object-position: 67% center; }
+.fs-chapter__body { max-width: 480px; }
+.fs-chapter__number,
+.fs-cycle__number,
+.fs-actions__number {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 14px;
+  color: var(--fs-moss) !important;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  letter-spacing: .12em;
+}
+.fs-chapter__number span { width: 45px; height: 1px; background: var(--fs-sage); }
+.fs-chapter h2 { margin: 0 0 24px; font-size: clamp(30px, 3.5vw, 47px); line-height: 1.35; }
+.fs-chapter__body > p:not(.fs-chapter__number) { margin-bottom: 16px; color: #555e57; font-size: 16px; line-height: 2; }
+.fs-chapter__body > p:last-child { margin-bottom: 0; }
+
+/* Resource cycle */
+.fs-cycle {
+  padding: clamp(96px, 11vw, 158px) 0;
+  background: var(--fs-ivory);
+  border-block: 1px solid rgba(56, 73, 61, .12);
+}
+.fs-heading--wide { max-width: 780px; }
+.fs-cycle__flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(18px, 2.8vw, 40px);
+  padding: 0;
+  margin: clamp(62px, 8vw, 102px) 0 0;
+  list-style: none;
+}
+.fs-cycle__flow::before {
+  position: absolute;
+  z-index: 0;
+  top: 64px;
+  right: 7%;
+  left: 7%;
+  height: 1px;
+  background: var(--fs-rule);
+  content: "";
+}
+.fs-cycle__flow li { position: relative; z-index: 1; min-width: 0; }
+.fs-cycle__flow li:not(:last-child)::after {
+  position: absolute;
+  top: 57px;
+  right: -25px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid var(--fs-moss);
+  border-right: 1px solid var(--fs-moss);
+  content: "";
+  transform: rotate(45deg);
+}
+.fs-cycle__flow picture {
+  position: relative;
+  width: 128px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  margin-bottom: 22px;
+  background: #ccd3c6;
+  border: 7px solid var(--fs-ivory);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(51, 76, 61, .2);
+}
+.fs-cycle__flow img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.82) contrast(1.04); }
+.fs-cycle__flow li:nth-child(1) img { object-position: 43% center; }
+.fs-cycle__flow li:nth-child(2) img { object-position: 66% center; }
+.fs-cycle__flow li:nth-child(4) img { object-position: center 40%; }
+.fs-cycle__flow li:nth-child(5) img { object-position: 62% center; }
+.fs-cycle__flow li:nth-child(6) img { object-position: 69% center; }
+.fs-cycle__number { margin-bottom: 10px; font-size: 12px; }
+.fs-cycle__flow h3 { min-height: 4em; margin: 0 0 12px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.72; letter-spacing: .02em; }
+.fs-cycle__flow li > p:last-child { margin: 0; color: #596159; font-size: 13px; line-height: 1.85; }
+.fs-text-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  justify-content: flex-end;
+  padding-top: 42px;
+  margin-top: 56px;
+  border-top: 1px solid var(--fs-rule);
+}
+.fs-text-links a { position: relative; padding-right: 28px; color: var(--fs-forest); font-size: 14px; font-weight: 700; }
+.fs-text-links a::after { position: absolute; top: 50%; right: 0; content: "→"; transform: translateY(-50%); }
+
+/* Circular bioeconomy */
+.fs-bioeconomy {
+  display: grid;
+  grid-template-columns: minmax(360px, 38%) minmax(0, 62%);
+  min-height: 760px;
+  background: var(--fs-paper);
+}
+.fs-bioeconomy__visual { position: relative; min-height: 720px; overflow: hidden; background: var(--fs-forest-deep); }
+.fs-bioeconomy__visual picture,
+.fs-bioeconomy__visual img { width: 100%; height: 100%; }
+.fs-bioeconomy__visual img { object-fit: cover; object-position: 49% center; filter: saturate(.8) contrast(1.05) brightness(.78); }
+.fs-bioeconomy__visual::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8, 37, 27, .08), rgba(8, 37, 27, .5)); content: ""; }
+.fs-bioeconomy__visual > p {
+  position: absolute;
+  z-index: 1;
+  left: clamp(30px, 4vw, 70px);
+  bottom: 46px;
+  margin: 0;
+  color: rgba(255, 255, 255, .9) !important;
+  font-size: 13px;
+  letter-spacing: .25em;
+  line-height: 1.8;
+}
+.fs-bioeconomy__body { display: flex; justify-content: center; flex-direction: column; padding: clamp(72px, 8vw, 124px) clamp(44px, 5vw, 88px); }
+.fs-bioeconomy__body h2 { max-width: 760px; margin: 0 0 32px; font-size: clamp(34px, 3.1vw, 44px); line-height: 1.45; letter-spacing: .025em; }
+.fs-bioeconomy__body h2 span { white-space: nowrap; }
+.fs-bioeconomy__body > p:not(.fs-kicker) { max-width: 680px; margin-bottom: 20px; color: #535d55; font-size: 16px; line-height: 2; }
+.fs-bioeconomy__note { max-width: 700px; padding: 26px 30px; margin-top: 14px; background: var(--fs-ivory); border: 1px solid rgba(60, 79, 65, .2); }
+.fs-bioeconomy__note small,
+.fs-bioeconomy__note strong { display: block; }
+.fs-bioeconomy__note small { margin-bottom: 7px; color: var(--fs-bark); font-size: 13px; font-weight: 700; }
+.fs-bioeconomy__note strong { color: var(--fs-forest-deep); font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif; font-size: 18px; font-weight: 600; line-height: 1.9; }
+.fs-bioeconomy__path { display: flex; flex-wrap: wrap; gap: 8px 13px; align-items: center; max-width: 700px; padding-top: 26px; margin-top: 26px; border-top: 1px solid var(--fs-rule); }
+.fs-bioeconomy__path span { color: var(--fs-forest); font-size: 13px; font-weight: 700; letter-spacing: .05em; }
+.fs-bioeconomy__path i { color: #9aa393; font-style: normal; }
+
+/* Sustainability */
+.fs-sustainability { padding: clamp(100px, 11vw, 164px) 0; background: var(--fs-ivory); }
+.fs-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(22px, 3vw, 40px); }
+.fs-actions article { padding-bottom: 30px; border-bottom: 1px solid var(--fs-rule); }
+.fs-actions picture { aspect-ratio: 4 / 3; overflow: hidden; margin-bottom: 28px; background: #d2d8cc; }
+.fs-actions img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.82) contrast(1.04); }
+.fs-actions article:nth-child(1) img { object-position: 54% center; }
+.fs-actions article:nth-child(2) img { object-position: 67% center; }
+.fs-actions article:nth-child(3) img { object-position: 69% center; }
+.fs-actions__number { margin-bottom: 12px; }
+.fs-actions h3 { margin: 0 0 14px; font-size: clamp(21px, 2vw, 27px); line-height: 1.55; }
+.fs-actions article > p:last-child { margin: 0; font-size: 15px; line-height: 1.9; }
+
+/* SDGs */
+.fs-sdgs { padding: clamp(94px, 10vw, 150px) 0; background: var(--fs-paper); }
+.fs-heading--sdgs { display: grid; max-width: none; grid-template-columns: minmax(280px, .75fr) minmax(0, 1.25fr); column-gap: clamp(50px, 8vw, 120px); align-items: end; }
+.fs-heading--sdgs .fs-kicker { grid-column: 1; }
+.fs-heading--sdgs h2 { grid-column: 1; margin-bottom: 0; }
+.fs-heading--sdgs > p:last-child { grid-row: 1 / span 2; grid-column: 2; padding-top: 30px; border-top: 1px solid var(--fs-rule); }
+.fs-sdgs__grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: clamp(10px, 1.45vw, 20px); }
+.fs-sdgs__grid article { min-width: 0; }
+.fs-sdgs__grid img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.fs-sdgs__grid p { padding-top: 14px; margin: 14px 0 0; border-top: 1px solid var(--fs-rule); color: #596259; font-size: 12px; line-height: 1.75; }
+.fs-sdgs__note { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 36px; align-items: center; padding-top: 38px; margin-top: 48px; border-top: 1px solid var(--fs-rule); }
+.fs-sdgs__note img { width: 230px; }
+.fs-sdgs__note p { margin: 0 0 7px; color: #70776f; font-size: 11px; line-height: 1.7; }
+.fs-sdgs__note a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Community vision */
+.fs-community { position: relative; padding: clamp(100px, 11vw, 164px) 0; overflow: hidden; background: #ebe8dd; }
+.fs-community::before { position: absolute; top: -105px; right: -80px; width: 520px; height: 520px; border: 1px solid rgba(34, 65, 47, .1); border-radius: 50%; content: ""; }
+.fs-heading--community { position: relative; z-index: 1; max-width: 790px; }
+.fs-community__values { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin: 0; list-style: none; border-block: 1px solid var(--fs-rule); }
+.fs-community__values li { min-height: 250px; padding: 34px 28px 32px 0; }
+.fs-community__values li + li { padding-left: 28px; border-left: 1px solid var(--fs-rule); }
+.fs-community__values span { display: block; margin-bottom: 34px; color: var(--fs-moss); font-family: Georgia, serif; font-size: 13px; letter-spacing: .12em; }
+.fs-community__values h3 { margin: 0 0 13px; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.55; letter-spacing: .025em; }
+.fs-community__values p { margin: 0; font-size: 14px; line-height: 1.9; }
+.fs-community__closing { max-width: 760px; padding-left: 32px; margin: clamp(58px, 7vw, 94px) 0 0 auto; border-left: 1px solid var(--fs-moss); }
+.fs-community__closing p { margin-bottom: 14px; color: #525d54; font-size: 16px; line-height: 2; }
+.fs-community__closing strong { color: var(--fs-forest-deep); font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif; font-size: clamp(20px, 2.25vw, 30px); font-weight: 600; line-height: 1.75; }
+
+/* Closing visual */
+.fs-final-cta { position: relative; min-height: 680px; overflow: hidden; color: #fff; background: var(--fs-forest-deep); }
+.fs-final-cta > picture,
+.fs-final-cta > picture img,
+.fs-final-cta__shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.fs-final-cta > picture img { object-fit: cover; object-position: 64% center; filter: saturate(.86) contrast(1.04) brightness(.82); }
+.fs-final-cta__shade { background: linear-gradient(90deg, rgba(6, 28, 20, .9), rgba(6, 28, 20, .66) 46%, rgba(6, 28, 20, .16) 78%); }
+.fs-final-cta__content { position: relative; z-index: 1; display: flex; min-height: 680px; justify-content: center; flex-direction: column; padding: 100px 0; }
+.forest-story-v4 .fs-final-cta h2 { max-width: 850px; margin: 0 0 24px; color: #fff; font-size: clamp(38px, 5.2vw, 69px); font-weight: 500; line-height: 1.48; letter-spacing: .045em; }
+.fs-final-cta h2 span { display: block; }
+.fs-final-cta__content > p:not(.fs-kicker) { margin: 0; color: rgba(255, 255, 255, .82); font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif; font-size: 17px; letter-spacing: .08em; line-height: 2; }
+.fs-final-cta__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+.fs-final-cta__actions a { display: inline-flex; min-width: 220px; min-height: 52px; align-items: center; justify-content: center; padding: 12px 28px; color: #fff; border: 1px solid rgba(255, 255, 255, .58); border-radius: 999px; font-size: 14px; font-weight: 700; letter-spacing: .05em; transition: background-color .2s ease, color .2s ease, transform .2s ease; }
+.fs-final-cta__actions a:first-child { color: var(--fs-forest-deep); background: rgba(255, 255, 255, .92); }
+
+/* Page-only contact controls */
+.forest-story-v4 .floating-cta a { color: #fff; border-color: rgba(255, 255, 255, .22); box-shadow: 0 10px 28px rgba(8, 35, 25, .16); }
+.forest-story-v4 .floating-tel { background: linear-gradient(135deg, rgba(45, 91, 66, .97), rgba(18, 59, 42, .98)); }
+.forest-story-v4 .floating-mail { background: linear-gradient(135deg, rgba(119, 91, 61, .96), rgba(74, 55, 37, .98)); }
+
+@media (hover: hover) {
+  .fs-text-links a:hover { color: var(--fs-bark); }
+  .fs-final-cta__actions a:hover { color: var(--fs-forest-deep); background: #fff; transform: translateY(-2px); }
+  .fs-final-cta__actions a:first-child:hover { background: var(--fs-ivory); }
+}
+
+@media (max-width: 1180px) {
+  .fs-cycle__flow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 54px 48px; }
+  .fs-cycle__flow::before,
+  .fs-cycle__flow li::after { display: none; }
+  .fs-cycle__flow picture { width: 146px; }
+  .fs-cycle__flow h3 { min-height: 0; }
+  .fs-heading--sdgs { grid-template-columns: 1fr; gap: 22px; }
+  .fs-heading--sdgs .fs-kicker,
+  .fs-heading--sdgs h2,
+  .fs-heading--sdgs > p:last-child { grid-row: auto; grid-column: 1; }
+  .fs-heading--sdgs > p:last-child { max-width: 720px; }
+  .fs-sdgs__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 34px 24px; }
+  .fs-sdgs__grid p { font-size: 13px; }
+}
+
+@media (max-width: 980px) {
+  .fs-shell,
+  .forest-story-v4 .breadcrumbs { width: min(100% - 48px, 860px); }
+  .fs-hero { min-height: 700px; }
+  .fs-intro__grid { grid-template-columns: 1fr; gap: 48px; }
+  .fs-intro__copy { max-width: 760px; }
+  .fs-chapter { grid-template-columns: minmax(0, 1.08fr) minmax(290px, .92fr); gap: 44px; }
+  .fs-bioeconomy { grid-template-columns: minmax(300px, .78fr) minmax(0, 1.22fr); }
+  .fs-bioeconomy__body { padding-inline: 44px; }
+  .fs-bioeconomy__body h2 { font-size: 33px; }
+  .fs-actions { gap: 22px; }
+  .fs-community__values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fs-community__values li:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--fs-rule); }
+  .fs-community__values li:nth-child(4) { border-top: 1px solid var(--fs-rule); }
+}
+
+@media (max-width: 760px) {
+  .fs-shell,
+  .forest-story-v4 .breadcrumbs { width: calc(100% - 36px); }
+  .forest-story-v4 .breadcrumbs { padding: 14px 0; font-size: 11px; }
+  .fs-kicker { margin-bottom: 13px; font-size: 11px; letter-spacing: .19em; }
+  .fs-heading { margin-bottom: 42px; }
+  .fs-heading h2 { margin-bottom: 18px; font-size: 32px; }
+  .fs-heading > p:last-child,
+  .fs-heading--wide > p:not(.fs-kicker) { font-size: 15px; line-height: 1.9; }
+  .fs-hero { min-height: min(720px, calc(100svh - 54px)); }
+  .fs-hero__media img { object-position: 59% center; }
+  .fs-hero__shade { background: linear-gradient(180deg, rgba(7, 30, 22, .22), rgba(7, 30, 22, .48) 47%, rgba(7, 30, 22, .86)); }
+  .fs-hero__content { justify-content: flex-end; padding: 88px 0 64px; }
+  .forest-story-v4 .fs-hero h1 { margin-bottom: 18px; font-size: clamp(38px, 12.3vw, 53px); line-height: 1.3; letter-spacing: .035em; }
+  .fs-hero__copy { font-size: 18px; letter-spacing: .045em; line-height: 1.75; }
+  .fs-hero__subcopy { font-size: 13px; line-height: 1.8; }
+  .fs-hero__aside,
+  .fs-hero__index { display: none; }
+  .fs-intro { padding: 84px 0; }
+  .fs-intro::after { width: 270px; height: 270px; }
+  .fs-intro__grid { gap: 36px; }
+  .fs-intro h2 { font-size: 34px; }
+  .fs-intro__copy { padding-top: 26px; }
+  .fs-intro__copy p { margin-bottom: 22px; font-size: 15px; line-height: 2; }
+  .fs-intro__copy br { display: none; }
+  .fs-story { padding-bottom: 94px; }
+  .fs-chapter,
+  .fs-chapter:nth-child(even) { grid-template-columns: 1fr; gap: 30px; padding: 44px 0; }
+  .fs-chapter:nth-child(even) .fs-chapter__image,
+  .fs-chapter:nth-child(even) .fs-chapter__body { order: initial; }
+  .fs-chapter__image { aspect-ratio: 16 / 10.5; }
+  .fs-chapter__body { max-width: none; }
+  .fs-chapter h2 { margin-bottom: 16px; font-size: 29px; }
+  .fs-chapter__body > p:not(.fs-chapter__number) { font-size: 15px; line-height: 1.9; }
+  .fs-chapter__body br { display: none; }
+  .fs-cycle { padding: 86px 0; }
+  .fs-cycle__flow { grid-template-columns: 1fr; gap: 0; padding-left: 25px; margin-top: 52px; }
+  .fs-cycle__flow::before { display: block; top: 10px; bottom: 18px; left: 6px; width: 1px; height: auto; background: var(--fs-rule); }
+  .fs-cycle__flow li { display: grid; grid-template-columns: 108px minmax(0, 1fr); column-gap: 22px; padding: 0 0 42px; }
+  .fs-cycle__flow li::before { position: absolute; top: 47px; left: -24px; width: 9px; height: 9px; background: var(--fs-ivory); border: 1px solid var(--fs-moss); border-radius: 50%; content: ""; }
+  .fs-cycle__flow picture { width: 108px; grid-row: 1 / span 3; grid-column: 1; margin: 0; border-width: 5px; }
+  .fs-cycle__number,
+  .fs-cycle__flow h3,
+  .fs-cycle__flow li > p:last-child { grid-column: 2; }
+  .fs-cycle__number { margin: 0 0 5px; }
+  .fs-cycle__flow h3 { margin-bottom: 7px; font-size: 17px; line-height: 1.6; }
+  .fs-cycle__flow h3 br { display: none; }
+  .fs-cycle__flow li > p:last-child { font-size: 13px; line-height: 1.75; }
+  .fs-text-links { display: grid; justify-content: stretch; gap: 0; padding-top: 22px; margin-top: 8px; }
+  .fs-text-links a { padding: 13px 30px 13px 0; border-bottom: 1px solid var(--fs-rule); }
+  .fs-bioeconomy { grid-template-columns: 1fr; }
+  .fs-bioeconomy__visual { min-height: 430px; }
+  .fs-bioeconomy__body { padding: 76px 18px 86px; }
+  .fs-bioeconomy__body h2 { margin-bottom: 26px; font-size: clamp(28px, 8.8vw, 35px); line-height: 1.55; }
+  .fs-bioeconomy__body h2 span { white-space: normal; word-break: keep-all; overflow-wrap: anywhere; }
+  .fs-bioeconomy__body > p:not(.fs-kicker) { font-size: 15px; line-height: 1.95; }
+  .fs-bioeconomy__body > p:not(.fs-kicker) br,
+  .fs-bioeconomy__note strong br { display: none; }
+  .fs-bioeconomy__note { padding: 22px 20px; }
+  .fs-bioeconomy__note strong { font-size: 16px; }
+  .fs-bioeconomy__path { gap: 7px 9px; }
+  .fs-bioeconomy__path span { font-size: 12px; }
+  .fs-sustainability { padding: 86px 0 94px; }
+  .fs-actions { grid-template-columns: 1fr; gap: 44px; }
+  .fs-actions article { padding-bottom: 38px; }
+  .fs-actions picture { aspect-ratio: 16 / 10; margin-bottom: 23px; }
+  .fs-actions h3 { font-size: 23px; }
+  .fs-actions article > p:last-child { font-size: 15px; }
+  .fs-sdgs { padding: 86px 0; }
+  .fs-heading--sdgs > p:last-child { padding-top: 22px; }
+  .fs-sdgs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 16px; }
+  .fs-sdgs__grid p { padding-top: 11px; margin-top: 11px; font-size: 12px; line-height: 1.7; }
+  .fs-sdgs__note { grid-template-columns: 1fr; gap: 22px; margin-top: 42px; }
+  .fs-sdgs__note img { width: min(230px, 76%); }
+  .fs-community { padding: 88px 0; }
+  .fs-community__values { grid-template-columns: 1fr; }
+  .fs-community__values li,
+  .fs-community__values li + li,
+  .fs-community__values li:nth-child(3) { min-height: 0; padding: 28px 0; border-top: 1px solid var(--fs-rule); border-left: 0; }
+  .fs-community__values li:first-child { border-top: 0; }
+  .fs-community__values span { margin-bottom: 12px; }
+  .fs-community__closing { padding-left: 20px; margin-top: 52px; }
+  .fs-community__closing p { font-size: 15px; }
+  .fs-community__closing strong { font-size: 20px; }
+  .fs-community__closing br { display: none; }
+  .fs-final-cta,
+  .fs-final-cta__content { min-height: 610px; }
+  .fs-final-cta > picture img { object-position: 67% center; }
+  .fs-final-cta__shade { background: linear-gradient(180deg, rgba(6, 28, 20, .24), rgba(6, 28, 20, .82) 57%, rgba(6, 28, 20, .92)); }
+  .fs-final-cta__content { justify-content: flex-end; padding: 80px 0 72px; }
+  .forest-story-v4 .fs-final-cta h2 { font-size: clamp(27px, 8vw, 38px); line-height: 1.55; }
+  .fs-final-cta h2 span { white-space: nowrap; }
+  .fs-final-cta__content > p:not(.fs-kicker) { font-size: 15px; }
+  .fs-final-cta__actions { display: grid; gap: 10px; margin-top: 28px; }
+  .fs-final-cta__actions a { width: 100%; min-width: 0; min-height: 50px; }
+}
+
+@media (max-width: 360px) {
+  .fs-shell,
+  .forest-story-v4 .breadcrumbs { width: calc(100% - 28px); }
+  .forest-story-v4 .fs-hero h1 { font-size: 35px; }
+  .fs-cycle__flow { padding-left: 19px; }
+  .fs-cycle__flow li { grid-template-columns: 88px minmax(0, 1fr); column-gap: 14px; }
+  .fs-cycle__flow li::before { left: -18px; }
+  .fs-cycle__flow picture { width: 88px; }
+  .fs-cycle__flow h3 { font-size: 16px; }
+  .fs-cycle__flow li > p:last-child,
+  .fs-sdgs__grid p { font-size: 12px; }
+  .fs-bioeconomy__body h2 { font-size: 27px; }
+  .fs-sdgs__grid { gap-inline: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fs-final-cta__actions a { transition: none; }
+}

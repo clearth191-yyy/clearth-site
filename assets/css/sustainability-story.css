@@ -714,6 +714,32 @@
   line-height: 1.7;
 }
 
+.fs-intro__visual {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(1240px, calc(100% - 80px));
+  aspect-ratio: 16 / 5.6;
+  overflow: hidden;
+  margin: clamp(72px, 7vw, 104px) auto 0;
+  background: #d7dacd;
+}
+
+.fs-intro__visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 41, 29, .22), transparent 48%, rgba(10, 41, 29, .07));
+  content: "";
+}
+
+.fs-intro__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 57%;
+  filter: saturate(.84) contrast(1.05) brightness(.94);
+}
+
 /* Four restrained story rows */
 .fs-story {
   padding-bottom: clamp(110px, 10vw, 160px);
@@ -887,13 +913,54 @@
   align-items: start;
 }
 
-.fs-cycle__flow picture {
+.fs-cycle__flow picture,
+.fs-cycle__icon {
   width: 142px;
   grid-row: 1 / span 3;
   grid-column: 1;
   margin: 0;
   border-width: 6px;
 }
+
+.fs-cycle__icon {
+  position: relative;
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+  color: var(--fs-forest);
+  background:
+    radial-gradient(circle at 38% 32%, rgba(255, 255, 255, .72), transparent 34%),
+    #e8eadf;
+  border: 6px solid var(--fs-ivory);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(51, 76, 61, .26);
+}
+
+.fs-cycle__icon::before {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(42, 75, 54, .13);
+  border-radius: 50%;
+  content: "";
+}
+
+.fs-cycle__icon svg {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.45;
+}
+
+.fs-cycle__flow li:nth-child(2) .fs-cycle__icon,
+.fs-cycle__flow li:nth-child(4) .fs-cycle__icon { color: #6f563d; background-color: #eee7db; }
+
+.fs-cycle__flow li:nth-child(5) .fs-cycle__icon { color: #50644b; background-color: #e3e8db; }
 
 .fs-cycle__number,
 .fs-cycle__flow h3,
@@ -1145,6 +1212,33 @@
   height: 580px;
 }
 
+.fs-community__visual {
+  position: relative;
+  z-index: 1;
+  display: block;
+  aspect-ratio: 16 / 5.4;
+  overflow: hidden;
+  margin: 0 0 0;
+  background: #d6d9ca;
+}
+
+.fs-community__visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 45, 31, .12), transparent 52%, rgba(16, 45, 31, .06));
+  content: "";
+}
+
+.fs-community__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 56%;
+  filter: saturate(.82) contrast(1.04) brightness(.95);
+}
+
+.fs-community__visual + .fs-community__values { margin-top: 0; }
+
 .fs-community__values li {
   min-height: 270px;
   padding-top: 28px;
@@ -1217,7 +1311,9 @@
   .fs-intro__aside { display: none; }
   .fs-cycle__flow { gap: 58px 42px; }
   .fs-cycle__flow li { grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; }
-  .fs-cycle__flow picture { width: 120px; }
+  .fs-cycle__flow picture,
+  .fs-cycle__icon { width: 120px; }
+  .fs-cycle__icon svg { width: 50px; height: 50px; }
   .fs-cycle__flow li:not(:last-child)::after { display: none; }
   .fs-bioeconomy__layout { grid-template-columns: 300px minmax(0, 1fr); gap: 55px; }
   .fs-bioeconomy__body { grid-template-columns: 1fr; }
@@ -1233,7 +1329,9 @@
   .fs-cycle__header { grid-template-columns: 1fr 210px; gap: 45px; }
   .fs-cycle__statement { width: 200px; font-size: 17px; }
   .fs-cycle__flow li { grid-template-columns: 104px minmax(0, 1fr); }
-  .fs-cycle__flow picture { width: 104px; }
+  .fs-cycle__flow picture,
+  .fs-cycle__icon { width: 104px; }
+  .fs-cycle__icon svg { width: 44px; height: 44px; }
   .fs-bioeconomy__layout { grid-template-columns: 1fr; }
   .fs-bioeconomy__visual { min-height: 0; aspect-ratio: 16 / 7.2; }
   .fs-bioeconomy__visual img { object-position: center 38%; }
@@ -1303,6 +1401,14 @@
     margin: 8px 0 0 auto;
   }
 
+  .fs-intro__visual {
+    width: calc(100% - 36px);
+    aspect-ratio: 4 / 3;
+    margin-top: 54px;
+  }
+
+  .fs-intro__visual img { object-position: center; }
+
   .fs-story__heading {
     padding: 30px 0 32px;
   }
@@ -1354,6 +1460,9 @@
     gap: 18px;
   }
 
+  .fs-cycle__header h2 span,
+  .fs-heading--community h2 span { display: block; }
+
   .fs-cycle__statement {
     width: auto;
     max-width: 270px;
@@ -1397,7 +1506,11 @@
     left: -22px;
   }
 
-  .fs-cycle__flow picture { width: 94px; }
+  .fs-cycle__flow picture,
+  .fs-cycle__icon { width: 94px; }
+  .fs-cycle__icon { border-width: 5px; }
+  .fs-cycle__icon::before { inset: 9px; }
+  .fs-cycle__icon svg { width: 40px; height: 40px; }
   .fs-cycle__flow h3 { font-size: 17px; }
 
   .fs-bioeconomy {
@@ -1465,6 +1578,12 @@
     padding: 86px 0 94px;
   }
 
+  .fs-community__visual {
+    aspect-ratio: 4 / 3;
+  }
+
+  .fs-community__visual img { object-position: 58% center; }
+
   .fs-community__values li,
   .fs-community__values li + li,
   .fs-community__values li:nth-child(3) {
@@ -1498,6 +1617,10 @@
   .fs-hero__copy { font-size: 16px; }
   .fs-chapter__body { grid-template-columns: 41px minmax(0, 1fr); }
   .fs-chapter__arrow { display: none; }
+  .fs-cycle__flow li { grid-template-columns: 82px minmax(0, 1fr); column-gap: 14px; }
+  .fs-cycle__flow picture,
+  .fs-cycle__icon { width: 82px; }
+  .fs-cycle__icon svg { width: 35px; height: 35px; }
   .fs-bioeconomy__path span { width: 56px; height: 56px; font-size: 11px; }
   .fs-bioeconomy__path span:nth-of-type(1),
   .fs-bioeconomy__path span:nth-of-type(4) { left: calc(50% - 28px); }

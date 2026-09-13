@@ -20,7 +20,7 @@ const form = document.querySelector('.contact-form');
 if (form) {
   const status = form.querySelector('[data-form-status]');
   const submitButton = form.querySelector('button[type="submit"]');
-  const endpointReady = !form.action.includes('REPLACE_ME');
+  const endpointReady = /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(form.action);
 
   if (submitButton && endpointReady) {
     submitButton.disabled = false;

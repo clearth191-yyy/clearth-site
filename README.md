@@ -15,7 +15,7 @@
 | メール表示 | `CONFIG["contact"]["email_display"]` | `clearth.191@gmail.com` | フッター、問い合わせ |
 | メール送信先 | `CONFIG["contact"]["email_href"]` | `clearth.191@gmail.com` | `mailto:`リンク、構造化データ |
 | 拠点情報 | `CONFIG["company"]["locations"]` | `本社 / 浅原プラント / 友田プラント` | 会社概要、お問い合わせ、アクセスページ、構造化データ |
-| フォーム送信先 | `CONFIG["form"]["action"]` | `https://formspree.io/f/REPLACE_ME` | お問い合わせフォーム |
+| フォーム送信先 | `CONFIG["form"]["action"]` | `https://formspree.io/f/xzeblrjd` | お問い合わせフォーム |
 | 施工実績ラベル | `CONFIG["works"]["show_placeholder_badges"]` | `True` | 「イメージ画像」ラベルの一括表示/非表示 |
 
 ## フォーム設定

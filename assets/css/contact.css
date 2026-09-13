@@ -334,6 +334,19 @@
   font-size: 17px;
 }
 
+.contact-page .contact-form-panel button:disabled {
+  color: #52645d !important;
+  background: #dfe7e3;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.contact-page .contact-form-panel button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .contact-company-section {
   padding: clamp(72px, 8vw, 108px) 0;
   background: linear-gradient(135deg, #f5f3ec, #edf2ec);

@@ -1625,3 +1625,188 @@
   .fs-bioeconomy__path span:nth-of-type(1),
   .fs-bioeconomy__path span:nth-of-type(4) { left: calc(50% - 28px); }
 }
+
+/* 2026-09-13 final polish
+   Preserve the completed art direction while clarifying flow and mobile rhythm. */
+.fs-hero__index {
+  bottom: 100px;
+  gap: 10px;
+  color: rgba(255, 255, 255, .72) !important;
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .16em;
+}
+
+.fs-hero__index span {
+  width: 34px;
+  background: rgba(255, 255, 255, .5);
+}
+
+.fs-bioeconomy__path i {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  color: rgba(38, 70, 49, .68);
+  background: var(--fs-paper);
+  border-radius: 50%;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.fs-bioeconomy__path i:nth-of-type(1) { top: 5%; left: 72%; transform: rotate(45deg); }
+.fs-bioeconomy__path i:nth-of-type(2) { top: 47%; right: -4%; transform: rotate(90deg); }
+.fs-bioeconomy__path i:nth-of-type(3) { bottom: 5%; left: 72%; transform: rotate(135deg); }
+.fs-bioeconomy__path i:nth-of-type(4) { bottom: 5%; left: 22%; transform: rotate(225deg); }
+.fs-bioeconomy__path i:nth-of-type(5) { top: 47%; left: -4%; transform: rotate(270deg); }
+
+@media (min-width: 761px) {
+  .fs-cycle__flow li:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .fs-cycle__flow li:nth-child(2) { grid-column: 2; grid-row: 1; }
+  .fs-cycle__flow li:nth-child(3) { grid-column: 3; grid-row: 1; }
+  .fs-cycle__flow li:nth-child(4) { grid-column: 3; grid-row: 2; }
+  .fs-cycle__flow li:nth-child(5) { grid-column: 2; grid-row: 2; }
+  .fs-cycle__flow li:nth-child(6) { grid-column: 1; grid-row: 2; }
+
+  .fs-cycle__flow li:nth-child(1)::after,
+  .fs-cycle__flow li:nth-child(2)::after,
+  .fs-cycle__flow li:nth-child(3)::after,
+  .fs-cycle__flow li:nth-child(4)::after,
+  .fs-cycle__flow li:nth-child(5)::after {
+    display: block;
+    opacity: .72;
+  }
+
+  .fs-cycle__flow li:nth-child(3)::after {
+    top: calc(100% + 29px);
+    right: 65px;
+    transform: rotate(135deg);
+  }
+
+  .fs-cycle__flow li:nth-child(4)::after,
+  .fs-cycle__flow li:nth-child(5)::after {
+    right: auto;
+    left: calc(clamp(42px, 6vw, 86px) / -2 - 4px);
+    transform: rotate(225deg);
+  }
+
+  .fs-actions {
+    align-items: stretch;
+  }
+
+  .fs-actions article {
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto auto auto 1fr;
+  }
+
+  .fs-actions article > p:last-child {
+    align-self: start;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .fs-cycle__flow li:nth-child(1)::after,
+  .fs-cycle__flow li:nth-child(2)::after {
+    right: -25px;
+  }
+
+  .fs-cycle__flow li:nth-child(3)::after {
+    top: calc(100% + 23px);
+    right: 52px;
+  }
+
+  .fs-cycle__flow li:nth-child(4)::after,
+  .fs-cycle__flow li:nth-child(5)::after {
+    left: -25px;
+  }
+}
+
+@media (max-width: 760px) {
+  .fs-hero__scroll,
+  .fs-hero__index {
+    bottom: 82px;
+  }
+
+  .fs-hero__index span {
+    width: 28px;
+  }
+
+  .fs-chapter,
+  .fs-chapter:nth-child(even) {
+    gap: 28px;
+    padding: 40px 0 46px;
+  }
+
+  .fs-chapter__body > p:not(.fs-chapter__number),
+  .fs-cycle__flow li > p:last-child,
+  .fs-bioeconomy__copy > p:not(.fs-kicker) {
+    line-height: 1.95;
+  }
+
+  .fs-cycle__flow {
+    margin-top: 64px;
+  }
+
+  .fs-cycle__flow li {
+    padding-bottom: 48px;
+  }
+
+  .fs-cycle__flow li:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: 17px;
+    left: -21px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 0;
+    border-right: 1px solid rgba(61, 85, 67, .7);
+    border-bottom: 1px solid rgba(61, 85, 67, .7);
+    transform: rotate(45deg);
+  }
+
+  .fs-cycle__flow li:last-child {
+    padding-bottom: 38px;
+  }
+
+  .fs-actions {
+    gap: 34px;
+  }
+
+  .fs-actions article {
+    padding-bottom: 28px;
+  }
+
+  .fs-sdgs__grid {
+    gap: 32px 16px;
+  }
+
+  .fs-sdgs__grid p {
+    line-height: 1.78;
+  }
+
+  .fs-community {
+    padding-bottom: 102px;
+  }
+}
+
+@media (max-width: 380px) {
+  .fs-sustainability .fs-heading h2 {
+    font-size: clamp(29px, 8.8vw, 34px);
+    letter-spacing: .035em;
+    white-space: nowrap;
+  }
+
+  .fs-cycle__flow li:not(:last-child)::after {
+    left: -17px;
+  }
+
+  .fs-sdgs__grid {
+    column-gap: 12px;
+  }
+}

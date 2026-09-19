@@ -21,6 +21,7 @@ if (form) {
   const status = form.querySelector('[data-form-status]');
   const submitButton = form.querySelector('button[type="submit"]');
   const endpointReady = /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(form.action);
+  let isSubmitting = false;
 
   if (submitButton && endpointReady) {
     submitButton.disabled = false;
@@ -33,20 +34,35 @@ if (form) {
     const phoneLink = document.createElement('a');
     phoneLink.href = 'tel:0829780222';
     phoneLink.textContent = 'TEL 0829-78-0222';
+    status.classList.remove('is-success');
     status.classList.add('is-error');
     status.replaceChildren(
-      document.createTextNode('送信できませんでした。お手数ですが、お電話にてお問い合わせください。 '),
-      phoneLink
+      document.createTextNode('送信できませんでした。\nお手数ですが '),
+      phoneLink,
+      document.createTextNode(' までお電話ください。')
     );
   };
 
+  const showSuccess = () => {
+    if (!status) return;
+    status.classList.remove('is-error');
+    status.classList.add('is-success');
+    status.textContent = 'お問い合わせありがとうございます。\n内容を確認のうえ、担当者よりご連絡いたします。';
+  };
+
   form.addEventListener('submit', async (event) => {
+    if (isSubmitting) {
+      event.preventDefault();
+      return;
+    }
+
     const honeypot = form.querySelector('[name="_gotcha"]');
     const requiredFields = Array.from(form.querySelectorAll('[required]'));
     const invalidField = requiredFields.find((field) => !field.checkValidity());
 
     if (status) {
       status.classList.remove('is-error');
+      status.classList.remove('is-success');
       status.replaceChildren();
     }
 
@@ -65,12 +81,13 @@ if (form) {
     }
     if (!endpointReady) {
       event.preventDefault();
-      if (status) status.textContent = '現在、フォームは準備中です。お電話またはメールでお問い合わせください。';
+      showFailure();
       return;
     }
 
     event.preventDefault();
     const readyLabel = submitButton?.dataset.readyLabel || '入力内容を送信する';
+    isSubmitting = true;
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -86,8 +103,14 @@ if (form) {
       });
 
       if (!response.ok) throw new Error('Form submission failed');
-      window.location.assign(form.dataset.successPage || 'thanks.html');
+      form.reset();
+      showSuccess();
+      if (submitButton) {
+        submitButton.removeAttribute('aria-busy');
+        submitButton.textContent = '送信完了';
+      }
     } catch (error) {
+      isSubmitting = false;
       showFailure();
       if (submitButton) {
         submitButton.disabled = false;

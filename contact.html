@@ -20,7 +20,7 @@
     
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
-    <link rel="stylesheet" href="assets/css/contact.css?v=20260913-03">
+    <link rel="stylesheet" href="assets/css/contact.css?v=20260914-01">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、伐採、立木買取、木材の受け入れ、木質チップ製造などのご相談を承る企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://www.google.com/maps/search/?api=1&query=%E3%80%92738-0223%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E6%B5%85%E5%8E%9F962-3","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"お問い合わせ","item":"https://clearth191-yyy.github.io/clearth-site/contact.html"}]}</script>
   </head>
@@ -116,10 +116,8 @@
             </aside>
           </div>
 
-          <!-- Formspree本番フォーム：送信先 https://formspree.io/f/xzeblrjd -->
-          <form class="contact-form contact-form-panel" action="https://formspree.io/f/xzeblrjd" method="post" name="clearth-contact" data-enhanced-form data-success-page="thanks.html" aria-describedby="contact-form-guide contact-form-note">
-            <input type="hidden" name="subject" value="株式会社Clearth ホームページからのお問い合わせ">
-            <input type="hidden" name="_next" value="https://clearth191-yyy.github.io/clearth-site/thanks.html">
+          <form class="contact-form contact-form-panel" action="https://formspree.io/f/xzeblrjd" method="POST" name="clearth-contact" data-enhanced-form aria-describedby="contact-form-guide contact-form-note">
+            <input type="hidden" name="_subject" value="株式会社Clearth ホームページからのお問い合わせ">
             <p class="form-honeypot" aria-hidden="true"><label for="contact-gotcha">この欄は入力しないでください</label><input id="contact-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></p>
             <p class="contact-form-guide" id="contact-form-guide">分かる範囲だけで構いません。</p>
 
@@ -176,7 +174,7 @@
 
             <div class="form-status" data-form-status role="status" aria-live="polite"></div>
             <p class="form-note" id="contact-form-note">送信後、内容を確認のうえご連絡いたします。お急ぎの場合は、<a href="tel:0829780222">0829-78-0222</a>へお電話いただくか、<a href="mailto:clearth.191@gmail.com">メール</a>でご連絡ください。</p>
-            <button class="button button-primary" type="submit" data-ready-label="入力内容を送信する" disabled aria-disabled="true">フォーム準備中</button>
+            <button class="button button-primary" type="submit" data-ready-label="入力内容を送信する">入力内容を送信する</button>
           </form>
         </div>
       </section>
@@ -232,6 +230,6 @@
     </div>
     
     
-    <script src="assets/js/main.js?v=20260913-02" defer></script>
+    <script src="assets/js/main.js?v=20260914-01" defer></script>
   </body>
 </html>

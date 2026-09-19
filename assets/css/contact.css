@@ -226,6 +226,39 @@
   text-align: center;
 }
 
+.contact-line-direct-label {
+  margin: 0 0 8px;
+  color: var(--contact-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-line-direct-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 13px 20px;
+  margin: 0 0 28px;
+  color: #fff;
+  background: #058b3c;
+  border: 2px solid #058b3c;
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(5,139,60,.2);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.55;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.contact-line-direct-button:focus-visible {
+  outline: 3px solid rgba(5,139,60,.35);
+  outline-offset: 3px;
+}
+
 .contact-line-account-title {
   margin: 0 0 22px;
   color: var(--contact-green);
@@ -623,6 +656,14 @@
     transform: translateY(-2px);
     box-shadow: 0 24px 54px rgba(23,63,50,.2);
   }
+
+  .contact-line-direct-button:hover {
+    color: #fff;
+    background: #047433;
+    border-color: #047433;
+    box-shadow: 0 15px 30px rgba(5,139,60,.27);
+    transform: translateY(-2px);
+  }
 }
 
 @media (max-width: 980px) {
@@ -711,6 +752,13 @@
 
   .contact-line-account-title {
     margin-bottom: 18px;
+  }
+
+  .contact-line-direct-button {
+    min-height: 60px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-bottom: 25px;
   }
 
   .contact-line-account-id {

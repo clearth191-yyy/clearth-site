@@ -66,6 +66,7 @@
 }
 
 .contact-phone-copy h2,
+.contact-line-copy h2,
 .contact-examples h2,
 .contact-form-intro h2,
 .contact-company-copy h2 {
@@ -129,6 +130,156 @@
   font-size: 16px;
   font-weight: 900;
   line-height: 30px;
+}
+
+.contact-line-section {
+  padding-top: clamp(72px, 8vw, 108px);
+  padding-bottom: clamp(72px, 8vw, 108px);
+  background: linear-gradient(145deg, #f7fbf9 0%, #eef5f2 58%, #f8faf7 100%);
+  border-top: 1px solid rgba(23,63,50,.08);
+  border-bottom: 1px solid rgba(23,63,50,.1);
+}
+
+.contact-line-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, .7fr);
+  gap: clamp(42px, 7vw, 88px);
+  align-items: start;
+}
+
+.contact-line-copy > p:not(.contact-kicker) {
+  max-width: 720px;
+  margin-bottom: 12px;
+  color: var(--contact-muted);
+  font-size: 17px;
+}
+
+.contact-line-copy .contact-line-lead {
+  color: var(--contact-ink);
+  font-size: clamp(18px, 1.9vw, 21px);
+  font-weight: 800;
+}
+
+.contact-line-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.contact-line-detail-card {
+  padding: 25px 24px;
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(23,63,50,.14);
+  border-radius: 14px;
+}
+
+.contact-line-detail-card h3 {
+  margin-bottom: 14px;
+  color: var(--contact-green);
+  font-size: 19px;
+}
+
+.contact-line-detail-card p {
+  margin: -4px 0 13px;
+  color: var(--contact-muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.contact-line-detail-card ul {
+  display: grid;
+  gap: 9px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-line-detail-card li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--contact-ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.contact-line-detail-card li::before {
+  position: absolute;
+  top: .7em;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  background: #06c755;
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.contact-line-connect {
+  padding: clamp(26px, 3vw, 36px);
+  background: #fff;
+  border: 1px solid rgba(23,63,50,.16);
+  border-top: 5px solid #06c755;
+  border-radius: 18px;
+  box-shadow: 0 20px 54px rgba(23,63,50,.12);
+  text-align: center;
+}
+
+.contact-line-account-title {
+  margin: 0 0 22px;
+  color: var(--contact-green);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+.contact-line-account-label {
+  margin: 0 0 4px;
+  color: var(--contact-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.contact-line-account-id {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #058b3c;
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: .015em;
+}
+
+.contact-line-account-help,
+.contact-line-qr-note {
+  margin: 12px auto 0;
+  color: var(--contact-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.contact-line-account-help {
+  max-width: 330px;
+}
+
+.contact-line-qr-frame {
+  width: min(100%, 340px);
+  padding: 18px;
+  margin: 24px auto 0;
+  background: #fff;
+  border: 1px solid #e1e7e3;
+  border-radius: 14px;
+}
+
+.contact-line-qr-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-line-qr-note {
+  max-width: 340px;
 }
 
 .contact-examples-section {
@@ -467,10 +618,6 @@
   font-weight: 800;
 }
 
-.contact-line-section[hidden] {
-  display: none !important;
-}
-
 @media (hover: hover) {
   .contact-call-card:hover {
     transform: translateY(-2px);
@@ -480,6 +627,7 @@
 
 @media (max-width: 980px) {
   .contact-phone-grid,
+  .contact-line-layout,
   .contact-examples,
   .contact-form-layout,
   .contact-company-layout {
@@ -493,6 +641,11 @@
 
   .contact-call-card {
     min-height: 210px;
+  }
+
+  .contact-line-connect {
+    width: min(100%, 540px);
+    margin: 0 auto;
   }
 }
 
@@ -513,12 +666,14 @@
   }
 
   .contact-phone-section,
+  .contact-line-section,
   .contact-company-section {
     padding-top: 64px;
     padding-bottom: 64px;
   }
 
   .contact-phone-copy > p,
+  .contact-line-copy > p:not(.contact-kicker),
   .contact-form-intro > p:not(.contact-kicker) {
     font-size: 16px;
   }
@@ -542,6 +697,29 @@
 
   .contact-example-list {
     grid-template-columns: 1fr;
+  }
+
+  .contact-line-details {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-line-detail-card,
+  .contact-line-connect {
+    padding: 22px 18px;
+    border-radius: 13px;
+  }
+
+  .contact-line-account-title {
+    margin-bottom: 18px;
+  }
+
+  .contact-line-account-id {
+    font-size: clamp(29px, 10vw, 38px);
+  }
+
+  .contact-line-qr-frame {
+    width: min(100%, 290px);
+    padding: 15px;
   }
 
   .contact-example-list li {

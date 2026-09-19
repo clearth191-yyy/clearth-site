@@ -20,7 +20,7 @@
     
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
-    <link rel="stylesheet" href="assets/css/contact.css?v=20260914-01">
+    <link rel="stylesheet" href="assets/css/contact.css?v=20260919-01">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、伐採、立木買取、木材の受け入れ、木質チップ製造などのご相談を承る企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://www.google.com/maps/search/?api=1&query=%E3%80%92738-0223%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E6%B5%85%E5%8E%9F962-3","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"お問い合わせ","item":"https://clearth191-yyy.github.io/clearth-site/contact.html"}]}</script>
   </head>
@@ -68,20 +68,49 @@
         </div>
       </section>
 
-      <!-- LINE公式アカウント開設後に有効化：hidden・inert・aria-hidden属性を外し、公式URLとQRコードを設定してください。 -->
-      <section class="section contact-line-section" hidden inert aria-hidden="true" aria-labelledby="line-consultation-title">
-        <div class="container">
-          <p class="contact-kicker">LINE</p>
-          <h2 id="line-consultation-title">LINEでかんたん相談</h2>
-          <p>写真を送っていただくだけでもご相談いただけます。</p>
-          <ul>
-            <li>木全体の写真</li>
-            <li>木の根元</li>
-            <li>家や道路との距離が分かる写真</li>
-            <li>搬入したい木材の写真</li>
-          </ul>
-          <button type="button" disabled>LINEで相談する</button>
-          <div aria-label="LINE公式アカウントのQRコード表示予定位置"></div>
+      <section class="section contact-line-section" aria-labelledby="line-consultation-title">
+        <div class="container contact-line-layout">
+          <div class="contact-line-copy">
+            <p class="contact-kicker">LINE</p>
+            <h2 id="line-consultation-title">LINEでかんたん相談</h2>
+            <p class="contact-line-lead">写真を送っていただくだけでもご相談いただけます。</p>
+            <p>文章で説明しにくい場合は、木や現場の写真をLINEからお送りください。</p>
+
+            <div class="contact-line-details">
+              <div class="contact-line-detail-card">
+                <h3>こんなご相談に</h3>
+                <ul>
+                  <li>森林整備・伐採</li>
+                  <li>危険木・特殊伐採</li>
+                  <li>立木買取</li>
+                  <li>木材持ち込み・受け入れ</li>
+                  <li>その他のご相談</li>
+                </ul>
+              </div>
+
+              <div class="contact-line-detail-card contact-line-photo-guide">
+                <h3>写真相談のポイント</h3>
+                <p>危険木や伐採のご相談は、次の写真があると状況を確認しやすくなります。</p>
+                <ul>
+                  <li>木全体</li>
+                  <li>木の根元</li>
+                  <li>家屋・道路・電線との距離</li>
+                  <li>車両が入れる場所や導線</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <aside class="contact-line-connect" aria-label="LINE公式アカウントの友だち追加案内">
+            <p class="contact-line-account-title">LINE公式アカウント</p>
+            <p class="contact-line-account-label">アカウントID</p>
+            <p class="contact-line-account-id">@641rcfkn</p>
+            <p class="contact-line-account-help">スマートフォンからは、LINEアプリで上のIDを検索してください。</p>
+            <div class="contact-line-qr-frame">
+              <img src="assets/images/company/line-official-qr.png" alt="LINE公式アカウント @641rcfkn の友だち追加QRコード" width="540" height="540" loading="lazy" decoding="async">
+            </div>
+            <p class="contact-line-qr-note">PC・タブレットでは、LINEアプリのQRコードリーダーから読み取ってください。</p>
+          </aside>
         </div>
       </section>
 
@@ -112,7 +141,7 @@
             <p>分かる範囲だけで構いません。難しい文章にする必要はありません。</p>
             <aside class="contact-photo-note">
               <h3>写真があると状況を確認しやすくなります</h3>
-              <p>現在このフォームは写真添付に対応していません。LINE公式アカウント開設後は、写真相談のご案内を追加する予定です。</p>
+              <p>写真は、上のLINE公式アカウントからお送りいただけます。木全体や周囲の状況が分かる写真があると、確認がスムーズです。</p>
             </aside>
           </div>
 

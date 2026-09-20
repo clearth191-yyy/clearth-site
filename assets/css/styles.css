@@ -72,6 +72,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease;
 }
 .nav-contact, .button-primary { color: #fff !important; background: linear-gradient(135deg, var(--blue), var(--navy)); box-shadow: 0 14px 32px rgba(31, 120, 180, 0.24); }
+.button-line { color: #fff; background: linear-gradient(135deg, #06c755, #159447); box-shadow: 0 14px 32px rgba(6, 199, 85, 0.2); }
 .button-secondary { color: var(--navy); background: #fff; border: 1px solid var(--line); }
 .button-light { color: var(--navy); background: #fff; }
 .button-outline-light { color: #fff; border: 1px solid rgba(255,255,255,.55); }

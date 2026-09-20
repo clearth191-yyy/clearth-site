@@ -1,0 +1,517 @@
+.access-page {
+  --access-blue: #1f78b4;
+  --access-green: #174c3a;
+  --access-green-deep: #103b30;
+  --access-ivory: #f7f4ec;
+  --access-paper: #fcfbf7;
+  --access-ink: #173129;
+  --access-muted: #5d6d67;
+  --access-line: rgba(23, 76, 58, .16);
+  color: var(--access-ink);
+  background: var(--access-paper);
+}
+
+.access-page main {
+  overflow: hidden;
+}
+
+.access-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.access-kicker,
+.access-hero__eyebrow {
+  margin: 0 0 12px;
+  color: var(--access-blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.access-hero {
+  position: relative;
+  min-height: clamp(580px, 64vw, 720px);
+  overflow: hidden;
+  color: #fff;
+  background: var(--access-green-deep);
+}
+
+.access-hero__media,
+.access-hero__media img,
+.access-hero__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.access-hero__media img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.access-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(5, 35, 30, .9) 0%, rgba(7, 42, 35, .7) 48%, rgba(7, 42, 35, .14) 78%),
+    linear-gradient(180deg, rgba(7, 29, 51, .08), rgba(7, 29, 51, .52));
+}
+
+.access-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(1120px, calc(100% - 96px));
+  min-height: inherit;
+  padding: 90px 0 82px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.access-hero__eyebrow {
+  color: rgba(255, 255, 255, .82);
+}
+
+.access-hero h1 {
+  margin: 0 0 38px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.access-hero__copy {
+  max-width: 680px;
+  margin: 0 0 28px;
+  color: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(48px, 6.2vw, 76px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: .02em;
+}
+
+.access-hero__lead {
+  max-width: 640px;
+  margin: 0;
+  color: rgba(255, 255, 255, .88);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.access-overview {
+  padding: clamp(98px, 10vw, 146px) 0;
+  background: var(--access-paper);
+}
+
+.access-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(360px, 1.28fr);
+  gap: 28px 76px;
+  align-items: end;
+  margin-bottom: 58px;
+}
+
+.access-section-heading .access-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -8px;
+}
+
+.access-section-heading h2,
+.access-contact-card h2 {
+  margin: 0;
+  color: var(--access-green-deep);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(36px, 4.3vw, 54px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+
+.access-section-heading > p:last-child {
+  max-width: 650px;
+  margin: 0;
+  color: var(--access-muted);
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.access-location-layout {
+  display: grid;
+  grid-template-columns: minmax(330px, .74fr) minmax(0, 1.26fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.access-details {
+  position: relative;
+  padding: 46px 40px 38px;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(145deg, #164f3b, #0b314c);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(7, 35, 42, .16);
+}
+
+.access-details::after {
+  position: absolute;
+  right: -94px;
+  bottom: -110px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 50%;
+  box-shadow: 0 0 0 54px rgba(255, 255, 255, .025);
+  content: "";
+}
+
+.access-details__number {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  color: rgba(255, 255, 255, .09);
+  font-family: Georgia, serif;
+  font-size: 82px;
+  line-height: 1;
+}
+
+.access-details .access-kicker {
+  position: relative;
+  color: rgba(255, 255, 255, .68);
+}
+
+.access-details h3 {
+  position: relative;
+  margin: 40px 0 30px;
+  color: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(32px, 3.7vw, 46px);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.access-details dl {
+  position: relative;
+  margin: 0;
+}
+
+.access-details dl div {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+
+.access-details dt {
+  color: rgba(255, 255, 255, .66);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.access-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.access-details a {
+  color: #fff;
+}
+
+.access-details__note {
+  position: relative;
+  margin: 26px 0 22px;
+  color: rgba(255, 255, 255, .78);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.access-map-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 52px;
+  padding-top: 14px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  font-weight: 900;
+}
+
+.access-map-panel {
+  display: flex;
+  min-width: 0;
+  padding: 22px;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--access-line);
+  border-radius: 20px;
+  box-shadow: 0 22px 58px rgba(18, 62, 49, .1);
+}
+
+.access-map-panel__heading {
+  display: flex;
+  padding: 4px 4px 18px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.access-map-panel__heading span {
+  color: var(--access-blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.access-map-panel__heading p {
+  margin: 0;
+  color: var(--access-muted);
+  font-size: 13px;
+}
+
+.access-page .map-frame {
+  flex: 1 1 auto;
+  min-height: 520px;
+  overflow: hidden;
+  background: #eef3f1;
+  border: 1px solid var(--access-line);
+  border-radius: 14px;
+}
+
+.access-page .map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border: 0;
+  filter: saturate(.88) contrast(.98);
+}
+
+.access-contact-section {
+  padding: clamp(88px, 9vw, 128px) 0;
+  background: linear-gradient(140deg, #edf3ee, #f8f5ed);
+}
+
+.access-contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, .76fr);
+  gap: clamp(48px, 7vw, 90px);
+  padding: clamp(44px, 6vw, 72px);
+  align-items: center;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid rgba(23, 76, 58, .13);
+  border-radius: 22px;
+  box-shadow: 0 22px 60px rgba(18, 62, 49, .09);
+}
+
+.access-contact-card h2 span {
+  display: block;
+}
+
+.access-contact-card > div:first-child > p:last-child {
+  max-width: 640px;
+  margin: 22px 0 0;
+  color: var(--access-muted);
+  line-height: 1.9;
+}
+
+.access-contact-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.access-contact-actions .button {
+  width: 100%;
+  min-height: 56px;
+}
+
+.access-page .site-footer .button-light {
+  color: #0b2d4d;
+}
+
+@media (hover: hover) {
+  .access-details,
+  .access-map-panel,
+  .access-contact-card {
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+
+  .access-details:hover,
+  .access-map-panel:hover,
+  .access-contact-card:hover {
+    box-shadow: 0 28px 68px rgba(18, 62, 49, .14);
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 980px) {
+  .access-section-heading,
+  .access-location-layout,
+  .access-contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .access-section-heading .access-kicker {
+    margin-bottom: -4px;
+  }
+
+  .access-page .map-frame,
+  .access-page .map-frame iframe {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 620px) {
+  .access-shell {
+    width: calc(100% - 28px);
+  }
+
+  .access-hero {
+    min-height: 520px;
+  }
+
+  .access-hero__media img {
+    object-position: 60% center;
+  }
+
+  .access-hero__overlay {
+    background: linear-gradient(180deg, rgba(7, 33, 27, .2), rgba(7, 33, 27, .54) 48%, rgba(7, 33, 27, .92));
+  }
+
+  .access-hero__inner {
+    width: calc(100% - 36px);
+    padding: 68px 0 46px;
+    justify-content: flex-end;
+  }
+
+  .access-hero h1 {
+    margin-bottom: 26px;
+    font-size: 15px;
+  }
+
+  .access-hero__copy {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 11vw, 44px);
+    line-height: 1.35;
+  }
+
+  .access-hero__lead {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .access-overview,
+  .access-contact-section {
+    padding: 76px 0 82px;
+  }
+
+  .access-section-heading {
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .access-section-heading .access-kicker {
+    margin-bottom: 0;
+  }
+
+  .access-section-heading h2,
+  .access-contact-card h2 {
+    font-size: 31px;
+  }
+
+  .access-section-heading > p:last-child,
+  .access-contact-card > div:first-child > p:last-child {
+    font-size: 14px;
+  }
+
+  .access-location-layout {
+    gap: 14px;
+  }
+
+  .access-details {
+    padding: 34px 24px 26px;
+    border-radius: 15px;
+  }
+
+  .access-details__number {
+    top: 14px;
+    right: 16px;
+    font-size: 66px;
+  }
+
+  .access-details h3 {
+    margin: 30px 0 24px;
+    font-size: 34px;
+  }
+
+  .access-details dl div {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .access-map-panel {
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .access-map-panel__heading {
+    padding: 5px 4px 13px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .access-page .map-frame,
+  .access-page .map-frame iframe {
+    min-height: 320px;
+  }
+
+  .access-contact-card {
+    width: calc(100% - 28px);
+    gap: 32px;
+    padding: 34px 22px;
+    border-radius: 15px;
+  }
+
+  .access-contact-actions .button {
+    min-height: 58px;
+  }
+
+  .access-page .floating-cta {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .access-hero__inner {
+    width: calc(100% - 28px);
+  }
+
+  .access-details {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .access-details dl div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .access-details,
+  .access-map-panel,
+  .access-contact-card {
+    transition: none;
+  }
+}

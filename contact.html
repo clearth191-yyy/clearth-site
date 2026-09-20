@@ -20,7 +20,7 @@
     
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
-    <link rel="stylesheet" href="assets/css/contact.css?v=20260920-01">
+    <link rel="stylesheet" href="assets/css/contact.css?v=20260920-02">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、伐採、立木買取、木材の受け入れ、木質チップ製造などのご相談を承る企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://www.google.com/maps/search/?api=1&query=%E3%80%92738-0223%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E6%B5%85%E5%8E%9F962-3","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"お問い合わせ","item":"https://clearth191-yyy.github.io/clearth-site/contact.html"}]}</script>
   </head>
@@ -42,29 +42,51 @@
     <main id="main">
       <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="index.html">ホーム</a></li><li>お問い合わせ</li></ol></nav>
 
-      <section class="lower-hero contact-hero">
-        <div class="lower-hero-copy">
-          <p class="eyebrow">CONTACT</p>
-          <h1>お問い合わせ</h1>
-          <p>森林整備・伐採・危険木・立木買取・木材持ち込みなど、まずはお気軽にご相談ください。</p>
-          <p class="contact-hero-assurance">どこに相談したらいいか分からない場合も、お気軽にお問い合わせください。</p>
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <picture class="contact-hero__media">
+          <source srcset="assets/images/story-dedicated/hero-cedar-grove.webp" type="image/webp">
+          <img src="assets/images/story-dedicated/hero-cedar-grove.jpg" alt="木漏れ日が差し込む日本の森林" loading="eager" decoding="async" width="2048" height="1024" fetchpriority="high">
+        </picture>
+        <div class="contact-hero__overlay"></div>
+        <div class="contact-hero__inner">
+          <p class="contact-hero__eyebrow">CONTACT</p>
+          <h1 id="contact-title">お問い合わせ</h1>
+          <p class="contact-hero__copy">森林・木材のこと、<br>まずはお気軽に<span class="contact-hero__mobile-break"><br></span>ご相談ください。</p>
+          <p class="contact-hero__lead">立木買取、森林整備、危険木伐採、特殊伐採、木材持ち込み、木質チップなど、内容が決まっていない段階でもご相談いただけます。</p>
         </div>
-        <div class="lower-hero-image"><picture><source srcset="assets/images/generated/town-mountain.webp" type="image/webp"><img src="assets/images/generated/town-mountain.jpg" alt="山と街が近くにある地域の美しい風景" loading="eager" decoding="async" width="1600" height="853" fetchpriority="high"></picture></div>
+        <p class="contact-hero__side" aria-hidden="true"><span>FOREST</span><span>RESOURCE</span><span>FUTURE</span></p>
       </section>
 
-      <section class="contact-phone-section" aria-labelledby="phone-consultation-title">
-        <div class="container contact-phone-grid">
-          <div class="contact-phone-copy">
-            <p class="contact-kicker">PHONE</p>
-            <h2 id="phone-consultation-title">お電話でのご相談</h2>
-            <p>お急ぎの場合や、文章で説明しにくい場合はお電話ください。</p>
-            <p>「伐採できるか分からない」「木材を持ち込めるか確認したい」といったご相談でも大丈夫です。</p>
-          </div>
-          <a class="contact-call-card" href="tel:0829780222" aria-label="0829-78-0222へ電話をかける">
-            <span>株式会社Clearth</span>
-            <strong>0829-78-0222</strong>
-            <small>電話をかける</small>
-          </a>
+      <section class="contact-methods" aria-labelledby="contact-methods-title">
+        <div class="contact-section-shell">
+          <header class="contact-section-heading">
+            <p class="contact-kicker">CONTACT METHOD</p>
+            <h2 id="contact-methods-title">お問い合わせ方法</h2>
+            <p>ご相談内容やお使いの端末に合わせて、お好きな方法をお選びください。</p>
+          </header>
+          <ol class="contact-method-list">
+            <li class="contact-method contact-method--phone">
+              <span class="contact-method__number" aria-hidden="true">01</span>
+              <p class="contact-method__label">PHONE</p>
+              <h3>お電話で相談</h3>
+              <p>お急ぎの場合や、文章で説明しにくい場合はお電話ください。「伐採できるか分からない」「木材を持ち込めるか確認したい」といったご相談でも大丈夫です。</p>
+              <a class="contact-method__phone" href="tel:0829780222" aria-label="0829-78-0222へ電話をかける">0829-78-0222</a>
+            </li>
+            <li class="contact-method contact-method--form">
+              <span class="contact-method__number" aria-hidden="true">02</span>
+              <p class="contact-method__label">FORM</p>
+              <h3>フォームで相談</h3>
+              <p>見積依頼や森林・木材に関するご相談を、分かる範囲からご入力いただけます。</p>
+              <a class="contact-method__link" href="#contact-form">フォームへ進む <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="contact-method contact-method--line">
+              <span class="contact-method__number" aria-hidden="true">03</span>
+              <p class="contact-method__label">LINE</p>
+              <h3>LINEで相談</h3>
+              <p>木や現場の写真を添えて相談したい方に。スマートフォンからそのまま友だち追加できます。</p>
+              <a class="contact-method__link" href="https://lin.ee/Sf9A96m" target="_blank" rel="noopener noreferrer">LINEを開く <span aria-hidden="true">→</span></a>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -205,7 +227,7 @@
 
             <div class="form-status" data-form-status role="status" aria-live="polite"></div>
             <p class="form-note" id="contact-form-note">送信後、内容を確認のうえご連絡いたします。お急ぎの場合は、<a href="tel:0829780222">0829-78-0222</a>へお電話いただくか、<a href="mailto:clearth.191@gmail.com">メール</a>でご連絡ください。</p>
-            <button class="button button-primary" type="submit" data-ready-label="入力内容を送信する">入力内容を送信する</button>
+            <button class="button button-primary" type="submit" data-ready-label="お問い合わせを送信する">お問い合わせを送信する</button>
           </form>
         </div>
       </section>
@@ -213,10 +235,10 @@
       <section class="contact-company-section" aria-labelledby="contact-company-title">
         <div class="container contact-company-layout">
           <div class="contact-company-copy">
-            <p class="contact-kicker">COMPANY</p>
-            <h2 id="contact-company-title">会社情報</h2>
+            <p class="contact-kicker">ACCESS</p>
+            <h2 id="contact-company-title"><span>会社情報・</span><span>アクセス</span></h2>
             <p>ご来社や木材の持ち込みをご希望の場合は、事前にお問い合わせください。</p>
-            <a class="button button-secondary" href="access.html">アクセスを見る</a>
+            <a class="button button-secondary" href="access.html">拠点・アクセスを見る</a>
           </div>
           <dl class="contact-company-details">
             <div><dt>会社名</dt><dd>株式会社Clearth</dd></div>
@@ -257,7 +279,7 @@
     
     <div class="floating-cta" aria-label="固定お問い合わせ導線">
       <a href="tel:0829780222" class="floating-tel">電話相談</a>
-      <a href="contact.html" class="floating-mail">見積・相談</a>
+      <a href="#contact-form" class="floating-mail">見積・相談</a>
     </div>
     
     

@@ -574,6 +574,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .photo-trust-gallery picture { aspect-ratio: 16 / 11; }
   .contact-strip { padding: 24px; }
   .contact-strip h2 { font-size: 24px; line-height: 1.35; }
+  .access-page .access-contact-title-line { display: block; white-space: nowrap; }
   .contact-strip-actions { width: 100%; flex-direction: column; }
   .access-page .floating-cta { display: none; }
   .floating-cta { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); gap: 7px; }

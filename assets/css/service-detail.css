@@ -125,6 +125,7 @@
   .detail-section { padding: 68px 0; }
   .detail-hero { min-height: 500px; }
   .detail-hero__media img { object-position: 47% center; }
+  .detail-hero__media img[src*="standing-tree-field-assessment"] { object-position: 37% center; }
   .detail-hero__overlay { background: linear-gradient(180deg, rgba(7,40,32,.13), rgba(7,40,32,.43) 37%, rgba(7,40,32,.88)); }
   .detail-hero__inner { padding: 82px 0 48px; }
   .detail-hero__index { gap: 11px; margin-bottom: 40px; font-size: 9px; }

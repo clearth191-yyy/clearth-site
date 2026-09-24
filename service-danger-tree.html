@@ -20,11 +20,11 @@
     
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
-    <link rel="stylesheet" href="assets/css/service-danger-tree.css?v=20260924-01">
+    <link rel="stylesheet" href="assets/css/service-detail.css?v=20260921-02">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、木材廃棄物処分、木質チップ製造、バイオマス燃料供給まで一貫対応する企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://maps.app.goo.gl/4wMg3vUEQ7vRsqch8","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"事業内容","item":"https://clearth191-yyy.github.io/clearth-site/services.html"},{"@type":"ListItem","position":3,"name":"危険木伐採","item":"https://clearth191-yyy.github.io/clearth-site/service-danger-tree.html"}]}</script>
   </head>
-  <body class="danger-tree-page">
+  <body class="detail-page">
     <a class="skip-link" href="#main">本文へスキップ</a>
     
     <header class="site-header" data-header>
@@ -43,133 +43,98 @@
       <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="index.html">ホーム</a></li><li><a href="services.html">事業内容</a></li><li>危険木伐採</li></ol></nav>
       
     
-    <section class="service-photo-hero">
-      <div class="service-photo-hero-media"><picture><source srcset="assets/images/services/danger-tree-hero.webp" type="image/webp"><img src="assets/images/services/danger-tree-hero.jpg" alt="山里の道路と住宅に近い大木を作業員が点検している様子" loading="eager" decoding="async" width="1672" height="941" fetchpriority="high"></picture></div>
-      <div class="service-photo-hero-overlay" aria-hidden="true"></div>
-      <div class="service-photo-hero-copy">
-        <p class="eyebrow">SERVICE</p>
-        <h1>危険木伐採</h1>
-        <p>倒れそうな木、家屋や道路に近い木、電線付近の木、山林内の危険木まで、現地の状況に合わせて安全な作業方法を検討します。</p>
+    <section class="detail-hero" aria-labelledby="detail-title">
+      <picture class="detail-hero__media"><source srcset="assets/images/services/danger-tree-hero.webp" type="image/webp"><img src="assets/images/services/danger-tree-hero.jpg" alt="山里の道路と住宅に近い大木を作業員が点検している様子" width="1672" height="941" fetchpriority="high" decoding="async"></picture>
+      <div class="detail-hero__overlay" aria-hidden="true"></div>
+      <div class="detail-hero__inner">
+        <p class="detail-hero__index"><span>03</span> HAZARDOUS TREE REMOVAL</p>
+        <p class="detail-hero__eyebrow">OUR BUSINESS / SERVICE 03</p>
+        <h1 id="detail-title">危険木伐採</h1>
+        <p class="detail-hero__copy">倒木リスクを見極め、<br>安心につなぐ。</p>
+        <p class="detail-hero__lead">倒れそうな木、家屋や道路に近い木、電線付近の木、山林内の危険木まで、現地の状況に合わせて安全な作業方法を検討します。</p>
       </div>
     </section>
-    
-    
-    <section class="section service-intro-pair-section">
-      <div class="container service-intro-pair">
-        
-          <div class="detail-block">
-            <h2>危険木伐採について</h2>
-            <p>危険木伐採とは、倒木の恐れがある木や、家屋・道路・施設・電線などに影響する可能性のある木を、被害が発生する前に確認し、必要に応じて伐採・処理する作業です。</p><p>株式会社Clearthでは、倒れそうな木、傾いた木、枯れ木、山林内の危険木、道路や建物に近い支障木について、現地確認を行ったうえで安全な作業方法を検討します。</p><p>重機や林業現場での経験を活かし、伐採だけでなく、伐採後の搬出、処分、一次破砕、木質チップ化まで一貫してご相談いただけます。</p>
-            
-          </div>
-        
-        
-          <div class="detail-block">
-            <h2>こんなお悩みはありませんか？</h2>
-            <ul class="check-list"><li>倒れそうな木が家屋や道路に近い</li><li>枯れ木や老木があり、強風や大雨の時が心配</li><li>電線付近や施設周辺の木をどう処理すればよいかわからない</li><li>山林内の倒木リスクを確認したい</li><li>伐採後の木材の搬出・処分までまとめて相談したい</li></ul>
-          </div>
-        
+
+    <section class="detail-section detail-about" aria-labelledby="detail-about-title">
+      <div class="detail-container detail-split">
+        <div class="detail-copy">
+          <p class="detail-label">ABOUT SERVICE</p>
+          <h2 id="detail-about-title">危険木伐採について</h2>
+          <p>危険木伐採とは、倒木の恐れがある木や、家屋・道路・施設・電線などに影響する可能性のある木を、被害が発生する前に確認し、必要に応じて伐採・処理する作業です。</p>
+          <p>株式会社Clearthでは、倒れそうな木、傾いた木、枯れ木、山林内の危険木、道路や建物に近い支障木について、現地確認を行ったうえで安全な作業方法を検討します。</p>
+          <p>重機や林業現場での経験を活かし、伐採だけでなく、伐採後の搬出、処分、一次破砕、木質チップ化まで一貫してご相談いただけます。</p>
+          <p class="detail-note">木の状態や周辺環境が分かる写真を送っていただければ、事前相談も可能です。</p>
+        </div>
+        <picture class="detail-photo"><source srcset="assets/images/services/overview/service-03-danger-tree.webp" type="image/webp"><img src="assets/images/services/overview/service-03-danger-tree.jpg" alt="住宅と道路の近くに立つ大きな木" width="1400" height="933" loading="lazy" decoding="async"></picture>
       </div>
-      <div class="container">
-        <div class="intro-photo" style="width: min(100%, 820px); margin: 22px auto 0;">
-          <picture style="display: block; aspect-ratio: 16 / 9; max-height: 420px;"><source srcset="assets/images/services/danger-tree-inspection.webp" type="image/webp"><img src="assets/images/services/danger-tree-inspection.jpg" alt="道路と住宅に近い危険木の状態を作業員が確認している様子" loading="lazy" decoding="async" width="1672" height="941"></picture>
+    </section>
+
+    <section class="detail-section detail-why" aria-labelledby="detail-why-title">
+      <div class="detail-container">
+        <div class="detail-heading">
+          <p class="detail-label">WHY CLEARTH</p>
+          <h2 id="detail-why-title">Clearthの危険木伐採</h2>
+          <p>現地確認から伐採後の資源活用まで、状況に合わせてご相談いただけます。</p>
+        </div>
+        <ol class="detail-features">
+          <li><span>01</span><div><h3>現地確認から作業方法の提案まで丁寧に対応</h3><p>周辺環境や木の状態を確認し、状況に応じた施工方法を検討します。</p></div></li>
+          <li><span>02</span><div><h3>家屋・道路・電線付近にも配慮した安全な計画</h3><p>周囲への影響を確認し、安全性を重視した施工方法を検討します。</p></div></li>
+          <li><span>03</span><div><h3>重機・林業の経験を活かした対応</h3><p>山林内の危険木から、生活圏に近い木まで現場条件に応じて対応します。</p></div></li>
+          <li><span>04</span><div><h3>伐採後の搬出・処理・資源活用まで一貫対応</h3><p>伐採だけで終わらず、搬出・処分・一次破砕・木質チップ化など、次の工程までご相談いただけます。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="detail-section detail-resource" aria-labelledby="detail-resource-title">
+      <div class="detail-container detail-split detail-split--media-first">
+        <picture class="detail-photo"><source srcset="assets/images/services/danger-tree-inspection.webp" type="image/webp"><img src="assets/images/services/danger-tree-inspection.jpg" alt="作業員が住宅に近い危険木と周辺環境を確認している様子" width="1672" height="941" loading="lazy" decoding="async"></picture>
+        <div class="detail-copy">
+          <p class="detail-label">SAFETY FIRST</p>
+          <h2 id="detail-resource-title">危険を見極め、<br>安全な対応へ。</h2>
+          <p>危険木は、木の状態だけでなく、住宅・道路・電線など周辺環境との距離によって適切な対応方法が異なります。</p>
+          <p>倒木のおそれ、傾き、枯れ、根元や幹の状態、周辺設備との位置関係などを確認し、安全に配慮した方法で伐採・処理につなげます。</p>
+          <p>住宅・道路・電線付近など、通常の伐採が難しい場合は、ロープや高所作業車などを使用する<a href="service-special-cutting.html">特殊伐採</a>にも対応します。</p>
+          <h3>対応内容</h3>
+          <ul class="detail-contents"><li>現地確認</li><li>倒木リスク確認</li><li>傾木・枯木の確認</li><li>家屋・道路周辺対応</li><li>電線付近の確認</li></ul>
         </div>
       </div>
     </section>
 
-    <section class="section service-main-after-pair">
-      <div class="container service-detail-grid">
-        <div>
-          
-    <div class="section-heading">
-      <p class="eyebrow">WHO IT HELPS</p>
-      <h2>このような方へ</h2>
-      <p>一般住宅、山林所有者、法人企業、行政・施設管理者</p>
-    </div>
-    
-          <div class="detail-block">
-            <h2>対応内容</h2>
-            <ul class="check-list"><li>危険木・支障木の現地確認</li><li>倒木リスクの確認</li><li>家屋・道路・施設周辺の伐採相談</li><li>伐採後の木材は、資源として有効活用できるものを木質チップ化し、適正に処理します。</li></ul>
-          </div>
-          
-          <div class="detail-block">
-            <h2>選ばれる理由</h2>
-            <ul class="check-list"><li>現地確認から安全な作業方法をご提案</li><li>重機や林業経験を活かした対応</li><li>伐採後の搬出・処分・資源活用まで相談可能</li><li>一般住宅から法人・行政案件まで対応</li></ul>
-          </div>
+    <section class="detail-section detail-flow" aria-labelledby="detail-flow-title">
+      <div class="detail-container">
+        <div class="detail-heading">
+          <p class="detail-label">FLOW</p>
+          <h2 id="detail-flow-title">ご相談から作業完了まで</h2>
+          <p>写真確認または現地確認後に、作業内容とお見積りをご案内します。</p>
         </div>
-        <aside class="service-aside">
-          <h2>相談から完了まで</h2>
-          <ol class="flow-list"><li><span>01</span>お問い合わせ</li><li><span>02</span>現地確認</li><li><span>03</span>倒木リスク・周辺環境の確認</li><li><span>04</span>作業方法のご提案</li><li><span>05</span>伐採・搬出・処分</li></ol>
-          <a class="button button-primary" href="contact.html">この事業について相談する</a>
-        </aside>
+        <ol class="detail-flow__list"><li><span>01</span><strong>お問い合わせ</strong></li><li><span>02</span><strong>現地確認</strong></li><li><span>03</span><strong>危険度・周辺環境の確認</strong></li><li><span>04</span><strong>作業方法・お見積り</strong></li><li><span>05</span><strong>伐採・搬出・処理</strong></li></ol>
       </div>
     </section>
-    
-    
-    
-    
-    <section class="section service-feature-section">
-      <div class="container">
 
-    <div class="section-heading">
-      <p class="eyebrow">FEATURE</p>
-      <h2>放置すると危険なケース</h2>
-      <p>危険木は見た目だけでは判断しにくい場合があります。早めの確認により、倒木や接触による被害を未然に防ぎやすくなります。</p>
-    </div>
-
-        <div class="service-grid">
-          <article class="service-card"><div><span class="card-label">01</span><h3>家屋・道路に近い木</h3><p>強風や大雨で倒れた場合、建物、道路、車両、通行人へ影響する可能性があります。周辺環境を確認したうえで対応方法を検討します。</p></div></article><article class="service-card"><div><span class="card-label">02</span><h3>枯れ木・傾いた木</h3><p>内部が傷んでいる木や大きく傾いた木は、突然倒れるリスクがあります。山林内でも作業道や近隣施設に影響する場合は注意が必要です。</p></div></article><article class="service-card"><div><span class="card-label">03</span><h3>電線・施設付近の支障木</h3><p>電線、倉庫、工場、公共施設の近くにある木は、伐採方法や作業範囲を慎重に確認する必要があります。電線や公共設備に近い場合は、必要に応じて関係機関と確認しながら対応方法を検討します。まずは現地状況をお聞かせください。</p></div></article>
+    <section class="detail-section detail-for-you" aria-labelledby="detail-for-you-title">
+      <div class="detail-container detail-for-you__inner">
+        <div class="detail-heading">
+          <p class="detail-label">FOR YOU / WHO IT HELPS</p>
+          <h2 id="detail-for-you-title">こんなお悩みはありませんか？</h2>
+          <p>一般住宅、山林所有者、法人企業、行政・施設管理者</p>
         </div>
+        <ul class="detail-concerns"><li>倒れそうな木が家屋や道路に近い</li><li>枯れ木や老木があり、強風や大雨の時が心配</li><li>電線付近や施設周辺の木をどう処理すればよいかわからない</li><li>山林内の倒木リスクを確認したい</li><li>危険木を伐採した後の処分までまとめて相談したい</li></ul>
       </div>
     </section>
 
-
-    <section class="section service-why-section">
-      <div class="container">
-
-    <div class="section-heading">
-      <p class="eyebrow">WHY CLEARTH</p>
-      <h2>株式会社Clearthが選ばれる理由</h2>
-      <p>現場対応から再資源化、供給までを一体で考え、安心して相談できる体制を整えています。</p>
-    </div>
-
-        <div class="service-grid">
-          <article class="service-card"><div><span class="card-label">01</span><h3>現地確認から丁寧に対応</h3><p>木の状態、周辺環境、搬出条件を確認し、無理のない作業方法をご提案します。写真での事前相談も可能です。</p></div></article><article class="service-card"><div><span class="card-label">02</span><h3>伐採後まで一貫相談</h3><p>伐採して終わりではなく、搬出、処分、一次破砕、木質チップ化まで、木材を資源として活用する流れもご相談いただけます。</p></div></article><article class="service-card"><div><span class="card-label">03</span><h3>住宅・法人・行政まで対応</h3><p>一般住宅の支障木、山林所有者様の倒木リスク確認、法人施設や行政管理地の危険木まで、状況に応じて対応します。</p></div></article>
-        </div>
+    <section class="detail-section detail-related" aria-labelledby="detail-related-title">
+      <div class="detail-container">
+        <div class="detail-heading"><p class="detail-label">RELATED SERVICES</p><h2 id="detail-related-title">関連する事業</h2></div>
+        <div class="related-links"><a href="service-forest.html">森林整備</a><a href="service-special-cutting.html">特殊伐採</a><a href="service-standing-tree.html">立木買取</a><a href="service-wood-waste.html">木材廃棄物処分</a><a href="service-crushing.html">木材一次破砕</a><a href="service-wood-chip.html">木質チップ製造</a><a href="service-biomass.html">バイオマス燃料供給</a></div>
       </div>
     </section>
 
-
-    <section class="section related-section">
-      <div class="container">
-        
-    <div class="section-heading">
-      <p class="eyebrow">RELATED SERVICES</p>
-      <h2>関連する事業</h2>
-      
-    </div>
-    
-        <div class="related-links"><a href="service-standing-tree.html">立木買取</a><a href="service-forest.html">森林整備</a><a href="service-special-cutting.html">特殊伐採</a><a href="service-wood-waste.html">木材廃棄物処分</a><a href="service-crushing.html">木材一次破砕</a><a href="service-wood-chip.html">木質チップ製造</a><a href="service-biomass.html">バイオマス燃料供給</a></div>
-      </div>
-    </section>
-    
-    
-    <section class="section service-assurance-section">
-      <div class="container contact-strip">
-        <div>
-          <p class="eyebrow">CONSULTATION</p>
-          <h2>写真を送って事前相談できます</h2>
-          <p>木の状態や周辺環境が分かる写真を送っていただければ、危険木伐採・支障木伐採の相談内容を整理しやすくなります。</p><p>木全体の写真、根元の状態、家屋・道路・電線との距離、作業車両が入れる道の状況などが分かる写真があると、よりスムーズに確認できます。</p><p><a href="mailto:clearth.191@gmail.com">写真はメールにてお送りいただけます。</a><a href="contact.html">お問い合わせフォーム</a>からのご相談も可能です。</p><p>写真確認または現地確認後に、作業内容とお見積もりをご案内します。</p><p class="assurance-callout">倒木の恐れがある場合や、道路・建物へ影響している場合は、お早めにお電話でご相談ください。伐採後の木材の搬出・処分、木質チップ化までまとめてご相談いただけます。</p>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="cta-band">
+    <section class="cta-band detail-cta" aria-labelledby="detail-cta-title">
       <div class="cta-inner">
-        <p class="eyebrow">CONTACT</p>
-        <h2>危険木伐採について、まずは状況をお聞かせください。</h2>
+        <p class="detail-label">CONTACT</p>
+        <h2 id="detail-cta-title">危険木伐採について、まずは状況をお聞かせください。</h2>
         <p>倒れそうな木、家屋や道路に近い木、電線付近の木、山林内の危険木でお困りの方へ。現地確認から伐採、搬出、処分、木質チップ化まで、状況に合わせて最適な方法をご提案します。まずはお気軽にご相談ください。</p>
+        <p>木全体・根元の状態、家屋・道路・電線との距離、作業車両が入れる道が分かる写真を<a href="mailto:clearth.191@gmail.com">メールでお送りいただく</a>と、事前確認がスムーズです。倒木の恐れがある場合や道路・建物へ影響している場合は、お早めにお電話でご相談ください。</p>
         <p><strong>対応エリア</strong><br>広島県全域を中心に対応しております。近隣県についても対応可能な場合がありますので、お気軽にご相談ください。</p>
         <p>現地確認・お見積もりは無料です。現場状況やご相談内容を確認したうえで、最適な方法をご提案いたします。</p>
         <div class="cta-actions">
@@ -198,7 +163,7 @@
         <div>
           <h2>お問い合わせ</h2>
           <p>TEL：<a href="tel:0829780222">0829-78-0222</a><br>FAX：0829-78-2277<br>MAIL：<a href="mailto:clearth.191@gmail.com">clearth.191@gmail.com</a><br>〒738-0223 広島県廿日市市浅原962-3</p>
-          <a class="button button-light" href="contact.html">お問い合わせフォーム</a>
+          <a class="button button-light" href="contact.html" style="color: var(--navy);">お問い合わせフォーム</a>
           <a class="footer-access-link" href="access.html">アクセスを見る</a>
         </div>
       </div>

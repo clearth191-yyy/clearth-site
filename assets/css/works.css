@@ -1,0 +1,213 @@
+/* 施工実績ページ専用。HERO・ヘッダー・フッター・固定CTAは共通仕様を維持。 */
+.works-page .works-projects {
+  background: #fff;
+}
+
+.works-page .works-projects .section-heading {
+  max-width: 780px;
+  margin-bottom: 24px;
+}
+
+.works-page .works-projects .eyebrow {
+  color: #527563;
+}
+
+.works-page .works-projects h2 {
+  color: #183c2f;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.4;
+}
+
+.works-page .works-projects .section-heading > p:last-child {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.works-page .works-image-note {
+  margin: 0 0 30px;
+  color: #64736b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.works-page .works-projects__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.works-page .work-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-color: #e0e8e2;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(24, 60, 47, .05);
+}
+
+/* 1枚・2枚とも同じ構造。figure の数に応じて写真幅を等分する。 */
+.works-page .work-card__photos {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 2px;
+  background: #eef3ef;
+}
+
+.works-page .work-card__photos .image-frame {
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.works-page .work-card__photos .image-frame:only-child {
+  aspect-ratio: 2 / 1;
+}
+
+.works-page .work-card__photos img {
+  object-fit: cover;
+  object-position: center;
+  filter: none;
+}
+
+.works-page .work-card .image-badge {
+  left: 8px;
+  bottom: 8px;
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+.works-page .work-card > .work-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px 24px 22px;
+}
+
+.works-page .work-card__category {
+  align-self: flex-start;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  color: #325b45;
+  background: #f0f5f1;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.works-page .work-card h3 {
+  margin-bottom: 14px;
+  font-size: 21px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.works-page .work-card__body > p:not(.work-card__region) {
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.works-page .work-card .work-card__region {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: auto 0 0;
+  padding-top: 16px;
+  color: #364b40;
+  border-top: 1px solid #e7ede8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.works-page .work-card__region span {
+  color: #64736b;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.works-page .work-card:hover {
+  transform: none;
+  border-color: #e0e8e2;
+  box-shadow: 0 8px 26px rgba(24, 60, 47, .05);
+}
+
+.works-page .work-card:hover img {
+  transform: none;
+}
+
+.works-page .works-contact {
+  background: linear-gradient(135deg, #174b3b, #0c332d);
+}
+
+.works-page .works-contact .cta-inner {
+  width: min(940px, calc(100% - 64px));
+}
+
+.works-page .works-contact h2 {
+  max-width: 780px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.4;
+}
+
+.works-page .works-contact .cta-actions {
+  flex-wrap: nowrap;
+  margin-top: 34px;
+}
+
+.works-page .works-contact .button {
+  min-width: 190px;
+  min-height: 52px;
+}
+
+.works-page .works-contact .button-secondary {
+  color: #fff;
+  background: #16894c;
+  border-color: transparent;
+}
+
+@media (max-width: 980px) {
+  .works-page .works-projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .works-page .works-contact .cta-inner {
+    width: calc(100% - 36px);
+  }
+
+  .works-page .works-contact h2 {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  .works-page .works-contact .cta-actions {
+    flex-direction: column;
+  }
+
+  .works-page .works-contact .button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .works-page .works-projects__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .works-page .works-projects .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .works-page .works-image-note {
+    margin-bottom: 26px;
+  }
+
+  .works-page .work-card > .work-card__body {
+    padding: 24px 22px 22px;
+  }
+}

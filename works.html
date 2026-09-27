@@ -20,10 +20,11 @@
     
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
+    <link rel="stylesheet" href="assets/css/works.css?v=20260927-01">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、木材廃棄物処分、木質チップ製造、バイオマス燃料供給まで一貫対応する企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://maps.app.goo.gl/4wMg3vUEQ7vRsqch8","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"施工実績","item":"https://clearth191-yyy.github.io/clearth-site/works.html"}]}</script>
   </head>
-  <body>
+  <body class="works-page">
     <a class="skip-link" href="#main">本文へスキップ</a>
     
     <header class="site-header" data-header>
@@ -51,96 +52,99 @@
       <div class="lower-hero-image"><picture><img src="assets/images/works/works-vehicles-hero.png?v=20260717-04" alt="株式会社Clearthが保有する車両・林業機械" loading="eager" decoding="async" width="1448" height="1086" fetchpriority="high"></picture></div>
     </section>
     
-    <section class="section">
+    <section class="section works-projects" aria-labelledby="projects-title">
       <div class="container">
         
     <div class="section-heading">
       <p class="eyebrow">PROJECTS</p>
-      <h2>施工前後を写真で分かりやすく</h2>
-      <p>写真や説明は後から何件でも追加できる構成です。</p>
+      <h2 id="projects-title">主な施工・対応事例</h2>
+      <p>森林整備から木材の再資源化、木質チップ製造・燃料供給まで、Clearthが対応した事例をご紹介します。</p>
     </div>
     
-        <div class="works-grid works-grid-large">
-    <article class="work-card">
-      <div class="before-after">
+        <p class="works-image-note">掲載写真は対応内容を紹介するイメージ画像です。施工前後の比較写真ではありません。</p>
+        <!-- 同じ work-card を複製して事例を追加。写真が1枚の場合は figure を1つにする。 -->
+        <div class="works-grid works-projects__grid">
+    <article class="work-card" aria-labelledby="project-forest-title">
+      <div class="work-card__photos">
         
     <figure class="image-frame">
-      <picture><source srcset="assets/images/works/work-forest-before.webp" type="image/webp"><img src="assets/images/works/work-forest-before.jpg" alt="山林整備・搬出作業の施工前写真（実写真差し替え予定）" loading="lazy" decoding="async" width="241" height="203"></picture>
+      <picture><source srcset="assets/images/works/work-forest-before.webp" type="image/webp"><img src="assets/images/works/work-forest-before.jpg" alt="林内で重機を使って木材を扱う森林整備のイメージ" loading="lazy" decoding="async" width="241" height="203"></picture>
       <figcaption class="image-badge">イメージ画像</figcaption>
     </figure>
     
         
     <figure class="image-frame">
-      <picture><source srcset="assets/images/works/work-forest-after.webp" type="image/webp"><img src="assets/images/works/work-forest-after.jpg" alt="山林整備・搬出作業の施工後写真（実写真差し替え予定）" loading="lazy" decoding="async" width="233" height="203"></picture>
+      <picture><source srcset="assets/images/works/work-forest-after.webp" type="image/webp"><img src="assets/images/works/work-forest-after.jpg" alt="伐採木をトラックへ積み込む搬出作業のイメージ" loading="lazy" decoding="async" width="233" height="203"></picture>
       <figcaption class="image-badge">イメージ画像</figcaption>
     </figure>
     
       </div>
-      <div>
-        <span>森林整備</span>
-        <h3>山林整備・搬出作業</h3>
+      <div class="work-card__body">
+        <span class="work-card__category">森林整備</span>
+        <h3 id="project-forest-title">山林整備・搬出作業</h3>
         <p>管理不足となっていた山林を整備し、伐採木を搬出して資源活用へつなげた事例です。</p>
-        <small>広島県内</small>
+        <p class="work-card__region"><span>対応地域</span>広島県内</p>
       </div>
     </article>
     
-    <article class="work-card">
-      <div class="before-after">
+    <article class="work-card" aria-labelledby="project-recycling-title">
+      <div class="work-card__photos">
         
     <figure class="image-frame">
-      <picture><source srcset="assets/images/works/work-recycling-before.webp" type="image/webp"><img src="assets/images/works/work-recycling-before.jpg" alt="一次破砕・再資源化の施工前写真（実写真差し替え予定）" loading="lazy" decoding="async" width="1267" height="962"></picture>
+      <picture><source srcset="assets/images/works/work-recycling-before.webp" type="image/webp"><img src="assets/images/works/work-recycling-before.jpg" alt="再資源化へつなぐ木材のイメージ" loading="lazy" decoding="async" width="1267" height="962"></picture>
       <figcaption class="image-badge">イメージ画像</figcaption>
     </figure>
     
         
     <figure class="image-frame">
-      <picture><source srcset="assets/images/works/work-recycling-after.webp" type="image/webp"><img src="assets/images/works/work-recycling-after.jpg" alt="一次破砕・再資源化の施工後写真（実写真差し替え予定）" loading="lazy" decoding="async" width="378" height="198"></picture>
+      <picture><source srcset="assets/images/works/work-recycling-after.webp" type="image/webp"><img src="assets/images/works/work-recycling-after.jpg" alt="木材を加工し木質チップへつなげる設備のイメージ" loading="lazy" decoding="async" width="378" height="198"></picture>
       <figcaption class="image-badge">イメージ画像</figcaption>
     </figure>
     
       </div>
-      <div>
-        <span>木材リサイクル</span>
-        <h3>一次破砕・再資源化</h3>
+      <div class="work-card__body">
+        <span class="work-card__category">木材リサイクル</span>
+        <h3 id="project-recycling-title">一次破砕・再資源化</h3>
         <p>木材廃棄物を受け入れ、一次破砕と選別を行い、木質チップ製造へつなげた事例です。</p>
-        <small>広島県内</small>
+        <p class="work-card__region"><span>対応地域</span>広島県内</p>
       </div>
     </article>
     
-    <article class="work-card">
-      <div class="before-after">
+    <article class="work-card" aria-labelledby="project-biomass-title">
+      <div class="work-card__photos">
         
     <figure class="image-frame">
-      <picture><source srcset="assets/images/works/work-biomass-before.webp" type="image/webp"><img src="assets/images/works/work-biomass-before.jpg" alt="バイオマス燃料供給の施工前写真（実写真差し替え予定）" loading="lazy" decoding="async" width="820" height="676"></picture>
+      <picture><source srcset="assets/images/works/work-biomass-before.webp" type="image/webp"><img src="assets/images/works/work-biomass-before.jpg" alt="燃料利用につながる木質チップのイメージ" loading="lazy" decoding="async" width="820" height="676"></picture>
       <figcaption class="image-badge">イメージ画像</figcaption>
     </figure>
     
         
     <figure class="image-frame">
-      <picture><source srcset="assets/images/works/work-biomass-after.webp" type="image/webp"><img src="assets/images/works/work-biomass-after.jpg" alt="バイオマス燃料供給の施工後写真（実写真差し替え予定）" loading="lazy" decoding="async" width="245" height="203"></picture>
+      <picture><source srcset="assets/images/works/work-biomass-after.webp" type="image/webp"><img src="assets/images/works/work-biomass-after.jpg" alt="木質チップを輸送するトラックのイメージ" loading="lazy" decoding="async" width="245" height="203"></picture>
       <figcaption class="image-badge">イメージ画像</figcaption>
     </figure>
     
       </div>
-      <div>
-        <span>燃料供給</span>
-        <h3>バイオマス燃料供給</h3>
+      <div class="work-card__body">
+        <span class="work-card__category">燃料供給</span>
+        <h3 id="project-biomass-title">バイオマス燃料供給</h3>
         <p>製造した木質チップを燃料用途に合わせて供給した事例です。数量や条件は個別にご相談ください。</p>
-        <small>中国地方</small>
+        <p class="work-card__region"><span>対応地域</span>中国地方</p>
       </div>
     </article>
     </div>
       </div>
     </section>
     
-    <section class="cta-band">
+    <section class="cta-band works-contact" aria-labelledby="works-contact-title">
       <div class="cta-inner">
         <p class="eyebrow">CONTACT</p>
-        <h2>同じような作業をご検討中の方は、写真や場所の情報をお送りください。</h2>
+        <h2 id="works-contact-title">同じような作業をご検討中の方は、写真や場所の情報をお送りください。</h2>
         <p>山林整備、危険木伐採、木材廃棄物処分、木質チップ製造、バイオマス燃料供給まで、内容に応じてご提案します。</p>
         <div class="cta-actions">
-          <a class="button button-light" href="contact.html">無料相談・お問い合わせ</a>
-          <a class="button button-outline-light" href="tel:0829780222">電話で相談する</a>
+          <a class="button button-light" href="tel:0829780222">電話で相談する</a>
+          <a class="button button-secondary" href="https://lin.ee/Sf9A96m" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+          <a class="button button-outline-light" href="contact.html">フォームで相談する</a>
         </div>
       </div>
     </section>

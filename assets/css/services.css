@@ -405,6 +405,20 @@
   border-color: transparent;
 }
 
+@media (min-width: 901px) {
+  /* Match the adjacent image columns without changing mobile or other cards. */
+  .business-item--special-cutting {
+    grid-template-columns: minmax(360px, .96fr) minmax(0, 1.04fr);
+  }
+
+  .business-item--special-cutting .business-item__media picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 @media (hover: hover) {
   .business-item__link:hover::after { transform: translateX(5px); }
   .business-item:hover .business-item__media img { transform: scale(1.025); }

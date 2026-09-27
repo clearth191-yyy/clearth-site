@@ -20,10 +20,29 @@
     
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
+    <link rel="stylesheet" href="assets/css/service-detail.css?v=20260921-02">
+    <style>
+      .biomass-page .detail-photo--loading,
+      .biomass-page .detail-photo--supply { aspect-ratio: 16 / 9; }
+      .biomass-nowrap { white-space: nowrap; }
+      .biomass-page .detail-resource .button { margin-top: 26px; }
+      .biomass-page .detail-flow__list p { margin: 12px 0 0; color: var(--detail-muted); font-size: 13px; line-height: 1.8; }
+      .biomass-page .detail-quality .detail-heading { margin-bottom: 0; }
+      @media (max-width: 700px) {
+        .biomass-page .detail-hero__media img {
+          height: auto;
+          aspect-ratio: 16 / 9;
+          object-position: center;
+          mask-image: linear-gradient(#000 82%, transparent 100%);
+        }
+        .biomass-page .detail-flow__list li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px 20px; }
+        .biomass-page .detail-flow__list p { grid-column: 2; margin-top: 0; }
+      }
+    </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、木材廃棄物処分、木質チップ製造、バイオマス燃料供給まで一貫対応する企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://maps.app.goo.gl/4wMg3vUEQ7vRsqch8","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"},{"@type":"ListItem","position":2,"name":"事業内容","item":"https://clearth191-yyy.github.io/clearth-site/services.html"},{"@type":"ListItem","position":3,"name":"バイオマス燃料供給","item":"https://clearth191-yyy.github.io/clearth-site/service-biomass.html"}]}</script>
   </head>
-  <body>
+  <body class="detail-page biomass-page">
     <a class="skip-link" href="#main">本文へスキップ</a>
     
     <header class="site-header" data-header>
@@ -42,84 +61,108 @@
       <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="index.html">ホーム</a></li><li><a href="services.html">事業内容</a></li><li>バイオマス燃料供給</li></ol></nav>
       
     
-    <section class="service-photo-hero">
-      <div class="service-photo-hero-media"><picture><source srcset="assets/images/services/biomass-supply-main.webp" type="image/webp"><img src="assets/images/services/biomass-supply-main.jpg" alt="木質チップの在庫ヤードで大型トラックへ積み込み出荷している作業風景" loading="eager" decoding="async" width="1412" height="1114" fetchpriority="high"></picture></div>
-      <div class="service-photo-hero-overlay" aria-hidden="true"></div>
-      <div class="service-photo-hero-copy">
-        <p class="eyebrow">SERVICE</p>
-        <h1>バイオマス燃料供給</h1>
-        <p>森林整備や伐採から生まれる木材資源を木質チップへ加工し、バイオマス発電所などへ燃料として供給します。受け入れから品質管理・出荷まで一貫した体制で安定供給を支えます。</p>
+    <section class="detail-hero" aria-labelledby="detail-title">
+      <picture class="detail-hero__media"><source srcset="assets/images/services/biomass-hero.webp" type="image/webp"><img src="assets/images/services/biomass-hero.jpg" alt="山林に囲まれた木質チップ保管ヤードで、大型運搬車両とホイールローダーが供給準備を行う風景" width="1672" height="941" fetchpriority="high" decoding="async"></picture>
+      <div class="detail-hero__overlay" aria-hidden="true"></div>
+      <div class="detail-hero__inner">
+        <p class="detail-hero__index"><span>08</span> BIOMASS FUEL SUPPLY</p>
+        <p class="detail-hero__eyebrow">OUR BUSINESS / SERVICE 08</p>
+        <h1 id="detail-title">バイオマス燃料供給</h1>
+        <p class="detail-hero__copy">木質チップを、<br>地域のエネルギーへ。</p>
+        <p class="detail-hero__lead">森林整備や伐採から生まれる木材資源を木質チップへ加工し、バイオマス発電所などへ燃料として供給します。受け入れから品質管理・出荷まで一貫した体制で安定供給を支えます。</p>
       </div>
     </section>
     
     
-    <section class="section service-intro-pair-section">
-      <div class="container service-intro-pair">
-        
-          <div class="detail-block">
-            <h2>Clearthのバイオマス燃料供給について</h2>
-            <p>株式会社Clearthでは、森林整備や伐採などから生まれる間伐材・未利用材・伐採木を、地域の大切な木材資源として有効活用しています。</p><p>受け入れた木材は、一次破砕と木質チップ製造を経て、粒度や異物混入の有無、状態を確認します。発電所での利用を見据えた品質管理を行い、燃料として扱いやすい状態へ整えます。</p><p>製造した木質チップは、保管時の状態を管理し、出荷前に確認したうえで積み込みます。運搬・供給まで一貫して対応し、継続的なバイオマス燃料供給を支えます。</p><p>木材を単にチップとして販売するのではなく、森林から生まれた資源をエネルギーとして次の価値へつなげることが、Clearthのバイオマス燃料供給です。</p>
-            
-          </div>
-        
-        
-          <div class="detail-block">
-            <h2>森林資源をエネルギーへ</h2>
-            <ul class="check-list"><li>森林整備や伐採から生まれる木材資源を受け入れます。</li><li>破砕・選別・木質チップ製造を自社の工程でつなぎます。</li><li>品質確認から保管・積込・運搬・供給まで一貫して対応します。</li><li>森林資源を循環利用し、再生可能エネルギーへつなげます。</li></ul>
-          </div>
-        
+    <section class="detail-section detail-about" aria-labelledby="detail-about-title">
+      <div class="detail-container detail-split">
+        <div class="detail-copy">
+          <p class="detail-label">ABOUT SERVICE</p>
+          <h2 id="detail-about-title">バイオマス<span class="biomass-nowrap">燃料供給について</span></h2>
+          <p>株式会社Clearthでは、森林整備や伐採などから生まれる間伐材・未利用材・伐採木を、地域の大切な木材資源として有効活用しています。</p>
+          <p>受け入れた木材は、一次破砕と木質チップ製造を経て、粒度や異物混入の有無、状態を確認します。発電所での利用を見据えた品質管理を行い、燃料として扱いやすい状態へ整えます。</p>
+          <p>製造した木質チップは、保管時の状態を管理し、出荷前に確認したうえで積み込みます。運搬・供給まで一貫して対応し、継続的なバイオマス燃料供給を支えます。</p>
+          <ul class="detail-contents" aria-label="対応内容"><li>木質チップ製造</li><li>品質確認</li><li>保管</li><li>積込・運搬</li><li>燃料供給</li></ul>
+          <p class="detail-note">木材を単にチップとして販売するのではなく、森林から生まれた資源をエネルギーとして次の価値へつなげることが、Clearthのバイオマス燃料供給です。</p>
+        </div>
+        <picture class="detail-photo detail-photo--loading"><source srcset="assets/images/services/biomass-loading.webp" type="image/webp"><img src="assets/images/services/biomass-loading.jpg" alt="ホイールローダーが木質チップを大型運搬車両の荷台へ積み込み、出荷を準備している様子" width="1672" height="941" loading="lazy" decoding="async"></picture>
       </div>
     </section>
-        
-    <section class="section service-feature-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">SUPPLY FLOW</p>
-          <h2>供給までの流れ</h2>
-          <p>森林から生まれた木材資源を受け入れ、加工・品質確認・保管・運搬を経て、バイオマス燃料として供給します。</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card"><div><span class="card-label">01</span><h3>木材資源の受け入れ</h3><p>間伐材・未利用材・伐採木などを、種類や状態、受け入れ条件を確認したうえで受け入れます。</p></div></article><article class="service-card"><div><span class="card-label">02</span><h3>一次破砕・チップ製造</h3><p>木材を適切な大きさへ一次破砕し、用途を見据えた木質チップへ加工します。</p></div></article><article class="service-card"><div><span class="card-label">03</span><h3>選別・品質確認</h3><p>チップの粒度や状態、異物混入の有無を確認し、次の工程へつなげます。</p></div></article><article class="service-card"><div><span class="card-label">04</span><h3>保管</h3><p>製造した木質チップを保管し、出荷まで状態や在庫量を管理します。</p></div></article><article class="service-card"><div><span class="card-label">05</span><h3>積込・運搬</h3><p>出荷前の確認後、供給計画に合わせて車両へ積み込み、運搬します。</p></div></article><article class="service-card"><div><span class="card-label">06</span><h3>バイオマス燃料として供給</h3><p>バイオマス発電所などへ燃料として届け、森林資源をエネルギーへつなげます。</p></div></article>
-        </div>
-      </div>
-    </section>
-    
-    
-    <section class="section service-supply-section">
-      <div class="container contact-strip contact-strip-with-media">
-        <div>
-          <p class="eyebrow">QUALITY CONTROL</p>
-          <h2>安定供給を支える品質管理</h2>
-          <p>燃料としての利用を見据え、製造から保管、出荷まで各工程で木質チップの状態を確認します。</p>
-          <ul class="check-list"><li>チップのサイズや状態を確認します。</li><li>金属などの異物混入がないか確認します。</li><li>用途や供給先の条件を見据えて管理します。</li><li>保管中の木質チップの状態を確認します。</li><li>積み込み前に出荷内容と状態を確認します。</li></ul>
-        </div>
-        <div class="contact-strip-media intro-photo">
-          <picture><source srcset="assets/images/services/biomass-shipping-detail.webp" type="image/webp"><img src="assets/images/services/biomass-shipping-detail.jpg" alt="木質チップを大型トラックへ積み込み出荷している作業風景" loading="lazy" decoding="async" width="900" height="590"></picture>
-        </div>
-      </div>
-    </section>
-        
-    
-    
-    <section class="section service-why-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">WHY CLEARTH</p>
-          <h2>株式会社Clearthが選ばれる理由</h2>
+
+    <section class="detail-section detail-why" aria-labelledby="detail-why-title">
+      <div class="detail-container">
+        <div class="detail-heading">
+          <p class="detail-label">WHY CLEARTH</p>
+          <h2 id="detail-why-title">Clearthのバイオマス<span class="biomass-nowrap">燃料供給</span></h2>
           <p>森林資源の受け入れから燃料供給までを一つの流れとして管理し、継続的な利用を支えます。</p>
         </div>
-        <div class="service-grid">
-          <article class="service-card"><div><span class="card-label">01</span><h3>一貫対応</h3><p>木材資源の受け入れから、破砕・チップ製造・品質確認・保管・出荷まで一貫して対応します。</p></div></article><article class="service-card"><div><span class="card-label">02</span><h3>安定した供給体制</h3><p>原料の確保、製造、保管、出荷まで自社の流れとして管理し、安定した燃料供給につなげます。</p></div></article><article class="service-card"><div><span class="card-label">03</span><h3>森林資源の循環利用</h3><p>森林から生まれた木材資源を燃料として活用し、地域資源の循環と有効利用につなげます。</p></div></article>
+        <ol class="detail-features">
+          <li><span>01</span><div><h3>製造から供給まで一貫対応</h3><p>木材資源の受け入れから、破砕・チップ製造・品質確認・保管・出荷まで一貫して対応します。</p></div></li>
+          <li><span>02</span><div><h3>安定した供給体制</h3><p>原料の確保、製造、保管、出荷まで自社の流れとして管理し、安定した燃料供給につなげます。</p></div></li>
+          <li><span>03</span><div><h3>利用を見据えた品質管理</h3><p>燃料としての利用を見据え、製造から保管、出荷まで各工程で木質チップの状態を確認します。</p></div></li>
+          <li><span>04</span><div><h3>森林資源の循環利用</h3><p>森林から生まれた木材資源を燃料として活用し、地域資源の循環と有効利用につなげます。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="detail-section detail-resource" aria-labelledby="detail-resource-title">
+      <div class="detail-container detail-split detail-split--media-first">
+        <picture class="detail-photo detail-photo--supply"><source srcset="assets/images/services/biomass-supply.webp" type="image/webp"><img src="assets/images/services/biomass-supply.jpg" alt="木質チップの保管施設と山林を背景に、燃料の搬出・供給に向けて待機する大型運搬車両" width="1672" height="941" loading="lazy" decoding="async"></picture>
+        <div class="detail-copy">
+          <p class="detail-label">FROM FOREST TO ENERGY</p>
+          <h2 id="detail-resource-title">森林資源を、<br>次のエネルギーへ。</h2>
+          <p>バイオマス燃料の供給には、原料となる木材の確認、破砕、選別、木質チップ製造、品質管理までの工程が欠かせません。</p>
+          <p>Clearthでは、木材資源を木質チップへ加工する工程から、保管・積込・運搬・供給まで一貫して対応しています。</p>
+          <ul class="detail-contents" aria-label="資源循環の流れ"><li>森林資源</li><li>一次破砕</li><li>木質チップ製造</li><li>バイオマス燃料供給</li></ul>
+          <a class="button button-primary" href="service-wood-chip.html">木質チップ製造について詳しく見る</a>
         </div>
       </div>
     </section>
+
+    <section class="detail-section detail-flow" aria-labelledby="detail-flow-title">
+      <div class="detail-container">
+        <div class="detail-heading">
+          <p class="detail-label">FLOW</p>
+          <h2 id="detail-flow-title">木材資源から<span class="biomass-nowrap">燃料供給まで</span></h2>
+          <p>森林から生まれた木材資源を受け入れ、加工・品質確認・保管・運搬を経て、バイオマス燃料として供給します。</p>
+        </div>
+        <ol class="detail-flow__list">
+          <li><span>01</span><strong>木材資源の受け入れ</strong><p>間伐材・未利用材・伐採木などを、種類や状態、受け入れ条件を確認したうえで受け入れます。</p></li>
+          <li><span>02</span><strong>一次破砕・チップ製造</strong><p>木材を適切な大きさへ一次破砕し、用途を見据えた木質チップへ加工します。</p></li>
+          <li><span>03</span><strong>選別・品質確認</strong><p>チップの粒度や状態、異物混入の有無を確認し、次の工程へつなげます。</p></li>
+          <li><span>04</span><strong>保管</strong><p>製造した木質チップを保管し、出荷まで状態や在庫量を管理します。</p></li>
+          <li><span>05</span><strong>積込・運搬・供給</strong><p>出荷前の確認後、供給計画に合わせて車両へ積み込み、運搬します。</p><p>バイオマス発電所などへ燃料として届け、森林資源をエネルギーへつなげます。</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="detail-section detail-for-you" aria-labelledby="detail-for-you-title">
+      <div class="detail-container detail-for-you__inner">
+        <div class="detail-heading">
+          <p class="detail-label">FOR YOU / WHO IT HELPS</p>
+          <h2 id="detail-for-you-title">こんなことでお困りではありませんか？</h2>
+        </div>
+        <ul class="detail-concerns"><li>発電所向けの木質チップ燃料を相談したい</li><li>用途や受け入れ条件に合う供給方法を確認したい</li><li>供給量や供給頻度について相談したい</li><li>品質管理から保管・積込・運搬までまとめて相談したい</li><li>森林から生まれる木材資源をエネルギーとして活用したい</li></ul>
+      </div>
+    </section>
+
+    <section class="detail-section detail-about detail-quality" aria-labelledby="detail-quality-title">
+      <div class="detail-container detail-for-you__inner">
+        <div class="detail-heading">
+          <p class="detail-label">QUALITY CONTROL</p>
+          <h2 id="detail-quality-title">安定供給を支える<span class="biomass-nowrap">品質管理</span></h2>
+        </div>
+        <ul class="detail-concerns"><li>チップのサイズや状態を確認します。</li><li>金属などの異物混入がないか確認します。</li><li>用途や供給先の条件を見据えて管理します。</li><li>保管中の木質チップの状態を確認します。</li><li>積み込み前に出荷内容と状態を確認します。</li></ul>
+      </div>
+    </section>
+
         
-    <section class="section related-section">
-      <div class="container">
+    <section class="detail-section detail-related" aria-labelledby="detail-related-title">
+      <div class="detail-container">
         
-    <div class="section-heading">
-      <p class="eyebrow">RELATED SERVICES</p>
-      <h2>関連する事業</h2>
+    <div class="detail-heading">
+      <p class="detail-label">RELATED SERVICES</p>
+      <h2 id="detail-related-title">関連する事業</h2>
       
     </div>
     
@@ -127,22 +170,12 @@
       </div>
     </section>
     
-    <section class="section service-assurance-section">
-      <div class="container contact-strip">
-        <div>
-          <p class="eyebrow">WOOD CHIP</p>
-          <h2>木質チップ製造から燃料供給へ</h2>
-          <p>バイオマス燃料の供給には、原料となる木材の確認、破砕、選別、木質チップ製造、品質管理までの工程が欠かせません。</p><p>Clearthでは、木材資源を木質チップへ加工する工程から、保管・積込・運搬・供給まで一貫して対応しています。</p>
-          <a class="button button-primary" href="service-wood-chip.html">木質チップ製造について詳しく見る</a>
-        </div>
-      </div>
-    </section>
         
     
-    <section class="cta-band">
+    <section class="cta-band detail-cta" aria-labelledby="detail-cta-title">
       <div class="cta-inner">
-        <p class="eyebrow">CONTACT</p>
-        <h2>バイオマス燃料の供給について</h2>
+        <p class="detail-label">CONTACT</p>
+        <h2 id="detail-cta-title">バイオマス燃料の供給について</h2>
         <p>供給量・受け入れ条件・運搬・供給頻度などについては、お気軽にご相談ください。用途や必要な条件を確認し、対応内容をご案内します。</p>
         <p><strong>対応エリア</strong><br>広島県全域を中心に対応しております。近隣県についても対応可能な場合がありますので、お気軽にご相談ください。</p>
         <p>ご相談・お見積もりは無料です。木質チップの用途、供給量、受け入れ条件、運搬方法などを確認したうえでご案内します。</p>

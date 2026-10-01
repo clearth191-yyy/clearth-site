@@ -1,0 +1,38 @@
+/* 採用ページのHEROのみ。共通の lower-hero は変更しない。 */
+.recruit-hero {
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: clamp(32px, 4.5vw, 58px);
+  padding: clamp(64px, 6vw, 88px) 0 54px;
+}
+
+.recruit-hero .lower-hero-copy {
+  max-width: 470px;
+}
+
+.recruit-hero .lower-hero-image picture {
+  aspect-ratio: 16 / 9;
+}
+
+.recruit-hero .lower-hero-image img {
+  object-fit: cover;
+  object-position: center;
+  filter: none;
+}
+
+@media (max-width: 980px) {
+  .recruit-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 620px) {
+  .recruit-hero {
+    gap: 22px;
+    padding: 42px 0 38px;
+  }
+
+  .recruit-hero .lower-hero-image picture {
+    aspect-ratio: 3 / 2;
+  }
+}

@@ -20,7 +20,7 @@
     <link rel="preload" href="assets/images/generated/hero-aerial.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="assets/css/styles.css?v=20260721-01" as="style">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260721-01">
-    <link rel="stylesheet" href="assets/css/home.css?v=20261004-01">
+    <link rel="stylesheet" href="assets/css/home.css?v=20261004-02">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"株式会社Clearth","url":"https://clearth191-yyy.github.io/clearth-site","logo":"https://clearth191-yyy.github.io/clearth-site/assets/images/company/clearth-logo.png","description":"広島県を拠点に森林整備、木材廃棄物処分、木質チップ製造、バイオマス燃料供給まで一貫対応する企業です。","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","address":{"@type":"PostalAddress","postalCode":"738-0223","addressRegion":"広島県","addressLocality":"廿日市市","streetAddress":"浅原962-3","addressCountry":"JP"},"areaServed":"広島県全域を中心に対応","hasMap":"https://maps.app.goo.gl/4wMg3vUEQ7vRsqch8","contactPoint":{"@type":"ContactPoint","telephone":"0829-78-0222","faxNumber":"0829-78-2277","email":"clearth.191@gmail.com","contactType":"customer service","areaServed":"JP","availableLanguage":"Japanese"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://clearth191-yyy.github.io/clearth-site/"}]}</script>
   </head>
@@ -54,183 +54,66 @@
         </div>
       </section>
 
-      <section class="home-section home-about" aria-labelledby="home-about-title">
-        <div class="home-shell home-about__inner">
-          <div class="home-about__media"><picture><source srcset="assets/images/story-dedicated/intro-path.webp" type="image/webp"><img src="assets/images/story-dedicated/intro-path.jpg" alt="木漏れ日が差す杉林の静かな小道" width="1536" height="1024" loading="lazy" decoding="async"></picture></div>
-          <div class="home-about__copy">
-            <p class="home-eyebrow">ABOUT CLEARTH</p>
-            <h2 class="home-heading" id="home-about-title"><span>単なる林業会社ではなく、</span><span>森林資源を未来へ</span><span>つなぐ企業へ。</span></h2>
-            <p>森林を整え、木材を次の資源へ。<br>Clearthは森林から資源化までをつなぐ企業です。</p>
-            <a class="home-text-link" href="about.html">Clearthについて <span aria-hidden="true">↗</span></a>
-          </div>
+      <section class="home-intro" aria-labelledby="home-about-title">
+        <div class="home-shell home-intro__inner">
+          <p class="home-eyebrow">ABOUT CLEARTH</p>
+          <h2 class="home-heading" id="home-about-title">森林を整え、木材を次の資源へ。</h2>
+          <p class="home-intro__text">森林整備・伐採から木材の資源化、木質チップ製造・燃料供給まで。Clearthは森林資源を次の価値へつなぎます。</p>
+          <a class="home-text-link" href="about.html">Clearthについて <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
-      <section class="home-section home-section--ivory home-services" aria-labelledby="home-services-title">
+      <section class="home-directory" aria-label="ページ案内">
+        <div class="home-shell home-directory__grid">
+          <a class="home-directory-card" href="services.html">
+            <picture class="home-directory-card__media">
+              <source srcset="assets/images/services/overview/services-hero.webp" type="image/webp">
+              <img src="assets/images/services/overview/services-hero.jpg" alt="森林の作業道と集積された丸太、林業用重機" width="1672" height="941" loading="lazy" decoding="async">
+            </picture>
+            <span class="home-directory-card__meta">
+              <span class="home-directory-card__labels"><span class="home-directory-card__eyebrow">SERVICES</span><span class="home-directory-card__title">事業内容</span></span>
+              <span class="home-directory-card__arrow" aria-hidden="true">→</span>
+            </span>
+          </a>
+          <a class="home-directory-card" href="sustainability.html">
+            <picture class="home-directory-card__media">
+              <source srcset="assets/images/story-dedicated/hero-cedar-grove.webp" type="image/webp">
+              <img src="assets/images/story-dedicated/hero-cedar-grove.jpg" alt="朝の光が差し込む杉林" width="1905" height="825" loading="lazy" decoding="async">
+            </picture>
+            <span class="home-directory-card__meta">
+              <span class="home-directory-card__labels"><span class="home-directory-card__eyebrow">FOREST STORY</span><span class="home-directory-card__title">森づくりストーリー</span></span>
+              <span class="home-directory-card__arrow" aria-hidden="true">→</span>
+            </span>
+          </a>
+          <a class="home-directory-card" href="works.html">
+            <picture class="home-directory-card__media">
+              <source srcset="assets/images/works/works-hero.webp" type="image/webp">
+              <img src="assets/images/works/works-hero.jpg" alt="山林の作業道に集積した丸太と林業用重機のコンセプト画像" width="1024" height="572" loading="lazy" decoding="async">
+            </picture>
+            <span class="home-directory-card__meta">
+              <span class="home-directory-card__labels"><span class="home-directory-card__eyebrow">WORKS</span><span class="home-directory-card__title">施工実績</span></span>
+              <span class="home-directory-card__arrow" aria-hidden="true">→</span>
+            </span>
+          </a>
+          <a class="home-directory-card home-directory-card--recruit" href="recruit.html">
+            <picture class="home-directory-card__media">
+              <source srcset="assets/images/recruit/recruit-team-hero.webp" type="image/webp">
+              <img src="assets/images/recruit/recruit-team-hero.jpg" alt="山林を見渡す作業チームの後ろ姿のイメージ" width="1672" height="941" loading="lazy" decoding="async">
+            </picture>
+            <span class="home-directory-card__meta">
+              <span class="home-directory-card__labels"><span class="home-directory-card__eyebrow">RECRUIT</span><span class="home-directory-card__title">採用情報</span></span>
+              <span class="home-directory-card__arrow" aria-hidden="true">→</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="home-directory-faq" aria-labelledby="home-faq-title">
         <div class="home-shell">
-          <div class="home-services__intro">
-            <div><p class="home-eyebrow">OUR SERVICES</p><h2 class="home-heading" id="home-services-title">森林から資源へ。<br>Clearthの8つの事業</h2></div>
-            <p class="home-lead">森林を整え、木材を次の資源へ。<br>8つの事業がひとつの流れをつくります。</p>
-          </div>
-        </div>
-        <div class="home-services__stages">
-          <article class="home-service-stage">
-            <div class="home-service-stage__media"><picture><source srcset="assets/images/services/forest-maintenance-main.webp" type="image/webp"><img src="assets/images/services/forest-maintenance-main.jpg" alt="森林整備の現場で樹木を確認する作業者" width="1536" height="998" loading="lazy" decoding="async"></picture></div>
-            <div class="home-service-stage__content">
-              <span class="home-service-stage__index">01 — 02</span>
-              <p class="home-service-stage__eyebrow">FOREST</p>
-              <h3 class="home-service-stage__heading">山林を見極め、整える。</h3>
-              <div class="home-service-stage__links">
-                <a class="home-service-item" href="service-standing-tree.html">
-                  <span class="home-service-item__number">01</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">立木買取</strong><small class="home-service-item__description">現地で立木を確認・査定。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="home-service-item" href="service-forest.html">
-                  <span class="home-service-item__number">02</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">森林整備</strong><small class="home-service-item__description">山林の状態に合わせて整備。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="home-service-stage home-service-stage--reverse">
-            <div class="home-service-stage__media"><picture><source srcset="assets/images/services/special-cutting-main.webp" type="image/webp"><img src="assets/images/services/special-cutting-main.jpg" alt="道路沿いで行う特殊伐採の作業風景" width="1920" height="1080" loading="lazy" decoding="async"></picture></div>
-            <div class="home-service-stage__content">
-              <span class="home-service-stage__index">03 — 04</span>
-              <p class="home-service-stage__eyebrow">TREE CARE</p>
-              <h3 class="home-service-stage__heading">周囲に配慮した伐採。</h3>
-              <div class="home-service-stage__links">
-                <a class="home-service-item" href="service-danger-tree.html">
-                  <span class="home-service-item__number">03</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">危険木伐採</strong><small class="home-service-item__description">建物や道路沿いの危険木に対応。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="home-service-item" href="service-special-cutting.html">
-                  <span class="home-service-item__number">04</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">特殊伐採</strong><small class="home-service-item__description">難しい場所の伐採にも対応。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="home-service-stage">
-            <div class="home-service-stage__media"><picture><source srcset="assets/images/services/crusher.webp" type="image/webp"><img src="assets/images/services/crusher.jpg" alt="木材を一次破砕する設備と作業風景" width="1535" height="1024" loading="lazy" decoding="async"></picture></div>
-            <div class="home-service-stage__content">
-              <span class="home-service-stage__index">05 — 06</span>
-              <p class="home-service-stage__eyebrow">WOOD PROCESSING</p>
-              <h3 class="home-service-stage__heading">木材を受け入れ、<span class="home-service-stage__phrase">次の工程へ。</span></h3>
-              <div class="home-service-stage__links">
-                <a class="home-service-item" href="service-wood-waste.html">
-                  <span class="home-service-item__number">05</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">木材廃棄物処分</strong><small class="home-service-item__description">木材廃棄物を次の資源へ。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="home-service-item" href="service-crushing.html">
-                  <span class="home-service-item__number">06</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">木材一次破砕</strong><small class="home-service-item__description">木材を破砕し、次の工程へ。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="home-service-stage home-service-stage--reverse">
-            <div class="home-service-stage__media"><picture><source srcset="assets/images/services/wood-chip-manufacturing-main.webp" type="image/webp"><img src="assets/images/services/wood-chip-manufacturing-main.jpg" alt="木質チップの製造設備と搬送コンベア" width="1448" height="1086" loading="lazy" decoding="async"></picture></div>
-            <div class="home-service-stage__content">
-              <span class="home-service-stage__index">07 — 08</span>
-              <p class="home-service-stage__eyebrow">RESOURCE &amp; ENERGY</p>
-              <h3 class="home-service-stage__heading">木質資源を<span class="home-service-stage__phrase">エネルギーへ。</span></h3>
-              <div class="home-service-stage__links">
-                <a class="home-service-item" href="service-wood-chip.html">
-                  <span class="home-service-item__number">07</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">木質チップ製造</strong><small class="home-service-item__description">木材を木質チップへ。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="home-service-item" href="service-biomass.html">
-                  <span class="home-service-item__number">08</span>
-                  <span class="home-service-item__body"><strong class="home-service-item__title">バイオマス燃料供給</strong><small class="home-service-item__description">木質チップを燃料として供給。</small></span>
-                  <span class="home-service-item__arrow" aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="home-shell home-services__end"><a class="home-text-link" href="services.html">8つの事業を見る <span aria-hidden="true">↗</span></a></div>
-      </section>
-
-      <section class="home-story" aria-labelledby="home-story-title">
-        <div class="home-story__media"><picture><source srcset="assets/images/story-dedicated/bioeconomy-forest-materials.webp" type="image/webp"><img src="assets/images/story-dedicated/bioeconomy-forest-materials.jpg" alt="森林の木材が資源となり次の森へつながる様子" width="1536" height="1024" loading="lazy" decoding="async"></picture></div>
-        <div class="home-story__copy">
-          <p class="home-eyebrow">FOREST TO RESOURCE</p>
-          <h2 class="home-heading" id="home-story-title">森林から資源へ。<br>木の価値を、次の未来へ。</h2>
-          <p>森林を整え、生まれた木材を次の資源へ。<br>木の価値を未来につなぐ、Clearthの森づくり。</p>
-          <a class="button button-outline-light" href="sustainability.html">森づくりストーリーを見る</a>
-        </div>
-      </section>
-
-      <section class="home-section home-works" aria-labelledby="home-works-title">
-        <div class="home-shell">
-          <div class="home-works__intro"><div><p class="home-eyebrow">WORKS</p><h2 class="home-heading" id="home-works-title">施工実績</h2></div><p class="home-lead">伐採・森林整備の現場を、施工前後の写真でご紹介します。</p></div>
-          <!-- works.html の写真は生成した仮素材。実施工記録・撮影地の確認後に差し替える。 -->
-          <div class="home-works__list">
-          <article class="home-work">
-            <div class="home-work__media">
-              <figure class="home-work__photo"><picture><source srcset="assets/images/works/works-house-tree-before.webp" type="image/webp"><img src="assets/images/works/works-house-tree-before.jpg" alt="家屋に隣接して大樹が立つ様子" width="1448" height="1086" loading="lazy" decoding="async"></picture><figcaption class="home-work__label"><span>BEFORE</span>施工前</figcaption></figure>
-              <figure class="home-work__photo"><picture><source srcset="assets/images/works/works-house-tree-after.webp" type="image/webp"><img src="assets/images/works/works-house-tree-after.jpg" alt="大樹を整理したあとの庭先の様子" width="1448" height="1086" loading="lazy" decoding="async"></picture><figcaption class="home-work__label"><span>AFTER</span>施工後</figcaption></figure>
-            </div>
-            <div class="home-work__copy">
-              <span class="home-work__number">01</span>
-              <p class="home-work__category">危険木伐採</p>
-              <h3 class="home-work__title"><span>家屋まわりの</span><span>危険木伐採</span></h3>
-            </div>
-          </article>
-          <article class="home-work">
-            <div class="home-work__media">
-              <figure class="home-work__photo"><picture><source srcset="assets/images/works/works-forest-cutting-before.webp" type="image/webp"><img src="assets/images/works/works-forest-cutting-before.jpg" alt="樹木が密集した山林の様子" width="1672" height="941" loading="lazy" decoding="async"></picture><figcaption class="home-work__label"><span>BEFORE</span>施工前</figcaption></figure>
-              <figure class="home-work__photo"><picture><source srcset="assets/images/works/works-forest-cutting-after.webp" type="image/webp"><img src="assets/images/works/works-forest-cutting-after.jpg" alt="伐採・搬出後に山肌と作業道が見える様子" width="1672" height="941" loading="lazy" decoding="async"></picture><figcaption class="home-work__label"><span>AFTER</span>施工後</figcaption></figure>
-            </div>
-            <div class="home-work__copy">
-              <span class="home-work__number">03</span>
-              <p class="home-work__category">森林整備</p>
-              <h3 class="home-work__title">森林整備・伐採</h3>
-            </div>
-          </article>
-          <article class="home-work">
-            <div class="home-work__media">
-              <figure class="home-work__photo"><picture><source srcset="assets/images/works/project04-house-back-before.webp" type="image/webp"><img src="assets/images/works/project04-house-back-before.jpg" alt="住宅裏の斜面に樹木が茂る様子" width="1448" height="1086" loading="lazy" decoding="async"></picture><figcaption class="home-work__label"><span>BEFORE</span>施工前</figcaption></figure>
-              <figure class="home-work__photo"><picture><source srcset="assets/images/works/project04-house-back-after.webp" type="image/webp"><img src="assets/images/works/project04-house-back-after.jpg" alt="伐採後の斜面に切り株が残る様子" width="1448" height="1086" loading="lazy" decoding="async"></picture><figcaption class="home-work__label"><span>AFTER</span>施工後</figcaption></figure>
-            </div>
-            <div class="home-work__copy">
-              <span class="home-work__number">04</span>
-              <p class="home-work__category">支障木伐採・搬出</p>
-              <h3 class="home-work__title"><span>住宅裏の</span><span>支障木伐採・搬出</span></h3>
-            </div>
-          </article>
-          </div>
-          <a class="home-text-link" href="works.html">施工実績を見る <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section class="home-recruit" aria-labelledby="home-recruit-title">
-        <picture class="home-recruit__media"><source srcset="assets/images/recruit/recruit-team-hero.webp" type="image/webp"><img src="assets/images/recruit/recruit-team-hero.jpg" alt="山々を望む伐採現場に並ぶ作業チームのイメージ" width="1672" height="941" loading="lazy" decoding="async"></picture>
-        <div class="home-recruit__shade" aria-hidden="true"></div>
-        <div class="home-shell home-recruit__copy">
-          <p class="home-eyebrow">RECRUIT</p>
-          <h2 class="home-heading" id="home-recruit-title"><span>森林と地域の未来を</span><span>支える仕事。</span></h2>
-          <p>森林資源を未来へつなぐ仕事に、<br>一緒に取り組む仲間を募集しています。</p>
-          <a class="button button-light" href="recruit.html">採用情報を見る</a>
-        </div>
-      </section>
-
-      <section class="home-section home-section--ivory home-faq" aria-labelledby="home-faq-title">
-        <div class="home-shell">
-          <div class="home-faq__intro"><div><p class="home-eyebrow">FAQ</p><h2 class="home-heading" id="home-faq-title">よくあるご質問</h2></div><p class="home-lead">ご相談前によくいただく質問から、3つをご紹介します。</p></div>
-          <div class="home-faq__list">
-          <details class="home-faq__item"><summary>立木はどのような状態でも買取できますか？</summary><div class="home-faq__answer"><p>樹種や搬出条件などを確認したうえで、買取可能か判断します。</p></div></details>
-          <details class="home-faq__item"><summary>家の近くにある危険な木も伐採できますか？</summary><div class="home-faq__answer"><p>住宅や建物の近くも、現場を確認して対応方法をご提案します。</p></div></details>
-          <details class="home-faq__item"><summary>どのような木材を持ち込めますか？</summary><div class="home-faq__answer"><p>丸太、枝葉、根株、竹・竹根などを受け入れています。状態により受入条件が異なるため、事前にご確認ください。</p></div></details>
-          </div>
-          <a class="home-text-link" href="faq.html">よくあるご質問を見る <span aria-hidden="true">↗</span></a>
+          <a class="home-directory-faq__link" href="faq.html">
+            <div class="home-directory-faq__labels"><span class="home-directory-faq__eyebrow">FAQ</span><h2 class="home-directory-faq__title" id="home-faq-title">よくあるご質問</h2></div>
+            <span class="home-directory-faq__arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </section>
 

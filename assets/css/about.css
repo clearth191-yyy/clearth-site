@@ -441,6 +441,19 @@
 .about-message__signature small { margin-top: 8px; color: var(--about-muted); font-size: 11px; }
 .about-message__signature strong { margin-top: 2px; font-size: 20px; letter-spacing: .08em; }
 
+.about-message__body .about-message__signature {
+  margin: 48px 0 0;
+  padding-top: 24px;
+  color: var(--about-green-deep);
+  border-top: 1px solid var(--about-line);
+}
+
+.about-message__body .about-message__signature strong {
+  margin-top: 7px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
 .about-message__body {
   position: relative;
   max-width: 690px;
@@ -750,6 +763,7 @@
   .about-message__body p { font-size: 15px; line-height: 1.9; }
   .about-message__body p + p { margin-top: 20px; }
   .about-message__body .about-message__highlight { margin: 30px 0 28px; padding: 20px 0 20px 20px; font-size: 21px; line-height: 1.7; }
+  .about-message__body .about-message__signature { margin-top: 36px; padding-top: 20px; }
 
   .about-profile { padding: 74px 0 80px; }
   .about-profile__layout { gap: 18px; }

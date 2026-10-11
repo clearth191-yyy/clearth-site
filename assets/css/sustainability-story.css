@@ -1536,6 +1536,10 @@
     display: block;
   }
 
+  #bioeconomy-title > .fs-bioeconomy__term + br {
+    display: none;
+  }
+
   .fs-bioeconomy__copy > p:not(.fs-kicker) {
     font-size: 15px;
   }

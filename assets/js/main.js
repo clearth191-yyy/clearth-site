@@ -1,19 +1,51 @@
 const button = document.querySelector('.menu-toggle');
-if (button) {
-  const closeMenu = () => {
-    document.body.classList.remove('is-menu-open');
-    button.setAttribute('aria-expanded', 'false');
+const globalNav = document.querySelector('#global-nav');
+
+if (button && globalNav) {
+  const toggleLabel = button.querySelector('.menu-toggle__label');
+  const mobileMenu = window.matchMedia('(max-width: 980px)');
+
+  const setMenuState = (isOpen) => {
+    const nextState = Boolean(isOpen) && mobileMenu.matches;
+
+    document.body.classList.toggle('is-menu-open', nextState);
+    button.setAttribute('aria-expanded', String(nextState));
+    button.setAttribute('aria-label', nextState ? 'メニューを閉じる' : 'メニューを開く');
+
+    if (toggleLabel) {
+      toggleLabel.textContent = nextState ? '閉じる' : 'MENU';
+    }
   };
+
+  const closeMenu = () => setMenuState(false);
+
+  setMenuState(false);
+
   button.addEventListener('click', () => {
-    const open = document.body.classList.toggle('is-menu-open');
-    button.setAttribute('aria-expanded', String(open));
+    setMenuState(!document.body.classList.contains('is-menu-open'));
   });
-  document.querySelectorAll('#global-nav a').forEach((link) => {
+
+  globalNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', closeMenu);
   });
+
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
+    if (event.key === 'Escape' && document.body.classList.contains('is-menu-open')) {
+      closeMenu();
+    }
   });
+
+  const resetForDesktop = (event) => {
+    if (!event.matches) closeMenu();
+  };
+
+  if (typeof mobileMenu.addEventListener === 'function') {
+    mobileMenu.addEventListener('change', resetForDesktop);
+  } else {
+    mobileMenu.addListener(resetForDesktop);
+  }
+
+  window.addEventListener('pageshow', closeMenu);
 }
 
 const form = document.querySelector('.contact-form');

@@ -57,6 +57,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .brand, .footer-brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 900; }
 .brand img, .footer-brand img { object-fit: contain; }
 .brand span { display: grid; line-height: 1.25; }
+.brand strong { display: block; line-height: 1.25; white-space: nowrap; }
+.brand ruby { ruby-align: center; ruby-position: over; }
+.brand rt { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .04em; }
 .brand small { color: var(--muted); font-size: 12px; letter-spacing: 0; }
 .global-nav { display: flex; align-items: center; gap: clamp(11px, 1.35vw, 22px); font-size: clamp(12px, .95vw, 14px); font-weight: 800; }
 .global-nav a { color: var(--navy); white-space: nowrap; }

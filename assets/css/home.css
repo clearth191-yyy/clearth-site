@@ -11,6 +11,10 @@
   background: #fff;
 }
 
+.home-page main {
+  background: var(--home-ivory);
+}
+
 .home-page.is-menu-open .floating-cta {
   visibility: hidden;
   opacity: 0;
@@ -50,16 +54,19 @@
 .home-page .home-text-link {
   display: inline-flex;
   align-items: center;
-  gap: 18px;
-  min-height: 42px;
-  padding: 4px 0 8px;
+  justify-content: center;
+  gap: 16px;
+  min-height: 50px;
+  padding: 10px 20px;
   color: var(--home-green);
-  border-bottom: 1px solid currentColor;
+  background: #fff;
+  border: 1px solid currentColor;
+  border-radius: 5px;
   font-size: 14px;
   font-weight: 800;
   letter-spacing: .025em;
   line-height: 1.6;
-  transition: gap .2s ease, color .2s ease;
+  transition: gap .2s ease, color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 .home-page .home-text-link span {
@@ -69,7 +76,12 @@
   line-height: 1;
 }
 
-.home-page .home-text-link:hover { gap: 24px; color: var(--home-blue); }
+.home-page .home-text-link:hover {
+  gap: 20px;
+  color: var(--home-blue);
+  background: #fcfdfa;
+  transform: translateY(-1px);
+}
 .home-page .home-text-link:focus-visible,
 .home-page .home-directory-card:focus-visible,
 .home-page .home-directory-faq__link:focus-visible {

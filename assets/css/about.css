@@ -193,6 +193,8 @@
   line-height: 2;
 }
 
+.about-story__lead-ending { white-space: nowrap; }
+
 .about-story__copy > p:not(.about-section-label):not(.about-story__statement):not(.about-story__lead) {
   color: var(--about-muted);
   font-size: 15px;

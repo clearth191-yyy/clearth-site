@@ -388,6 +388,7 @@
 
 .business-cta h2 span { display: block; }
 .business-cta__inner > p:last-of-type { color: rgba(255, 255, 255, .76); line-height: 1.9; }
+.business-cta__ending { white-space: nowrap; }
 
 .business-cta__actions {
   display: flex;

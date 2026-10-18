@@ -1078,7 +1078,7 @@
 }
 
 .fs-bioeconomy__path::after {
-  inset: 103px;
+  inset: 96px;
   background: var(--fs-paper);
   border: 1px solid rgba(43, 76, 55, .25);
 }
@@ -1088,12 +1088,12 @@
   z-index: 3;
   top: 50%;
   left: 50%;
-  width: 92px;
+  width: 100px;
   color: var(--fs-forest);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: .18em;
-  line-height: 1.6;
+  letter-spacing: .06em;
+  line-height: 1.48;
   text-align: center;
   transform: translate(-50%, -50%);
 }
@@ -1111,12 +1111,15 @@
   border-radius: 50%;
   font-size: 12px;
   letter-spacing: .04em;
+  white-space: nowrap;
 }
+
+.fs-bioeconomy__path span:nth-of-type(4) { width: 72px; font-size: 10px; letter-spacing: 0; word-break: keep-all; }
 
 .fs-bioeconomy__path span:nth-of-type(1) { top: -20px; left: 119px; }
 .fs-bioeconomy__path span:nth-of-type(2) { top: 42px; right: -18px; }
 .fs-bioeconomy__path span:nth-of-type(3) { right: -18px; bottom: 42px; background: #eee6db; border-color: rgba(117, 83, 52, .3); }
-.fs-bioeconomy__path span:nth-of-type(4) { bottom: -20px; left: 119px; background: #e7eadf; }
+.fs-bioeconomy__path span:nth-of-type(4) { bottom: -20px; left: 114px; background: #e7eadf; }
 .fs-bioeconomy__path span:nth-of-type(5) { bottom: 42px; left: -18px; }
 .fs-bioeconomy__path span:nth-of-type(6) { top: 42px; left: -18px; background: #f0eadf; }
 .fs-bioeconomy__path i { display: none; }
@@ -1817,9 +1820,9 @@
 
 /* Forest story: final mobile-only reading refinements */
 @media (max-width: 760px) {
-  .sustainability-page.forest-story-v4 .floating-cta {
-    display: none;
-  }
+  .fs-bioeconomy__path::after { inset: 88px; }
+  .fs-bioeconomy__path b { width: 98px; }
+  .fs-bioeconomy__path span:nth-of-type(4) { left: calc(50% - 36px); }
 
   .fs-sdgs__grid {
     row-gap: 26px;

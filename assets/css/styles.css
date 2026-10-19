@@ -299,6 +299,10 @@ body.is-menu-open .menu-toggle__close-icon { display: block; }
 .footer-main p, .footer-main a, .footer-main li { color: rgba(255,255,255,.78); }
 .footer-copy__ending { white-space: nowrap; }
 .footer-copy__lead { display: block; }
+.site-footer .footer-main .button-light,
+.site-footer .footer-main .button-light:visited,
+.site-footer .footer-main .button-light:hover { color: var(--navy); }
+.site-footer .footer-main .button-light:focus-visible { color: var(--navy); outline: 3px solid rgba(120,198,231,.9); outline-offset: 3px; }
 .footer-main h2 { color: #fff; font-size: 18px; }
 .footer-access-link { display: inline-flex; margin-top: 12px; font-weight: 900; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; padding: 0; margin: 0; list-style: none; }

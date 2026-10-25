@@ -541,6 +541,12 @@
   font-weight: 800;
 }
 
+.about-profile__contact dd,
+.about-profile__contact a {
+  font-size: inherit;
+  font-weight: 700;
+}
+
 .about-profile__base {
   position: relative;
   overflow: hidden;

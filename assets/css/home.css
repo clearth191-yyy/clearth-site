@@ -51,38 +51,7 @@
   line-height: 1.95;
 }
 
-.home-page .home-text-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  min-height: 50px;
-  padding: 10px 20px;
-  color: var(--home-green);
-  background: #fff;
-  border: 1px solid currentColor;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: .025em;
-  line-height: 1.6;
-  transition: gap .2s ease, color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease;
-}
-
-.home-page .home-text-link span {
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.home-page .home-text-link:hover {
-  gap: 20px;
-  color: var(--home-blue);
-  background: #fcfdfa;
-  transform: translateY(-1px);
-}
-.home-page .home-text-link:focus-visible,
+.home-page .home-intro__link:focus-visible,
 .home-page .home-directory-card:focus-visible,
 .home-page .home-directory-faq__link:focus-visible {
   outline: 3px solid var(--home-blue);
@@ -154,6 +123,7 @@
 }
 
 .home-page .home-hero__line { display: block; }
+.home-page .home-hero__description-phrase { display: inline-block; max-width: 100%; }
 .home-page .home-hero__description {
   max-width: 580px;
   margin: 28px 0 0;
@@ -188,55 +158,107 @@
   border-color: rgba(255, 255, 255, .7);
 }
 
-/* A compact introduction leads directly into the four destination photographs. */
+/* The selected prototype uses a quiet editorial introduction and photo-first links. */
 .home-page .home-intro {
-  padding-block: clamp(55px, 6vw, 82px) clamp(26px, 3vw, 42px);
+  padding-block: clamp(60px, 6.3vw, 82px) clamp(52px, 7vw, 94px);
+}
+
+.home-page .home-intro__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, .88fr);
+  align-items: start;
+  gap: clamp(32px, 5.5vw, 76px);
 }
 
 .home-page .home-intro .home-heading {
-  max-width: 880px;
-  font-size: clamp(29px, 3.1vw, 42px);
+  max-width: 620px;
+  font-size: clamp(31px, 3.35vw, 48px);
+  letter-spacing: .07em;
+  line-height: 1.7;
+}
+
+.home-page .home-intro .home-eyebrow {
+  color: #718179;
+  font-weight: 700;
+}
+
+.home-page .home-intro__heading-line {
+  display: block;
 }
 
 .home-page .home-intro__heading-resource {
   white-space: nowrap;
 }
 
+.home-page .home-intro__body {
+  padding: 0 0 12px clamp(28px, 4vw, 56px);
+  border-left: 1px solid #a4b0a8;
+}
+
 .home-page .home-intro__text {
-  max-width: 680px;
-  margin: 19px 0 17px;
+  max-width: 510px;
+  margin: 0 0 24px;
   color: #53685e;
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: clamp(15px, 1.25vw, 17px);
+  letter-spacing: .045em;
+  line-height: 2.15;
+}
+
+.home-page .home-intro__text span {
+  display: block;
+}
+
+.home-page .home-intro__link {
+  display: flex;
+  width: min(100%, 268px);
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 3px 8px 0;
+  border-bottom: 1px solid #85998d;
+  color: var(--home-green);
+  font-size: 15px;
+  letter-spacing: .05em;
+  text-decoration: none;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.home-page .home-intro__link span:last-child {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.home-page .home-intro__link:hover {
+  border-color: var(--home-green);
+  color: #0f392b;
 }
 
 .home-page .home-directory {
-  padding-block: 0 34px;
+  padding-block: 0 clamp(52px, 7vw, 96px);
 }
 
 .home-page .home-directory__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px 24px;
+  gap: clamp(46px, 6.5vw, 88px) clamp(28px, 4.2vw, 62px);
 }
 
 .home-page .home-directory-card {
   display: block;
   min-width: 0;
-  overflow: hidden;
-  color: var(--home-ink);
-  background: #fff;
-  border: 1px solid var(--home-line);
-  border-radius: 4px;
-  transition: border-color .2s ease;
+  color: inherit;
+  text-decoration: none;
 }
 
 .home-page .home-directory-card__media {
   display: block;
   width: 100%;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
-  background: #e5ebe5;
+  aspect-ratio: 1.63 / 1;
+  background: #dce2d9;
 }
 
 .home-page .home-directory-card__media img {
@@ -248,45 +270,66 @@
   transition: transform .25s ease;
 }
 
-/* The existing group photo is 16:9; contain keeps every person in frame. */
-.home-page .home-directory-card--recruit .home-directory-card__media img {
-  object-fit: contain;
+.home-page .home-directory-card__media--planting img {
+  object-position: 35% center;
 }
 
 .home-page .home-directory-card__meta {
   display: flex;
-  min-height: 94px;
+  min-height: 107px;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 18px 26px;
-  background: #fff;
-  border-top: 1px solid var(--home-line);
+  gap: 22px;
+  padding-top: 20px;
 }
 
 .home-page .home-directory-card__labels {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  gap: 2px;
+  gap: 11px;
 }
 
 .home-page .home-directory-card__eyebrow {
-  color: var(--home-blue);
-  font-size: 10px;
-  font-weight: 800;
-  line-height: 1.4;
-  letter-spacing: .16em;
+  color: #7e8e85;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .19em;
 }
 
 .home-page .home-directory-card__title {
   color: var(--home-ink);
-  font-size: clamp(20px, 2vw, 25px);
-  font-weight: 800;
-  line-height: 1.45;
+  font-family: "Noto Serif JP", "Yu Mincho", "YuMincho", serif;
+  font-size: clamp(22px, 2.05vw, 31px);
+  font-weight: 400;
+  letter-spacing: .09em;
+  line-height: 1.3;
 }
 
-.home-page .home-directory-card__arrow,
+.home-page .home-directory-card__arrow {
+  display: inline-grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid #bdcabf;
+  border-radius: 50%;
+  color: #183f31;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform .25s ease, border-color .25s ease, background-color .25s ease;
+}
+
+.home-page .home-directory-card:hover .home-directory-card__media img { transform: scale(1.025); }
+.home-page .home-directory-card:hover .home-directory-card__arrow {
+  border-color: #557565;
+  background: rgba(255, 255, 255, .45);
+  transform: translate(2px, -2px);
+}
+
 .home-page .home-directory-faq__arrow {
   flex: 0 0 auto;
   color: var(--home-green);
@@ -297,10 +340,6 @@
   transition: transform .2s ease;
 }
 
-.home-page .home-directory-card:hover { border-color: rgba(28, 76, 61, .45); }
-.home-page .home-directory-card:hover .home-directory-card__media img { transform: scale(1.025); }
-.home-page .home-directory-card--recruit:hover .home-directory-card__media img { transform: none; }
-.home-page .home-directory-card:hover .home-directory-card__arrow,
 .home-page .home-directory-faq__link:hover .home-directory-faq__arrow { transform: translateX(5px); }
 
 .home-page .home-directory-faq {
@@ -357,9 +396,106 @@
 .home-page .footer-main .button-light { color: var(--navy); }
 .home-page .site-footer { padding-bottom: 72px; }
 
+/* Video-first opening. The supplied reference film remains isolated to the home page. */
+.home-page .home-video-hero {
+  display: block;
+  height: calc(100svh - 78px);
+  min-height: 630px;
+  max-height: 1100px;
+  background: #132d25;
+}
+
+.home-page .home-video-hero .home-hero__media {
+  background: #132d25 url("../images/home/clearth-forest-poster.jpg") 46% 53% / cover no-repeat;
+}
+
+.home-page .home-video-hero .home-hero__media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 46% 53%;
+}
+
+.home-page .home-video-hero.is-video-unavailable .home-hero__media video { opacity: 0; }
+
+.home-page .home-video-hero .home-hero__shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(6, 25, 18, .76) 0%, rgba(6, 25, 18, .5) 40%, rgba(6, 25, 18, .16) 72%, rgba(6, 25, 18, .05) 100%),
+    linear-gradient(0deg, rgba(7, 28, 22, .84), transparent 38%, rgba(7, 28, 22, .12));
+}
+
+.home-page .home-video-hero .home-hero__inner {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.home-page .home-video-hero .home-hero__copy {
+  width: min(660px, 56%);
+  margin-top: 0;
+}
+
+.home-page .home-video-hero .home-hero__eyebrow {
+  margin-bottom: 24px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .23em;
+}
+
+.home-page .home-video-hero .home-hero__title {
+  max-width: none;
+  font-size: clamp(42px, 4.7vw, 74px);
+  line-height: 1.6;
+  text-shadow: 0 2px 30px rgba(7, 28, 22, .42);
+}
+
+.home-page .home-video-hero .home-hero__description {
+  max-width: 660px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, .94);
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: .04em;
+}
+
+/* The notice list remains directly beneath the film. */
+.home-page .home-news { padding-block: 86px 46px; background: var(--home-ivory); scroll-margin-top: 30px; }
+.home-page .home-news__inner { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 60px; }
+.home-page .home-news__heading h2 { margin: 0; color: var(--home-ink); font-family: Arial, sans-serif; font-size: 48px; font-weight: 500; line-height: 1.1; letter-spacing: -.025em; }
+.home-page .home-news__heading p { margin: 15px 0 0; color: var(--home-ink); font-size: 13px; letter-spacing: .12em; }
+.home-page .home-news__list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--home-line); }
+.home-page .home-news__list li { border-bottom: 1px solid var(--home-line); }
+.home-page .home-news__list a { display: grid; grid-template-columns: 82px minmax(0, 1fr) 25px; align-items: center; gap: 19px; min-height: 106px; padding: 28px 0; color: var(--home-ink); }
+.home-page .home-news__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.home-page .home-news__meta time { color: #53685e; font-size: 12px; line-height: 1.5; letter-spacing: .035em; white-space: nowrap; }
+.home-page .home-news__tag { display: inline-flex; width: fit-content; min-width: 76px; align-items: center; justify-content: center; padding: 7px 12px; color: #486154; background: #e8ede7; border-radius: 40px; font-size: 10px; line-height: 1.4; letter-spacing: .06em; white-space: nowrap; }
+.home-page .home-news__title { font-size: 14px; font-weight: 500; line-height: 1.9; letter-spacing: .045em; }
+.home-page .home-news__arrow { justify-self: end; font-family: Arial, sans-serif; font-size: 24px; line-height: 1; transition: transform .2s ease; }
+.home-page .home-news__bottom { display: flex; align-items: center; justify-content: flex-end; gap: 24px; margin-top: 23px; }
+.home-page .home-news__bottom a { display: inline-flex; min-height: 44px; align-items: center; gap: 28px; padding: 10px 0; color: var(--home-ink); border-bottom: 1px solid #8b9e90; font-size: 12px; letter-spacing: .05em; white-space: nowrap; }
+.home-page .home-news__bottom a span { font-family: Arial, sans-serif; font-size: 21px; line-height: 1; }
+.home-page .home-news__list a:focus-visible,
+.home-page .home-news__bottom a:focus-visible { outline: 3px solid rgba(255, 255, 255, .9); outline-offset: 4px; }
+
+@media (hover: hover) {
+  .home-page .home-news__list a:hover .home-news__title,
+  .home-page .home-news__bottom a:hover { color: #557860; }
+  .home-page .home-news__list a:hover .home-news__arrow { transform: translateX(4px); }
+}
+
 @media (max-width: 980px) {
   .home-page .home-hero { min-height: 620px; }
   .home-page .home-hero__title { font-size: clamp(45px, 6.6vw, 65px); }
+  .home-page .home-video-hero { height: calc(100svh - 80px); min-height: 650px; }
+  .home-page .home-video-hero .home-hero__copy { width: min(660px, 66%); }
+  .home-page .home-news__inner { grid-template-columns: 180px minmax(0, 1fr); gap: 35px; }
+  .home-page .home-news__list a { grid-template-columns: 76px minmax(0, 1fr) 22px; gap: 14px; }
 }
 
 @media (max-width: 700px) {
@@ -382,14 +518,42 @@
   .home-page .home-hero__actions .button:first-child { flex: 1 1 54%; }
   .home-page .home-hero__actions .button:last-child { flex: 1 1 38%; }
 
-  .home-page .home-intro { padding-block: 52px 28px; }
-  .home-page .home-intro .home-heading { font-size: clamp(28px, 7vw, 36px); }
-  .home-page .home-intro__heading-line { display: block; }
-  .home-page .home-intro__text { margin-block: 16px 14px; font-size: 15px; line-height: 1.85; }
-  .home-page .home-directory { padding-bottom: 22px; }
-  .home-page .home-directory__grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .home-page .home-directory-card__meta { min-height: 80px; padding: 13px 18px; }
-  .home-page .home-directory-card__title { font-size: 21px; }
+  .home-page .home-video-hero { height: calc(100svh - 68px); min-height: 600px; max-height: 900px; }
+  .home-page .home-video-hero .home-hero__media { background-position: 42% center; }
+  .home-page .home-video-hero .home-hero__media video { object-position: 42% 50%; }
+  .home-page .home-video-hero .home-hero__shade { background: linear-gradient(90deg, rgba(6, 27, 21, .58), rgba(6, 27, 21, .19) 70%, rgba(6, 27, 21, .06)), linear-gradient(0deg, rgba(6, 27, 21, .9), transparent 40%, rgba(6, 27, 21, .26)); }
+  .home-page .home-video-hero .home-hero__inner { align-items: flex-start; justify-content: flex-start; padding-top: clamp(112px, 23svh, 190px); }
+  .home-page .home-video-hero .home-hero__copy { width: 100%; margin: 0; }
+  .home-page .home-video-hero .home-hero__eyebrow { margin-bottom: 17px; font-size: 7px; }
+  .home-page .home-video-hero .home-hero__title { font-size: clamp(32px, 8.6vw, 40px); line-height: 1.6; }
+  .home-page .home-video-hero .home-hero__description { max-width: 100%; margin-top: 20px; font-size: 16px; line-height: 1.8; letter-spacing: .035em; }
+  .home-page .home-hero__description-line { display: block; text-wrap: pretty; }
+  .home-page .home-news { padding-block: 58px 32px; }
+  .home-page .home-news__inner { display: block; }
+  .home-page .home-news__heading { display: flex; align-items: baseline; gap: 19px; margin-bottom: 26px; }
+  .home-page .home-news__heading h2 { font-size: 35px; }
+  .home-page .home-news__heading p { margin: 0; font-size: 12px; }
+  .home-page .home-news__list a { grid-template-columns: minmax(0, 1fr) 22px; gap: 14px; min-height: 0; padding: 24px 0; }
+  .home-page .home-news__tag { min-width: 73px; padding: 6px 12px; font-size: 10px; }
+  .home-page .home-news__title { grid-column: 1; grid-row: 2; font-size: 14px; line-height: 1.85; letter-spacing: .025em; }
+  .home-page .home-news__arrow { grid-column: 2; grid-row: 2; align-self: start; margin-top: 3px; font-size: 23px; }
+  .home-page .home-news__bottom { align-items: flex-end; flex-direction: column; gap: 14px; margin-top: 19px; }
+  .home-page .home-news__bottom a { gap: 30px; font-size: 12px; }
+
+  .home-page .home-intro { padding-block: 50px 52px; }
+  .home-page .home-intro__inner { display: block; }
+  .home-page .home-intro .home-heading { font-size: clamp(30px, 7.7vw, 36px); line-height: 1.65; }
+  .home-page .home-intro__body { margin-top: 29px; padding: 0; border-left: 0; }
+  .home-page .home-intro__text { margin: 0 0 27px; font-size: 14px; line-height: 2.05; }
+  .home-page .home-intro__link { width: min(100%, 238px); min-height: 49px; font-size: 14px; }
+  .home-page .home-intro__link span:last-child { font-size: 23px; }
+  .home-page .home-directory { padding-bottom: 46px; }
+  .home-page .home-directory__grid { grid-template-columns: minmax(0, 1fr); gap: 39px; }
+  .home-page .home-directory-card__media { aspect-ratio: 1.5 / 1; }
+  .home-page .home-directory-card__meta { min-height: 88px; gap: 16px; padding-top: 17px; }
+  .home-page .home-directory-card__labels { gap: 9px; }
+  .home-page .home-directory-card__title { font-size: 23px; }
+  .home-page .home-directory-card__arrow { width: 45px; height: 45px; font-size: 23px; }
   .home-page .home-directory-faq { padding-bottom: 64px; }
   .home-page .home-directory-faq__link { min-height: 88px; padding-inline: 2px; }
   .home-page .home-directory-faq__title { font-size: 21px; }
@@ -405,10 +569,11 @@
   .home-page .home-hero__description { font-size: 13px; line-height: 1.78; }
   .home-page .home-hero__actions .button { min-height: 45px; padding-inline: 8px; font-size: 11px; }
   .home-page .home-contact h2 { font-size: 28px; }
+  .home-page .home-video-hero .home-hero__inner { padding-top: clamp(104px, 21svh, 158px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-page .home-text-link,
+  .home-page .home-intro__link,
   .home-page .home-directory-card,
   .home-page .home-directory-card__media img,
   .home-page .home-directory-card__arrow,

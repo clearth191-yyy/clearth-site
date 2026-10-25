@@ -1,17 +1,19 @@
 # Clearth site image guide
 
 ## Current Image Policy
+- The tables below retain the legacy asset inventory. Current usage is determined by each HTML picture/source/img reference; this guide is not proof that an image is an actual project record.
+- The current home video and the child-planting, forest-visit, and tree-ring prototype images require publication approval. Do not describe them as records of actual Clearth events or participant counts.
 - Brand images such as the top hero, forest scenery, mountains, and background visuals use AI / generated image assets.
 - Business-detail images such as wood chips and wood waste use actual photos provided by Clearth where available.
 - Heavy machinery is currently a commercial-use-free stock photo until Clearth's own equipment photos are ready.
 - Source originals are kept in `work/user-photos/`, `work/stock-images/`, or the project generated-image folder; optimized JPG/WebP files are generated into `assets/images/`.
-- `works/` images are still placeholders until real project photos are available, so the "image photo" badge remains visible.
-- When real company photos are ready, replace files with the same names and rebuild the site.
+- `works/` contains generated placeholders requiring confirmation against actual project records. The current HTML displays BEFORE/AFTER labels without an "image photo" badge.
+- When replacement photos are ready, update the related picture/source/img references together. Compare changes before using the legacy site generator, which can overwrite the current design.
 
 ## Directory
 - `generated/`: トップページのヒーロー画像や背景画像。AI生成画像を使用できます。
 - `services/`: 事業内容の説明画像。重機、破砕機、チップ製造設備などは実写真への差し替え推奨です。
-- `works/`: 施工実績写真。AI生成画像を実績写真と誤解されないよう、仮画像には「イメージ画像」ラベルを表示しています。
+- `works/`: 施工実績用画像。生成・仮素材を含むため、実写真・施工記録の確認が必要です。ラベルの有無だけで公開可否を判断しないでください。
 - `company/`: ロゴ、マーク、会社ヤード、スタッフ写真など会社固有の画像を置きます。
 
 ## Image List
@@ -87,7 +89,7 @@ Official license pages:
 ## Production Checklist
 - `work/build_clearth_site.py` の `CONFIG["site_url"]` を本番ドメインへ変更する。
 - `CONFIG["company"]` の所在地、対応エリア、会社名表記を最終確認する。
-- `CONFIG["company"]["locations"]` の本社、浅原プラント、友田プラントの住所とGoogleマップ表示を確認する。
+- 現行HTMLと `site-settings.json` にある浅原本社（〒738-0223 広島県廿日市市浅原962-3）の住所とGoogleマップ表示を確認する。
 - `CONFIG["contact"]` の電話番号、FAX、電話リンク、メールアドレス、受付時間を正式情報へ変更する。
 - `CONFIG["form"]["action"]` を Formspree、Netlify Forms、PHPメールフォームなど本番送信先へ変更する。
 - `assets/images/works/` の施工実績画像を実写真へ差し替え、必要に応じて「イメージ画像」ラベルを外す。
@@ -97,9 +99,9 @@ Official license pages:
 - Google Analytics を設定する。
 - Google Search Console に登録し、`sitemap.xml` を送信する。
 - Google Business Profile の情報と公式サイト情報を確認する。
-- Googleマップの本社、浅原プラント、友田プラントのリンクを確認する。
+- Googleマップの浅原本社のリンクを確認する。
 - お問い合わせフォームの送信テストを行う。
-- スマートフォンで `tel:0829780022` の電話発信を確認する。
+- スマートフォンで `tel:0829780222` の電話発信を確認する。
 - `mailto:clearth.191@gmail.com` のメール送信リンクを確認する。
 - PCとスマホで、ヘッダー、固定CTA、問い合わせボタン、フォーム項目、電話発信リンクを確認する。
 - 画像の表示崩れ、alt文、遅延読み込み、コントラスト、見出し階層を確認する。

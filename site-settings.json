@@ -1,5 +1,5 @@
 {
-  "note": "公開前に work/build_clearth_site.py 上部の CONFIG を更新して再ビルドしてください。",
+  "note": "現行HTML/CSS/JSの設定控えです。このJSONの変更はページへ自動反映されません。旧生成処理で再生成する場合は、現行の文章・画像・デザインを上書きしないよう別フォルダで差分を確認してください。",
   "site_url": "https://clearth191-yyy.github.io/clearth-site",
   "assets_version": "20260721-01",
   "company": {
@@ -7,33 +7,20 @@
     "brand": "Clearth",
     "catchcopy": "住み良い街づくりのために社会に貢献します。",
     "area_served": "広島県全域を中心に対応",
-    "address": "〒738-0222 広島県廿日市市津田5267-3",
+    "address": "〒738-0223 広島県廿日市市浅原962-3",
     "locations": [
       {
         "name": "本社",
-        "postal_code": "738-0222",
-        "address": "広島県廿日市市津田5267-3",
-        "access": "廿日市市津田エリア。山林整備・木材リサイクルに関するご相談の窓口です。"
-      },
-      {
-        "name": "浅原プラント",
         "postal_code": "738-0223",
-        "address": "広島県廿日市市浅原962-2",
+        "address": "広島県廿日市市浅原962-3",
         "map_url": "https://maps.app.goo.gl/4wMg3vUEQ7vRsqch8",
-        "access": "木材の搬入や木質チップ製造に関する拠点です。搬入前に必ずお問い合わせください。"
-      },
-      {
-        "name": "友田プラント",
-        "postal_code": "738-0203",
-        "address": "広島県廿日市市友田62",
-        "map_url": "https://maps.app.goo.gl/AYWPKjwz34oLmK3v7",
-        "access": "木材リサイクル・資源循環に関する事業拠点です。来場前に事前連絡をお願いいたします。"
+        "access": "森林整備・伐採・木材持ち込み・木質チップ製造など、株式会社Clearthの事業拠点です。ご来場・木材搬入の際は、事前にお問い合わせください。"
       }
     ]
   },
   "contact": {
-    "phone_display": "0829-78-0022",
-    "phone_href": "0829780022",
+    "phone_display": "0829-78-0222",
+    "phone_href": "0829780222",
     "fax_display": "0829-78-2277",
     "email_display": "clearth.191@gmail.com",
     "email_href": "clearth.191@gmail.com",
@@ -205,6 +192,6 @@
     "action": "https://formspree.io/f/xzeblrjd",
     "name": "clearth-contact",
     "success_page": "thanks.html",
-    "honeypot_name": "website"
+    "honeypot_name": "_gotcha"
   }
 }

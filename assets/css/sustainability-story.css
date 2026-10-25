@@ -107,6 +107,11 @@
   font-size: 15px;
   letter-spacing: .08em;
 }
+.fs-hero__subcopy .fs-hero__ending {
+  display: inline-block;
+  max-width: 100%;
+}
+
 .fs-hero__aside {
   position: absolute;
   z-index: 2;
@@ -163,6 +168,11 @@
 .fs-intro__copy { max-width: 680px; padding-top: 32px; border-top: 1px solid var(--fs-rule); }
 .fs-intro__copy p { margin-bottom: 24px; color: #505a53; font-size: 16px; line-height: 2.05; }
 .fs-intro__copy p:last-child { margin-bottom: 0; }
+
+.forest-story-v4 .fs-intro__resource-phrase {
+  display: inline-block;
+  max-width: 100%;
+}
 
 /* Four chapters */
 .fs-story { padding-bottom: clamp(98px, 11vw, 166px); background: var(--fs-paper); }
@@ -587,6 +597,12 @@
   transform: scale(1.012);
 }
 
+/* Keep the supplied visit scene intact; only the responsive framing changes. */
+.fs-hero__media--forest-visit img {
+  object-position: 50% center;
+  transform: none;
+}
+
 .fs-hero__shade {
   background:
     linear-gradient(90deg, rgba(5, 27, 19, .78) 0%, rgba(5, 27, 19, .52) 39%, rgba(5, 27, 19, .12) 72%, rgba(5, 27, 19, .18) 100%),
@@ -690,8 +706,8 @@
   position: absolute;
   right: 0;
   bottom: -48px;
-  width: 165px;
-  padding: 25px 0 0 23px;
+  width: 180px;
+  padding: 25px 0 0 18px;
   border-top: 1px solid var(--fs-rule);
   border-left: 1px solid var(--fs-rule);
   color: var(--fs-forest);
@@ -738,6 +754,18 @@
   object-fit: cover;
   object-position: center 57%;
   filter: saturate(.84) contrast(1.05) brightness(.94);
+}
+
+/* Preserve the full landscape composition, including the tree rings and hands. */
+.fs-intro__visual.fs-intro__visual--tree-rings {
+  aspect-ratio: 16 / 9;
+}
+
+.fs-intro__visual--tree-rings img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* Four restrained story rows */
@@ -1357,6 +1385,10 @@
     filter: saturate(.9) contrast(1.07) brightness(.88);
   }
 
+  .fs-hero__media--forest-visit img {
+    object-position: 40% center;
+  }
+
   .fs-hero__content {
     justify-content: flex-end;
     padding: 96px 0 132px;
@@ -1396,6 +1428,18 @@
 
   .fs-intro h2 { font-size: clamp(32px, 9.4vw, 42px); }
   .fs-intro__copy { padding-top: 25px; }
+
+  .forest-story-v4 .fs-hero__copy-line,
+  .forest-story-v4 #intro-title .fs-intro__title-line,
+  .forest-story-v4 .fs-intro__resource-line {
+    display: block;
+    text-wrap: pretty;
+  }
+
+  .forest-story-v4 .fs-intro__resource-lead {
+    display: block;
+    text-wrap: balance;
+  }
 
   .fs-intro__aside {
     display: block;
